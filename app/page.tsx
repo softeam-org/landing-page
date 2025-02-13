@@ -3,8 +3,8 @@ import HeroSection from "./components/HeroSection";
 
 function App(): React.JSX.Element {
   return (
-    <div className="w-screen min-h-screen h-screen flex flex-col">
-      <div className="h-24 w-full"></div>
+    <div className="w-full min-h-screen flex flex-col overflow-x-hidden">
+      <div className="w-full h-24 fixed"></div>
       <HeroSection />
     </div>
   );
