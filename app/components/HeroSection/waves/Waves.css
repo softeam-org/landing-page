@@ -27,7 +27,7 @@
 
 
 .wave {
-  animation: waving 40s linear infinite forwards;
+  animation: waving 50s linear infinite forwards;
 }
 
 .wave:nth-child(2) {
