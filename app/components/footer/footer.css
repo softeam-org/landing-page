@@ -1,0 +1,26 @@
+.container{
+    display: flex;
+    background-color: #072763;
+    width: 100%;
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 50%;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+}
+
+.socialNetworks{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    width: 50%;
+}
