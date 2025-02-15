@@ -1,16 +1,23 @@
+import Image from "next/image";
 import React from "react";
 import "./footer.css";
+import emailIcon from "../icons/email.png";
+import locationIcon from "../icons/location.png";
+import phoneIcon from "../icons/phone.png";
+import instagramIcon from "../icons/instagram.png";
+import linkedinIcon from "../icons/linkedin.png";
+import whatsappIcon from "../icons/whatsapp.png"
 
 const information = [
-    { icon: "image1.jpeg", text: "Adrress" },
-    { icon: "image2.jpeg", text: "(79) 99999-9999" },
-    { icon: "image3.jpeg", text: "contato@softeam.com" }
+    { icon: emailIcon, text: "Adrress" },
+    { icon: phoneIcon, text: "(79) 99999-9999" },
+    { icon: locationIcon, text: "contato@softeam.com" }
 ]
 
 const socialNetworks = [
-    { icon: "image1.jpeg",name:"Instagram" ,link: "Instagram.com" },
-    { icon: "image2.jpeg",name:"Linkedin", link: "Linkedin.com" },
-    { icon: "image3.jpeg",name:"Whatsapp", link: "Whatsapp.com" }
+    { icon: instagramIcon,name:"Instagram" ,link: "Instagram.com" },
+    { icon: linkedinIcon,name:"Linkedin", link: "Linkedin.com" },
+    { icon: whatsappIcon,name:"Whatsapp", link: "Whatsapp.com" }
 ]
 
 function Footer(): React.JSX.Element {
@@ -19,16 +26,20 @@ function Footer(): React.JSX.Element {
             <div className="information">
                 {information.map((info, index) => (
                     <div className="info" key={index}>
-                        <img src="{info.icon}" alt="{info.text}" />
+                        <div className="iconInfo">
+                            <Image src={info.icon} alt={info.text} width={25} />
+                            
+                        </div>
                         <p>{info.text}</p>
+                        
                     </div>
                 ))}
-                <p>Cafe e Paçoca</p>
+                <p>Café e Paçoca</p>
             </div>
             <div className="socialNetworks">
                 {socialNetworks.map((SN, index) => (
-                    <a key={index} href={SN.link}>
-                        <img src={SN.icon} alt={SN.name} />
+                    <a className="iconSN" key={index} href={SN.link} target="_blank" rel="noopener noreferrer">
+                        <Image  src={SN.icon} alt={SN.name} width={40} />
                     </a>
                 ))}
             </div>
