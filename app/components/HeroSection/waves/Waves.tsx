@@ -2,7 +2,7 @@ import React from "react";
 import Wave from "./Wave";
 import "./waves.css";
 
-function Waves({ d, fill }: { d: string; fill: string }): React.JSX.Element {
+function Waves({ d, fill, bg }: { d: string; fill: string; bg?: string }): React.JSX.Element {
   // JavaScript object to style the waves:
   const waveStyle: React.CSSProperties = {
     top: "0",
@@ -24,7 +24,10 @@ function Waves({ d, fill }: { d: string; fill: string }): React.JSX.Element {
   const arr = new Array(4).fill(0);
 
   return (
-    <div className="relative flex items-start mt-auto h-60 overflow-hidden" style={{ width: "200vw" }}>
+    <div
+      className={`relative flex items-start mt-auto h-60 overflow-hidden ${bg ? bg : ""}`}
+      style={{ width: "200vw" }}
+    >
       {arr.map((value, index: number) => {
         const opcty = calculateWaveOpacity(index, 4);
         return <Wave key={index} opcty={opcty} waveStyle={waveStyle} d={d} />;
