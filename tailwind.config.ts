@@ -14,7 +14,7 @@ export default {
         ["color-1"]: "#072763",
         ["color-2"]: "#1c58a8",
         ["color-3"]: "#1074bc",
-        ["color-4"]: "#0099ff",
+        ["color-4"]: "#114e7e",
         ["color-5"]: "#94d2ff",
       },
       backgroundColor: {
@@ -23,7 +23,7 @@ export default {
         ["color-1"]: "#072763",
         ["color-2"]: "#1c58a8",
         ["color-3"]: "#1074bc",
-        ["color-4"]: "#0099ff",
+        ["color-4"]: "#114e7e",
         ["color-5"]: "#94d2ff",
       },
     },
