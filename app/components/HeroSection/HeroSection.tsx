@@ -3,7 +3,8 @@ import Image from "next/image";
 import React from "react";
 import lamp from "../../../assets/lamp.png";
 import softeamLogo from "../../../assets/logo-softeam.svg";
-import Waves from "./waves";
+import About from "./about/About";
+import Waves from "./waves/Waves";
 
 const poppins = Poppins({
   weight: ["400", "700"],
@@ -52,6 +53,7 @@ function HeroSection(): React.JSX.Element {
           320,69,320,34,320L0,320Z"
         fill="#114e7e"
       />
+      <About />
     </main>
   );
 }
