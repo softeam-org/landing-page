@@ -1,5 +1,5 @@
 import React from "react";
-import About from "./about/About";
+import About from "../About/About";
 import Home from "./home/Home";
 import Waves from "./waves/Waves";
 
