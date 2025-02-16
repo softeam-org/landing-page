@@ -1,26 +1,67 @@
 html, body {
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
-.container{
+.container {
     display: flex;
+    flex-direction: row;
     background-color: #072763;
     width: 100%;
-
+    max-width: none;
+    padding: 20px;
+    justify-content: space-between;
 }
 
-.information{
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+.socialNetworks {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+    flex-direction: row;
+    gap: 20px;
     justify-content: center;
     width: 50%;
-    border: solid 1px ;
     margin-top: 20px;
 }
 
+
+@media (max-width: 768px) {
+    .socialNetworks {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+    border: solid 1px;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+
+@media (max-width: 768px) {
+    .information {
+        width: 100%;
+        align-items: start;
+        text-align: center;
+    }
+}
 
 .info{
     display: flex;
@@ -31,38 +72,36 @@ html, body {
     
 }
 
-.socialNetworks{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items:flex-start;
-    justify-content:center;
-    width: 50%;
-    border: solid 1px ;
-    margin-top: 20px;
-    
-}
 
-.iconInfo{
+.iconInfo {
     background-color: white;
     border-radius: 20px;
     padding: 5px;
+    display: flex;
     align-items: center;
     justify-content: center;
     
-    
 }
 
-.iconSN{
+
+.iconSN {
     background-color: #ffff;
-    border-radius: 30px;
-    padding: 5px;
-    align-items: center;
-    justify-content: center;
+    border-radius: 20px;
+    padding: 8px;
     width: 50px;
-    height:50px;
+    height: 50px;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.iconSN :hover{
-    background-color: aquamarine;
+
+.linkSN1:hover .iconSN {
+    background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+}
+
+.linkSN2:hover .iconSN {
+    background-color: #0e76a8;
+}
+
+.linkSN3:hover .iconSN {
+    background-color: #25D366;
 }

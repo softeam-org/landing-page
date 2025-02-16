@@ -8,17 +8,22 @@ import instagramIcon from "../icons/instagram.png";
 import linkedinIcon from "../icons/linkedin.png";
 import whatsappIcon from "../icons/whatsapp.png"
 
+const textBotton = "Software Team 2025 \u00A9 :: Feito com Café e Paçoca";
+
 const information = [
-    { icon: emailIcon, text: "Adrress" },
+    { icon: locationIcon, text: "Av. Marechal Rondon,S/N | Departamento de Computacao - UFS" },
     { icon: phoneIcon, text: "(79) 99999-9999" },
-    { icon: locationIcon, text: "contato@softeam.com" }
+    { icon: emailIcon, text: "contato@softeam.com" },
+    
 ]
 
 const socialNetworks = [
-    { icon: instagramIcon,name:"Instagram" ,link: "Instagram.com" },
-    { icon: linkedinIcon,name:"Linkedin", link: "Linkedin.com" },
-    { icon: whatsappIcon,name:"Whatsapp", link: "Whatsapp.com" }
+    { icon: instagramIcon,name:"Instagram" ,link: "Instagram.com" ,effectHover:"linkSN1"},
+    { icon: linkedinIcon,name:"Linkedin", link: "Linkedin.com",effectHover:"linkSN2" },
+    { icon: whatsappIcon,name:"Whatsapp", link: "Whatsapp.com",effectHover:"linkSN3"}
 ]
+
+
 
 function Footer(): React.JSX.Element {
     return (
@@ -34,12 +39,12 @@ function Footer(): React.JSX.Element {
                         
                     </div>
                 ))}
-                <p>Café e Paçoca</p>
+                <p>{textBotton}</p>
             </div>
             <div className="socialNetworks">
                 {socialNetworks.map((SN, index) => (
-                    <a className="iconSN" key={index} href={SN.link} target="_blank" rel="noopener noreferrer">
-                        <Image  src={SN.icon} alt={SN.name} width={40} />
+                    <a className={SN.effectHover}  key={index} href={SN.link} target="_blank" rel="noopener noreferrer">
+                        <Image className="iconSN"  src={SN.icon} alt={SN.name} width={40} />
                     </a>
                 ))}
             </div>
