@@ -12,6 +12,7 @@ html, body {
     max-width: none;
     padding: 20px;
     justify-content: space-between;
+    color: white;
 }
 
 
@@ -49,7 +50,6 @@ html, body {
     align-items: flex-start;
     justify-content: center;
     width: 50%;
-    border: solid 1px;
     padding: 20px;
     margin-left: 20px;
 }
@@ -91,17 +91,22 @@ html, body {
     width: 50px;
     height: 50px;
     transition: background-color 0.3s ease-in-out;
+    
 }
 
 
-.linkSN1:hover .iconSN {
+.linkSN1:hover .iconSN:hover {
     background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+    box-shadow: 2px 2px 2px white;
+    
 }
 
-.linkSN2:hover .iconSN {
+.linkSN2:hover .iconSN:hover {
     background-color: #0e76a8;
+    box-shadow: 2px 2px 2px white;
 }
 
-.linkSN3:hover .iconSN {
+.linkSN3:hover .iconSN:hover {
     background-color: #25D366;
+    box-shadow: 2px 2px 2px white;
 }

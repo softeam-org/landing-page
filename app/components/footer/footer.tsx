@@ -1,12 +1,12 @@
 import Image from "next/image";
 import React from "react";
 import "./footer.css";
-import emailIcon from "../icons/email.png";
-import locationIcon from "../icons/location.png";
-import phoneIcon from "../icons/phone.png";
-import instagramIcon from "../icons/instagram.png";
-import linkedinIcon from "../icons/linkedin.png";
-import whatsappIcon from "../icons/whatsapp.png"
+import emailIcon from "../footer/icons/email.png";
+import locationIcon from "../footer/icons/location.png";
+import phoneIcon from "../footer/icons/phone.png";
+import instagramIcon from "../footer/icons/instagram.png";
+import linkedinIcon from "../footer/icons/linkedin.png";
+import whatsappIcon from "../footer/icons/whatsapp.png"
 
 const textBotton = "Software Team 2025 \u00A9 :: Feito com Café e Paçoca";
 
@@ -39,7 +39,7 @@ function Footer(): React.JSX.Element {
                         
                     </div>
                 ))}
-                <p>{textBotton}</p>
+                <p className="textBotton">{textBotton}</p>
             </div>
             <div className="socialNetworks">
                 {socialNetworks.map((SN, index) => (
