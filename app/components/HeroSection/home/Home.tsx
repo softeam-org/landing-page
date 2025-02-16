@@ -1,20 +1,8 @@
-import { Open_Sans, Poppins } from "next/font/google";
+import { openSans, poppins } from "@/app/layout";
 import Image from "next/image";
 import React from "react";
 import lamp from "../../../../assets/lamp.png";
 import softeamLogo from "../../../../assets/logo-softeam.svg";
-
-const poppins = Poppins({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const openSans = Open_Sans({
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-});
 
 function Home(): React.JSX.Element {
   return (
