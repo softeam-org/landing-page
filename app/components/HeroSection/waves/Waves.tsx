@@ -25,7 +25,7 @@ function Waves({ d, fill, bg }: { d: string; fill: string; bg?: string }): React
 
   return (
     <div
-      className={`relative flex items-start mt-auto h-52 overflow-hidden ${bg ? bg : ""}`}
+      className={`relative flex items-start mt-auto h-40 overflow-hidden ${bg ? bg : ""}`}
       style={{ width: "200vw" }}
     >
       {arr.map((value, index: number) => {
