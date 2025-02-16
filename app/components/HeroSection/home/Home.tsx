@@ -6,25 +6,34 @@ import softeamLogo from "../../../../assets/logo-softeam.svg";
 
 function Home(): React.JSX.Element {
   return (
-    <section className="w-full px-32 flex flex-col">
-      <div className="w-full h-full flex items-center justify-between">
-        <div className={`text-white text-7xl flex flex-col gap-y-1 ${poppins.className}`}>
-          <article className="flex gap-x-3">
+    <section
+      className="w-full h-fit px-32 max-xl:px-16 max-lg:px-10 max-md:px-6 flex flex-col max-md:mt-10
+        max-sm:my-20 max-xs:my-24"
+    >
+      <div className="w-full flex items-center justify-between">
+        <article
+          className={`${poppins.className} text-white text-7xl max-xl:text-6xl max-lg:text-5xl max-xs:text-3xl
+          max-xxs:text-2xl flex flex-col gap-y-1 max-lg:gap-y-2 max-md:items-center`}
+        >
+          <div className="flex gap-x-3 max-md:justify-center">
             <p>Nós</p>
             <p className="font-bold">transformamos</p>
-          </article>
-          <article className="flex gap-3">
+          </div>
+          <div className="flex gap-3 max-md:justify-center items-center">
             <p>suas</p>
-            <Image alt="lamp" src={lamp} />
+            <Image alt="lamp" src={lamp} className="max-lg:h-14 max-lg:w-auto" />
             <p className="font bold">ideias</p>
             <p>em</p>
-          </article>
-          <p className="font-bold mb-3">realidade</p>
-          <p className={`w-2/3 text-2xl font-medium tracking-wider ${openSans.className}`}>
+          </div>
+          <p className="font-bold mb-3 max-md:text-6xl max-sm:text-5xl">realidade</p>
+          <p
+            className={`${openSans.className} w-2/3 max-md:w-5/6 text-2xl max-xl:text-xl max-md:text-lg max-sm:text-base
+            font-medium tracking-wider max-md:text-center`}
+          >
             Desenvolvemos soluções de qualidade com o maior custo benefício do mercado para fazer seu projeto decolar!
           </p>
-        </div>
-        <Image alt="softeam-logo" src={softeamLogo} className="w-auto h-7/12" />
+        </article>
+        <Image alt="softeam-logo" src={softeamLogo} className="w-2/5 md:w-1/3 h-auto max-md:hidden" />
       </div>
     </section>
   );

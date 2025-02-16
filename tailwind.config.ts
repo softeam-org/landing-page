@@ -26,6 +26,10 @@ export default {
         ["color-4"]: "#114e7e",
         ["color-5"]: "#94d2ff",
       },
+      screens: {
+        xs: "540px",
+        xxs: "370px",
+      },
     },
   },
   plugins: [],
