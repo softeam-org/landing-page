@@ -12,15 +12,15 @@ const textBotton = "Software Team 2025 \u00A9 :: Feito com Café e Paçoca";
 
 const information = [
     { icon: locationIcon, text: "Av. Marechal Rondon,S/N | Departamento de Computacao - UFS" },
-    { icon: phoneIcon, text: "(79) 99999-9999" },
-    { icon: emailIcon, text: "contato@softeam.com" },
+    { icon: phoneIcon, text: "+55 79 8100-0041" },
+    { icon: emailIcon, text: "contato@softeam.com.br" },
     
 ]
 
 const socialNetworks = [
-    { icon: instagramIcon,name:"Instagram" ,link: "Instagram.com" ,effectHover:"linkSN1"},
-    { icon: linkedinIcon,name:"Linkedin", link: "Linkedin.com",effectHover:"linkSN2" },
-    { icon: whatsappIcon,name:"Whatsapp", link: "Whatsapp.com",effectHover:"linkSN3"}
+    { icon: instagramIcon,name:"Instagram" ,link: "https://www.instagram.com/softeam.ejc/" ,effectHover:"linkSN1"},
+    { icon: linkedinIcon,name:"Linkedin", link: "https://www.linkedin.com/company/softeam-ejc",effectHover:"linkSN2" },
+    { icon: whatsappIcon,name:"Whatsapp", link: "https://wa.me/+557981000041",effectHover:"linkSN3"}
 ]
 
 
