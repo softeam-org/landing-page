@@ -1,4 +1,4 @@
-import { openSans, poppins } from "@/app/layout";
+import { openSans, poppins } from "@/app/ts/fonts";
 import Image from "next/image";
 import React from "react";
 import lamp from "../../../../assets/lamp.png";

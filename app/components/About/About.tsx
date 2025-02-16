@@ -1,4 +1,4 @@
-import { openSans, poppins } from "@/app/layout";
+import { openSans, poppins } from "@/app/ts/fonts";
 import React from "react";
 import { FaCircle } from "react-icons/fa";
 
@@ -6,7 +6,7 @@ function About(): React.JSX.Element {
   return (
     <section className="w-full min-h-screen flex flex-col gap-12 px-44 pt-6 text-white bg-color-1">
       {/* Quem Somos */}
-      <article className="flex flex-col gap-6 ">
+      <article className="flex flex-col gap-6">
         <h2 className={`font-bold text-2xl tracking-wide ${openSans.className}`}>QUEM SOMOS</h2>
         <div className="flex flex-col gap-3">
           <p className={`text-lg font-light ${poppins.className}`}>
