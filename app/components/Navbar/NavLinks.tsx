@@ -1,12 +1,12 @@
-import Link from 'next/link';
-
+import Link from "next/link";
+import { JSX } from "react";
 
 export interface NavLinksProps {
   url: string;
   label: string;
 }
 
-export function NavLinks(props : NavLinksProps) {
+export function NavLinks(props: NavLinksProps): JSX.Element {
   return (
     <div className="hidden sm:ml-6 sm:block">
       <div className="flex space-x-4">
