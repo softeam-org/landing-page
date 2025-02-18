@@ -7,8 +7,8 @@ import softeamLogo from "../../../../assets/logo-softeam.svg";
 function Home(): React.JSX.Element {
   return (
     <section
-      className="w-full h-fit px-32 max-xl:px-16 max-lg:px-10 max-md:px-6 flex flex-col max-md:mt-10
-        max-sm:my-20 max-xs:my-24"
+      className="w-full h-fit px-32 max-xl:px-16 max-lg:px-10 max-md:px-6 flex flex-col max-xl:mb-12 max-lg:my-10
+        max-md:mt-16 max-md:mb-6 max-sm:my-16 max-xs:mt-20"
     >
       <div className="w-full flex items-center justify-between">
         <article

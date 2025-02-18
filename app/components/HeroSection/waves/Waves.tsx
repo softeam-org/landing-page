@@ -33,7 +33,7 @@ function Waves({ d, fill, bg, hClass }: WavesProps): React.JSX.Element {
   return (
     <div
       className={`relative flex items-start mt-auto ${hClass}  overflow-hidden ${bg ? bg : ""}`}
-      style={{ width: "200vw" }}
+      style={{ width: "150vw" }}
     >
       {arr.map((value, index: number) => {
         const opcty = calculateWaveOpacity(index, 4);
