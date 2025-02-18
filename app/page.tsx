@@ -1,7 +1,6 @@
 import React from "react";
+import Footer from "./components/footer/footer";
 import HeroSection from "./components/HeroSection/HeroSection";
-import Image from "next/image";
-import  Footer  from "./components/footer/footer";
 
 function App(): React.JSX.Element {
   return (
