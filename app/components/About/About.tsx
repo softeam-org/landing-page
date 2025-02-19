@@ -23,7 +23,7 @@ function About(): React.JSX.Element {
         </div>
       </article>
       {/* Missão/Visão */}
-      <article className="grid grid-cols-2 gap-10">
+      <article className="grid grid-cols-2 items-stretch justify-items-center gap-10">
         <MissionVisionCard
           misVisName="MISSÃO"
           misVisText="Formar profissionais diferenciados e líderes preparados,
