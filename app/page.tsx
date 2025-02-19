@@ -1,6 +1,6 @@
 import React from "react";
-import Footer from "./components/footer/footer";
 import HeroSection from "./components/HeroSection/HeroSection";
+import Footer from "./components/footer/footer";
 
 function App(): React.JSX.Element {
   return (
