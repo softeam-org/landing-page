@@ -1,9 +1,9 @@
 import { openSans, poppins } from "@/app/ts/fonts";
 import React from "react";
-import { AiTwotoneAlert } from "react-icons/ai";
+import { AiOutlineAlert } from "react-icons/ai";
 import { FaHandHoldingHeart, FaRegCalendarCheck } from "react-icons/fa";
 import { HiUserGroup } from "react-icons/hi2";
-import { PiCastleTurretDuotone, PiHandFistDuotone, PiSunHorizonDuotone, PiTarget } from "react-icons/pi";
+import { PiCastleTurret, PiHandFist, PiSunHorizonDuotone, PiTarget } from "react-icons/pi";
 
 import MissionVisionCard from "./MissionVision/MissionVisionCard";
 import ValueCard from "./Values/ValueCard";
@@ -47,7 +47,7 @@ function About(): React.JSX.Element {
         />
       </article>
       <article>
-        <p className="text-center">Nossos serviços são desenvolvidos pensando no cliente.</p>
+        <p className="text-center text-lg">Nossos serviços são desenvolvidos pensando no cliente.</p>
         <p className="text-center">
           A partir dos desafios que recebemos, criamos soluções que visam trazer o melhor retorno possível.
         </p>
@@ -57,10 +57,10 @@ function About(): React.JSX.Element {
         <div className="grid grid-cols-3 items-stretch gap-10">
           <ValueCard valueIcon={FaHandHoldingHeart} valueName="Paixão pelo que fazemos" />
           <ValueCard valueIcon={FaRegCalendarCheck} valueName="Compromisso com resultados" />
-          <ValueCard valueIcon={AiTwotoneAlert} valueName="Autocrítica com nossas soluções" />
+          <ValueCard valueIcon={AiOutlineAlert} valueName="Autocrítica com nossas soluções" />
           <ValueCard valueIcon={HiUserGroup} valueName="União entre a equipe" />
-          <ValueCard valueIcon={PiHandFistDuotone} valueName="Garra para encarar desafios" />
-          <ValueCard valueIcon={PiCastleTurretDuotone} valueName="Se divertir para criar" />
+          <ValueCard valueIcon={PiHandFist} valueName="Garra para encarar desafios" />
+          <ValueCard valueIcon={PiCastleTurret} valueName="Se divertir para criar" />
         </div>
       </article>
     </section>
