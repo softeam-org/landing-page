@@ -10,7 +10,10 @@ interface MisVisCardProps {
 
 function MissionVisionCard({ misVisName, misVisText, misVisIcon: Icon }: MisVisCardProps): React.JSX.Element {
   return (
-    <div className={`flex flex-col w-2/3 p-10 gap-4 rounded-md ${poppins.className} bg-color-2`}>
+    <div
+      className={`flex flex-col w-2/3 p-10 gap-4 shadow-[0_0_2px_2px_#94d2ff]
+       rounded-md cursor-pointer ${poppins.className} bg-color-2`}
+    >
       <div className="flex w-fit items-center gap-2 justify-center">
         <Icon className="w-auto h-10" />
         <h3 className="text-2xl font-bold">{misVisName}</h3>
