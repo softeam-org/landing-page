@@ -10,9 +10,7 @@ import ValueCard from "./Values/ValueCard";
 
 function About(): React.JSX.Element {
   return (
-    <section
-      className={`w-full min-h-screen flex flex-col gap-16 px-44 pt-12 ${poppins.className} text-white bg-color-1`}
-    >
+    <section className={`w-full flex flex-col gap-16 px-44 pt-12 ${poppins.className} text-white bg-color-1`}>
       {/* Quem Somos */}
       <article className="flex flex-col gap-6">
         <h2 className={`font-bold text-2xl tracking-wide ${openSans.className}`}>QUEM SOMOS</h2>
