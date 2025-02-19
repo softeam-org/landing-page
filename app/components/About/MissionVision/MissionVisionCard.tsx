@@ -12,7 +12,7 @@ function MissionVisionCard({ misVisName, misVisText, misVisIcon: Icon }: MisVisC
   return (
     <div className={`flex flex-col w-2/3 p-10 gap-4 rounded-md ${poppins.className} bg-color-2`}>
       <div className="flex w-fit items-center gap-2 justify-center">
-        <Icon />
+        <Icon className="w-auto h-10" />
         <h3 className="text-2xl font-bold">{misVisName}</h3>
       </div>
       <p className="text-sm font-medium tracking-wide">{misVisText}</p>
