@@ -1,7 +1,7 @@
 import { openSans, poppins } from "@/app/ts/fonts";
 import React from "react";
 import { PiSunHorizonDuotone, PiTarget } from "react-icons/pi";
-import MissionVisionCard from "./MissionVisionCard";
+import MissionVisionCard from "./MissionVision/MissionVisionCard";
 
 function About(): React.JSX.Element {
   return (
