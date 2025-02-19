@@ -1,6 +1,7 @@
 import { openSans, poppins } from "@/app/ts/fonts";
 import React from "react";
-import { FaCircle } from "react-icons/fa";
+import { PiSunHorizonDuotone, PiTarget } from "react-icons/pi";
+import MissionVisionCard from "./MissionVisionCard";
 
 function About(): React.JSX.Element {
   return (
@@ -22,27 +23,21 @@ function About(): React.JSX.Element {
         </div>
       </article>
       {/* Missão/Visão */}
-      <article className="flex flex-col items-center gap-10">
-        <div className="w-2/5 flex flex-row gap-1">
-          <div className="flex flex-col gap-3">
-            <h3 className={`text-xl font-bold ${openSans.className}`}>MISSÃO</h3>
-            <p className={`text-lg font-light ${poppins.className}`}>
-              “Formar profissionais diferenciados e líderes preparados, viabilizando soluções tecnológicas inovadoras e
-              acessíveis, que impulsionam o crescimento de nossos clientes e transformam o mercado.”
-            </p>
-          </div>
-          <FaCircle className="w-80 h-fit top-0" />
-        </div>
-        <div className="w-2/5 flex flex-row-reverse gap-3">
-          <div className="flex flex-col gap-3">
-            <h3 className={`text-xl font-bold ${openSans.className}`}>VISÃO</h3>
-            <p className={`text-lg font-light ${poppins.className}`}>
-              “Consolidar a SofTeam como líder em desenvolvimento tecnológico no MEJ, oferecendo soluções modernas e
-              acessíveis, enquanto cultivamos líderes preparados para transformar o mercado”.
-            </p>
-          </div>
-          <FaCircle className="w-80 h-fit top-0" />
-        </div>
+      <article className="grid grid-cols-2 gap-10">
+        <MissionVisionCard
+          misVisName="MISSÃO"
+          misVisText="Formar profissionais diferenciados e líderes preparados,
+            viabilizando soluções tecnológicas inovadoras e acessíveis, que
+            impulsionam o crescimento de nossos clientes e transformam o mercado."
+          misVisIcon={PiTarget}
+        />
+        <MissionVisionCard
+          misVisName="VISÃO"
+          misVisText="Consolidar a SofTeam como líder em desenvolvimento tecnológico
+            no MEJ, oferecendo soluções modernas e acessíveis, enquanto cultivamos líderes
+            preparados para transformar o mercado."
+          misVisIcon={PiSunHorizonDuotone}
+        />
       </article>
     </section>
   );
