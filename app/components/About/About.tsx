@@ -10,7 +10,10 @@ import ValueCard from "./Values/ValueCard";
 
 function About(): React.JSX.Element {
   return (
-    <section className={`w-full flex flex-col gap-16 px-44 pt-12 ${poppins.className} text-white bg-color-1`}>
+    <section
+      className={`w-full flex flex-col gap-16 px-44 max-xl:px-36 max-lg:px-30 py-12 ${poppins.className}
+      text-white bg-color-1`}
+    >
       {/* Quem Somos */}
       <article className="flex flex-col gap-6">
         <h2 className={`font-bold text-2xl tracking-wide ${openSans.className}`}>QUEM SOMOS</h2>
@@ -52,7 +55,7 @@ function About(): React.JSX.Element {
       </article>
       <article className="flex flex-col gap-10">
         <h3 className="text-2xl text-center font-semibold">VALORES</h3>
-        <div className="grid grid-cols-3 items-stretch gap-10">
+        <div className="grid grid-cols-3 min-w-80 items-stretch gap-10 max-xl:gap-9">
           <ValueCard valueIcon={FaHandHoldingHeart} valueName="Paixão pelo que fazemos" />
           <ValueCard valueIcon={FaRegCalendarCheck} valueName="Compromisso com resultados" />
           <ValueCard valueIcon={AiOutlineAlert} valueName="Autocrítica com nossas soluções" />
