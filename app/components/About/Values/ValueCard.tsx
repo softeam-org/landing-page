@@ -11,11 +11,11 @@ interface ValueCardProps {
 function ValueCard({ valueName, valueIcon: Icon }: ValueCardProps): React.JSX.Element {
   return (
     <div
-      className="flex flex-col items-center px-10 py-14 gap-4 rounded-md cursor-pointer
+      className="flex flex-col items-center rounded-md cursor-pointer h-48
         shadow-[0_0_5px_1px_#114e7e] ease-out duration-200 hover:bg-color-2"
     >
-      <Icon className="w-auto h-8 mb-2" />
-      <p className="font-semibold text-2xl text-center">{valueName}</p>
+      <Icon className="w-auto h-8" />
+      <p className="font-semibold text-2xl max-xl:text-xl text-center">{valueName}</p>
     </div>
   );
 }
