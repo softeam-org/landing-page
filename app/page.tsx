@@ -1,6 +1,7 @@
 import React from "react";
-import Footer from "./components/footer/footer";
+import About from "./components/About/About";
 import HeroSection from "./components/HeroSection/HeroSection";
+import Footer from "./components/footer/footer";
 import Navbar from "./components/Navbar/index"
 
 function App(): React.JSX.Element {
@@ -11,6 +12,7 @@ function App(): React.JSX.Element {
     <Navbar/>
 
       <HeroSection />
+      <About />
       <Footer />
     </div>
   );

@@ -1,7 +1,7 @@
 import { Open_Sans, Poppins, League_Spartan } from "next/font/google";
 
 export const poppins = Poppins({
-  weight: ["200", "300", "400", "700"],
+  weight: ["200", "300", "400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
 });
