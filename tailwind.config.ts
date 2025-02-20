@@ -30,6 +30,9 @@ export default {
         xs: "540px",
         xxs: "370px",
       },
+      width: {
+        ["7/10"]: "70%",
+      },
     },
   },
   plugins: [],
