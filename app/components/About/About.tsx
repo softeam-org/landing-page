@@ -13,8 +13,8 @@ import ValueCard from "./Values/ValueCard";
 function About(): React.JSX.Element {
   return (
     <section
-      className={`w-full flex flex-col gap-16 px-44 max-xl:px-36 max-lg:px-16 max-md:px-10 max-xs:px-14 py-12 ${poppins.className}
-      text-white bg-color-1`}
+      className={`w-full flex flex-col gap-16 px-44 max-xl:px-36 max-lg:px-16 max-md:px-10 max-xs:px-14
+        py-12 ${poppins.className} text-white bg-color-1`}
     >
       {/* Quem Somos */}
       <article className="flex flex-col gap-6">
@@ -55,6 +55,7 @@ function About(): React.JSX.Element {
           A partir dos desafios que recebemos, criamos soluções que visam trazer o melhor retorno possível.
         </p>
       </article>
+      {/* Softeam Values */}
       <article className="w-full flex flex-col gap-10">
         <h3 className="text-2xl text-center font-semibold">VALORES</h3>
         <div
