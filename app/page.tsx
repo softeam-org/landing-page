@@ -1,9 +1,15 @@
-import Navbar from "./components/Navbar";
+import React from "react";
+import Footer from "./components/footer/footer";
+import HeroSection from "./components/HeroSection/HeroSection";
 
-import { FC } from "react";
+function App(): React.JSX.Element {
+  return (
+    <div className="w-full min-h-screen flex flex-col overflow-x-hidden">
+      <div className="w-full h-24 fixed"></div>
+      <HeroSection />
+      <Footer />
+    </div>
+  );
+}
 
-const Home: FC = () => {
-  return <Navbar />;
-};
-
-export default Home;
+export default App;
