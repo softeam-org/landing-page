@@ -1,5 +1,7 @@
+"use client";
+
 import { openSans, poppins } from "@/app/ts/fonts";
-import React from "react";
+import React, { useEffect } from "react";
 import { AiOutlineAlert } from "react-icons/ai";
 import { FaHandHoldingHeart, FaRegCalendarCheck } from "react-icons/fa";
 import { HiUserGroup } from "react-icons/hi2";
@@ -9,9 +11,17 @@ import MissionVisionCard from "./MissionVision/MissionVisionCard";
 import ValueCard from "./Values/ValueCard";
 
 function About(): React.JSX.Element {
+  useEffect(() => {
+    const handleResize = (): void => {
+      document.title = window.innerWidth.toString() + "px";
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <section
-      className={`w-full flex flex-col gap-16 px-44 max-xl:px-36 max-lg:px-30 py-12 ${poppins.className}
+      className={`w-full flex flex-col gap-16 px-44 max-xl:px-36 max-lg:px-16 max-md:px-10 max-xs:px-14 py-12 ${poppins.className}
       text-white bg-color-1`}
     >
       {/* Quem Somos */}
@@ -31,7 +41,7 @@ function About(): React.JSX.Element {
         </div>
       </article>
       {/* Missão/Visão */}
-      <article className="grid grid-cols-2 items-stretch justify-items-center">
+      <article className="grid grid-cols-2 max-sm:grid-cols-1 items-stretch justify-items-center max-md:gap-7">
         <MissionVisionCard
           misVisName="MISSÃO"
           misVisText="Formar profissionais diferenciados e líderes preparados,
@@ -49,13 +59,16 @@ function About(): React.JSX.Element {
       </article>
       <article>
         <p className="text-center text-lg">Nossos serviços são desenvolvidos pensando no cliente.</p>
-        <p className="text-center">
+        <p className="text-center text-lg">
           A partir dos desafios que recebemos, criamos soluções que visam trazer o melhor retorno possível.
         </p>
       </article>
-      <article className="flex flex-col gap-10">
+      <article className="w-full flex flex-col gap-10">
         <h3 className="text-2xl text-center font-semibold">VALORES</h3>
-        <div className="grid grid-cols-3 min-w-80 items-stretch gap-10 max-xl:gap-9">
+        <div
+          className="grid grid-cols-3 max-md:grid-cols-2 max-xs:grid-cols-1 w-full items-stretch gap-10
+            max-xl:gap-9 max-lg:gap-7"
+        >
           <ValueCard valueIcon={FaHandHoldingHeart} valueName="Paixão pelo que fazemos" />
           <ValueCard valueIcon={FaRegCalendarCheck} valueName="Compromisso com resultados" />
           <ValueCard valueIcon={AiOutlineAlert} valueName="Autocrítica com nossas soluções" />
