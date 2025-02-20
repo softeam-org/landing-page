@@ -1,7 +1,7 @@
 "use client";
 
 import { openSans, poppins } from "@/app/ts/fonts";
-import React, { useEffect } from "react";
+import React from "react";
 import { AiOutlineAlert } from "react-icons/ai";
 import { FaHandHoldingHeart, FaRegCalendarCheck } from "react-icons/fa";
 import { HiUserGroup } from "react-icons/hi2";
@@ -11,14 +11,6 @@ import MissionVisionCard from "./MissionVision/MissionVisionCard";
 import ValueCard from "./Values/ValueCard";
 
 function About(): React.JSX.Element {
-  useEffect(() => {
-    const handleResize = (): void => {
-      document.title = window.innerWidth.toString() + "px";
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <section
       className={`w-full flex flex-col gap-16 px-44 max-xl:px-36 max-lg:px-16 max-md:px-10 max-xs:px-14 py-12 ${poppins.className}
