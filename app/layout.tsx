@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import React from "react";
 import "./globals.css";
+import { JSX } from "react";
 
 export const metadata: Metadata = {
   title: "Softeam",
