@@ -31,7 +31,13 @@ function Home(): React.JSX.Element {
             Desenvolvemos soluções de qualidade com o maior custo benefício do mercado para fazer seu projeto decolar!
           </p>
         </article>
-        <Image alt="softeam-logo" src="/logo-softeam.svg" className="w-2/5 md:w-1/3 h-auto max-md:hidden" width={100} height={100} />
+        <Image
+          alt="softeam-logo"
+          src="/logo-softeam.svg"
+          className="w-2/5 md:w-1/3 h-auto max-md:hidden"
+          width={100}
+          height={100}
+        />
       </div>
     </section>
   );
