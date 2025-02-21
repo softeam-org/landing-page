@@ -19,7 +19,7 @@ jobs:
         run: npm run build
 
       - name: Upload to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           server: ${{ secrets.ftp_host }}
           username: ${{ secrets.ftp_username }}
