@@ -35,7 +35,7 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git checkout -B deploy  # Create or switch to the deploy branch
           rm -rf *  # Clear existing files in the deploy branch
-          cp -R output/* .  # Copy output files to the root
+          cp -R output/* . || echo "No files to copy from output."  # Check if files exist before copying
           git add .
           git commit -m "Deploy Next.js build" || echo "Nothing to commit"
           git push origin deploy --force  # Push to the deploy branch
