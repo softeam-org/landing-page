@@ -33,8 +33,11 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add output
+          git checkout -B deploy  # Create or switch to the deploy branch
+          rm -rf *  # Clear existing files in the deploy branch
+          cp -R output/* .  # Copy output files to the root
+          git add .
           git commit -m "Deploy Next.js build" || echo "Nothing to commit"
-          git push origin HEAD:deploy --force  # Push to the deploy branch
+          git push origin deploy --force  # Push to the deploy branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
