@@ -1,7 +1,6 @@
 import { leagueSpartan } from "@/app/ts/fonts";
 import Link from "next/link";
-import React from "react";
-import { JSX } from "react";
+import React, { JSX } from "react";
 
 export interface NavButtonsProps {
   url: string;
