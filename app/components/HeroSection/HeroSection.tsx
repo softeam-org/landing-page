@@ -4,7 +4,7 @@ import Waves from "./waves/Waves";
 
 function HeroSection(): React.JSX.Element {
   return (
-    <main className="w-full flex flex-col pt-36 overflow-x-hidden overflow-y-auto bg-color-3">
+    <main className="w-full flex flex-col pt-20 overflow-x-hidden overflow-y-auto bg-color-3">
       <Home />
       <Waves
         fill="#114e7e"
