@@ -9,15 +9,14 @@ export interface NavLinksProps {
 
 export function NavLinks(props: NavLinksProps): JSX.Element {
   return (
-    <div className="hidden sm:ml-4 sm:block">
-      <div className="flex space-x-4">
+    <div className="hidden h-full group sm:block">
+      <div className="flex h-full group-hover:cursor-pointer items-center space-x-4">
         <Link
           href={props.url}
-          className={`${
-            leagueSpartan.className
-          } rounded-md px-1 py-2 font-normal text-white text-lg hover:bg-blue-1C58A8`}
+          className={`${leagueSpartan.className} rounded-md flex justify-center h-5/6 px-2 items-center
+          font-normal text-white text-lg hover:bg-blue-1C58A8 cursor-pointer ease-out duration-200`}
         >
-          {props.label}
+          <p>{props.label}</p>
         </Link>
       </div>
     </div>

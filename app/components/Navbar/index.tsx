@@ -1,15 +1,15 @@
 "use client";
 
-import Image from "next/image";
-import { NavLinks, NavLinksProps } from "./NavLinks";
-import { NavButtons, NavButtonsProps } from "./NavButtons";
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import { FaArrowRightToBracket } from "react-icons/fa6";
 import { LuTextSearch } from "react-icons/lu";
+import { NavButtons, NavButtonsProps } from "./NavButtons";
+import { NavLinks, NavLinksProps } from "./NavLinks";
 
-import { FC } from "react";
 import Link from "next/link";
+import { FC } from "react";
 
 const Navbar: FC = () => {
   const links: NavLinksProps[] = [
@@ -26,14 +26,14 @@ const Navbar: FC = () => {
 
   return (
     <Disclosure as="nav" className="bg-blue-1074BC">
-      <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+      <div className="w-full  px-32 max-xl:px-16 max-lg:px-10 max-md:px-6">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
             <DisclosureButton
-              className="group relative inline-flex 
-              items-center 
-              justify-center rounded-md p-2 
-              text-white hover:bg-blue-1C58A8 focus:ring-2 
+              className="group relative inline-flex
+              items-center
+              justify-center rounded-md p-2
+              text-white hover:bg-blue-1C58A8 focus:ring-2
               focus:ring-white focus:outline-hidden focus:ring-inset"
             >
               {({ open }) => (
@@ -59,7 +59,7 @@ const Navbar: FC = () => {
               </Link>
             </div>
             <div className="hidden md:ml-6 md:block">
-              <div className="flex space-x-4">
+              <div className="flex justify-between items-center gap-4 h-full">
                 {links.map((link, index) => (
                   <NavLinks key={index} url={link.url} label={link.label} />
                 ))}
