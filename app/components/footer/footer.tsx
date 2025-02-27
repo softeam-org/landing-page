@@ -6,11 +6,8 @@ const textBotton = "Software Team 2025 \u00A9 :: Feito com Café e Paçoca";
 
 const information = [
   { icon: "/email.png", text: "contato@softeam.com.br" },
-  { icon: "/instagram.png", text: "Instagram" },
-  { icon: "/linkedin.png", text: "LinkedIn" },
   { icon: "/location.png", text: "Av. Marechal Rondon, S/N | Departamento de Computacao - UFS" },
   { icon: "/phone.png", text: "+55 79 8100-0041" },
-  { icon: "/whatsapp.png", text: "Whatsapp" },
 ];
 
 const socialNetworks = [
