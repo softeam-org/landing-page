@@ -1,8 +1,6 @@
 import { openSans, poppins } from "@/app/ts/fonts";
 import Image from "next/image";
 import React from "react";
-import lamp from "../../../../assets/lamp.png";
-import softeamLogo from "../../../../assets/logo-softeam.svg";
 
 function Home(): React.JSX.Element {
   return (
@@ -21,8 +19,8 @@ function Home(): React.JSX.Element {
           </div>
           <div className="flex gap-3 max-md:justify-center items-center">
             <p>suas</p>
-            <Image alt="lamp" src={lamp} className="max-lg:h-14 max-lg:w-auto" />
-            <p className="font bold">ideias</p>
+            <Image alt="lamp" src="/lamp.png" className="max-lg:h-14 max-lg:w-auto" width={40} height={40} />
+            <p className="font-bold">ideias</p>
             <p>em</p>
           </div>
           <p className="font-bold mb-3 max-md:text-6xl max-sm:text-5xl">realidade</p>
@@ -33,9 +31,16 @@ function Home(): React.JSX.Element {
             Desenvolvemos soluções de qualidade com o maior custo benefício do mercado para fazer seu projeto decolar!
           </p>
         </article>
-        <Image alt="softeam-logo" src={softeamLogo} className="w-2/5 md:w-1/3 h-auto max-md:hidden" />
+        <Image
+          alt="softeam-logo"
+          src="/logo-softeam.svg"
+          className="w-2/5 md:w-1/3 h-auto max-md:hidden"
+          width={100}
+          height={100}
+        />
       </div>
     </section>
   );
 }
+
 export default Home;
