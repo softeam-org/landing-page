@@ -19,7 +19,13 @@ function Home(): React.JSX.Element {
           </div>
           <div className="flex gap-3 max-md:justify-center items-center">
             <p>suas</p>
-            <Image alt="Icone de uma lampada" src="/lamp.png" className="max-lg:h-14 max-lg:w-auto" width={40} height={40} />
+            <Image
+              alt="Icone de uma lampada"
+              src="/lamp.png"
+              className="max-lg:h-14 max-lg:w-auto"
+              width={40}
+              height={40}
+            />
             <p className="font-bold">ideias</p>
             <p>em</p>
           </div>
