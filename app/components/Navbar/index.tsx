@@ -50,7 +50,7 @@ const Navbar: FC = () => {
             <div className="flex shrink-0">
               <Link href="/">
                 <Image
-                  alt="Logo Softeam"
+                  alt="Logo da Softeam com Nome"
                   src="logo-softeam-with-name.svg"
                   className="h-12 w-auto"
                   width={258}
