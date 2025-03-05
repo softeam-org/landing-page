@@ -25,6 +25,7 @@ function Home(): React.JSX.Element {
               className="max-lg:h-14 max-lg:w-auto"
               width={40}
               height={40}
+              loading="lazy"
             />
             <p className="font-bold">ideias</p>
             <p>em</p>
@@ -43,6 +44,7 @@ function Home(): React.JSX.Element {
           className="w-2/5 md:w-1/3 h-auto max-md:hidden"
           width={100}
           height={100}
+          loading="lazy"
         />
       </div>
     </section>

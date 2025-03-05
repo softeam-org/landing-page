@@ -27,7 +27,12 @@ const socialNetworks = [
     link: "https://www.linkedin.com/company/softeam-ejc",
     effectHover: "linkSN2",
   },
-  { icon: "/whatsapp.png", alt: "Logo do Whatsapp", link: "https://wa.me/+557981000041", effectHover: "linkSN3" },
+  {
+    icon: "/whatsapp.png",
+    alt: "Logo do Whatsapp",
+    link: "https://wa.me/+557981000041",
+    effectHover: "linkSN3"
+  },
 ];
 
 function Footer(): React.JSX.Element {
@@ -37,7 +42,7 @@ function Footer(): React.JSX.Element {
         {information.map((info, index) => (
           <div className="info" key={index}>
             <div className="iconInfo">
-              <Image src={info.icon} alt={info.text} width={25} height={25} />
+              <Image src={info.icon} alt={info.text} width={25} height={25} loading="lazy"/>
             </div>
             <p>{info.text}</p>
           </div>
@@ -47,7 +52,7 @@ function Footer(): React.JSX.Element {
       <div className="socialNetworks">
         {socialNetworks.map((SN, index) => (
           <a className={SN.effectHover} key={index} href={SN.link} target="_blank" rel="noopener noreferrer">
-            <Image className="iconSN" src={SN.icon} alt={SN.alt} width={40} height={40} />
+            <Image className="iconSN" src={SN.icon} alt={SN.alt} width={40} height={40} loading="lazy" />
           </a>
         ))}
       </div>
