@@ -99,7 +99,6 @@ html, body {
 .linkSN1:hover .iconSN:hover {
     background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
     box-shadow: 2px 2px 2px white;
-    
 }
 
 .linkSN2:hover .iconSN:hover {
