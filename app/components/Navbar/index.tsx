@@ -55,6 +55,7 @@ const Navbar: FC = () => {
                   className="h-12 w-auto"
                   width={258}
                   height={66}
+                  loading="lazy"
                 />
               </Link>
             </div>
