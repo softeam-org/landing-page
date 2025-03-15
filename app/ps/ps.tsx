@@ -1,9 +1,11 @@
 import React, { ReactElement } from "react";
 
+import "./ps.css";
+
 function PS(): ReactElement {
     return (
-        <div className="container">
-            <div className="about">
+        <div className="ps_container">
+            <div className="content">
                 <div className="text">
                     <h1>Faça parte da maior empresa Júnior de Sergipe</h1>
                     <p>
@@ -15,9 +17,13 @@ function PS(): ReactElement {
                     </p>
 
                 </div>
-                <div className="image"></div>
-                
-                <div className="text2">
+                <div className="ps_div_img">
+                    <div className="ps_img"></div>
+                </div>
+
+            </div>
+
+            <div className="text2">
                     <h2>Por que entrar na SofTeam?</h2>
                     <p>
                         Seja entrando em contato e negociando com clientes reais, pondo em prática o que estudou em sala
@@ -26,19 +32,32 @@ function PS(): ReactElement {
                     ir além da grade curricular. Muito mais que isso, a SofTeam oferece proximidade com o mercado e
                     interação com empresas e empresários júniores de diversas áreas e estados.
                     </p>
-                </div>
             </div>
             
             
-            <div>
-                <div className="edital"></div>
-                <div className="nucleos"></div>
-                <div className="cronograma"></div>
+            <div className="content2">
+                <div className="edital">
+                    <h2>Processo Seletivo 2025.1</h2>
+                    
+                </div>
+                <div className="content3">
+
+                    <div className="nucleos">
+                        <h2>Nucleos</h2>
+                    </div>
+                    <div className="cronograma">
+                    '<h2>Cronograma</h2>
+                    </div>
+
+                </div>
+                
             </div>
 
             <div className="timeline">
-
+                
             </div>
+
+            
             
         </div>
     )

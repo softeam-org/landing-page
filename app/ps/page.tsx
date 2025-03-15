@@ -2,7 +2,6 @@ import React, { ReactElement } from "react";
 import Navbar from "../components/Navbar";
 import PS from "./ps";
 import Footer from "../components/footer/footer";
-import "./ps.css";
 
 
 function index(): ReactElement {
