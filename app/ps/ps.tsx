@@ -7,8 +7,8 @@ function PS(): ReactElement {
         <div className="ps_container">
             <div className="content">
                 <div className="text">
-                    <h1>Faça parte da maior empresa Júnior de Sergipe</h1>
-                    <p>
+                    <h1 className="text-6xl font-bold font-sans leading-tight">Faça parte da<br></br>maior empresa<br></br>Júnior de Sergipe</h1>
+                    <p className="font-bold font-sans leading-relaxed compact-text">
                         Fundada em 1997, a SofTeam é uma empresa sem fins lucrativos que entrega soluções digitais,
                         abrangendo diversas áreas da computação. Composta pelos cursos do Departamento de Computação
                         da Universidade Federal de Sergipe, tem como um de seus objetivos capacitar e aperfeiçoar o
@@ -24,7 +24,7 @@ function PS(): ReactElement {
             </div>
 
             <div className="text2">
-                    <h2>Por que entrar na SofTeam?</h2>
+                    <h2 className="text-4xl font-bold font-sans" >Por que entrar na SofTeam?</h2>
                     <p>
                         Seja entrando em contato e negociando com clientes reais, pondo em prática o que estudou em sala
                     de aula para resolver problemas reais ou aprendendo, na prática, habilidades de gestão, a SofTeam
