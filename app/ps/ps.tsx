@@ -1,6 +1,29 @@
 import React, { ReactElement } from "react";
+import Image from "next/image";
 
 import "./ps.css";
+
+const information =[
+    { icon: "/check-mark.png", text: "Neste processo seletivo fknalgnfagbkajfbjkadgbkjafgbaljfsgbojwvfjsvb" },
+    { icon: "/check-mark.png", text: "Neste processo seletivo fknalgnfagbkajfbjkadgbkjafgbaljfsgbojwvfjsvb" },
+    { icon: "/check-mark.png", text: "Neste processo seletivo fknalgnfagbkajfbjkadgbkjafgbaljfsgbojwvfjsvb" }
+    
+]
+
+const nucleos =[
+    { icon: "/check-mark.png", text: "Pojetos" },
+    { icon: "/check-mark.png", text: "Pojetos" },
+    {icon:"/check-mark.png", text:"Pojetos"}
+]
+
+const cronograma = [
+    { etapa: "Incricao", data: "01/01/2025-15/01/2025" },
+    { etapa: "Desafio em Grupo", data: "01/01/2025-15/01/2025" },
+    { etapa: "Incricao", data: "01/01/2025-15/01/2025" }
+]
+
+
+
 
 function PS(): ReactElement {
     return (
@@ -36,18 +59,69 @@ function PS(): ReactElement {
             
             
             <div className="content2">
-                <div className="edital">
-                    <h2>Processo Seletivo 2025.1</h2>
+                <div className="info_edital">
+                    
+                    <div className="info_ps">
+                        <h2 className="text-4xl font-bold font-sans mb-4">Processo Seletivo 2025.1</h2>
+                        {information.map((info, index) => (
+                                <div className="info mb-4" key={index}>
+                                    <div className="iconInfo">
+                                    <Image src={info.icon} alt={info.text} width={20} height={20} loading="lazy"/>
+                                    </div>
+                                    <p>{info.text}</p>
+                                </div>
+                        ))}
+                    </div>
+                    <div className="edital">
+                        <h2 className="text-4xl font-bold font-sans mb-4">Edital</h2>
+                        <button className="button_edital rounded-lg">Acessar Edital</button>
+                    </div>
                     
                 </div>
                 <div className="content3">
 
                     <div className="nucleos">
-                        <h2>Nucleos</h2>
+                        <h2 className="text-3xl font-bold font-sans mb-4">Núcleos</h2>
+
+                        {nucleos.map((nucleo, index) => (
+                            <div key={index}>
+                                <div className="border-t-2 border-blue-500 my-2"></div>
+
+                                <div className="info flex items-center gap-2">
+                                    <div className="iconInfo">
+                                    <Image src={nucleo.icon} alt={nucleo.text} width={20} height={20} loading="lazy" />
+                                    </div>
+                                    <p>{nucleo.text}</p>
+                                </div>
+                            </div>
+                        ))}
+
+                        <div className="border-t-2 border-blue-500 my-2"></div>
                     </div>
-                    <div className="cronograma">
-                    '<h2>Cronograma</h2>
+
+
+                    <div className="cronograma w-full max-w-lg mx-auto">
+                        <h2 className="text-3xl font-bold font-sans mb-4">Cronograma</h2>
+
+                        <div className="grid grid-cols-2 font-bold py-2">
+                            <div className="text-left text-2xl">Etapa</div>
+                            <div className="text-left text-2xl">Data</div>
+                        </div>
+
+                        {cronograma.map((item, index) => (
+                            <div key={index}>
+                                <div className="border-t-2 border-blue-500"></div>
+
+                                <div className="grid grid-cols-2 py-2">
+                                    <div className="text-left">{item.etapa}</div>
+                                    <div className="text-left">{item.data}</div>
+                                </div>
+                            </div>
+                        ))}
+
+                        <div className="border-t-2 border-blue-500 my-2"></div>
                     </div>
+
 
                 </div>
                 
