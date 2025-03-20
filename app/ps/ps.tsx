@@ -2,6 +2,7 @@ import React, { ReactElement } from "react";
 import Image from "next/image";
 
 import "./ps.css";
+import Timeline from "./timeline/timeline";
 
 const information =[
     { icon: "/check-mark.png", text: "Neste processo seletivo fknalgnfagbkajfbjkadgbkjafgbaljfsgbojwvfjsvb" },
@@ -74,7 +75,9 @@ function PS(): ReactElement {
                     </div>
                     <div className="edital">
                         <h2 className="text-4xl font-bold font-sans mb-4">Edital</h2>
-                        <button className="button_edital rounded-lg">Acessar Edital</button>
+                        <a className="btn-edital" target="_blank">
+                            Acessar Edital
+                        </a>
                     </div>
                     
                 </div>
@@ -85,7 +88,7 @@ function PS(): ReactElement {
 
                         {nucleos.map((nucleo, index) => (
                             <div key={index}>
-                                <div className="border-t-2 border-blue-500 my-2"></div>
+                                <div className="border-t border-blue-500 my-2"></div>
 
                                 <div className="info flex items-center gap-2">
                                     <div className="iconInfo">
@@ -96,7 +99,7 @@ function PS(): ReactElement {
                             </div>
                         ))}
 
-                        <div className="border-t-2 border-blue-500 my-2"></div>
+                        <div className="border-t border-blue-500 my-2"></div>
                     </div>
 
 
@@ -110,7 +113,7 @@ function PS(): ReactElement {
 
                         {cronograma.map((item, index) => (
                             <div key={index}>
-                                <div className="border-t-2 border-blue-500"></div>
+                                <div className="border-t border-blue-500"></div>
 
                                 <div className="grid grid-cols-2 py-2">
                                     <div className="text-left">{item.etapa}</div>
@@ -119,19 +122,14 @@ function PS(): ReactElement {
                             </div>
                         ))}
 
-                        <div className="border-t-2 border-blue-500 my-2"></div>
+                        <div className="border-t border-blue-500 my-2"></div>
                     </div>
 
 
                 </div>
                 
             </div>
-
-            <div className="timeline">
-                
-            </div>
-
-            
+            <Timeline/>
             
         </div>
     )
