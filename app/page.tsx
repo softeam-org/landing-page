@@ -1,10 +1,11 @@
-import React from "react";
+import { Metadata } from "next";
 import Head from "next/head";
+import React from "react";
 import About from "./components/About/About";
 import Footer from "./components/footer/footer";
 import HeroSection from "./components/HeroSection/HeroSection";
 import Navbar from "./components/Navbar/index";
-import { Metadata } from "next";
+import Parceiros from "./components/Parceiros/Parceiros";
 
 const title = "Softeam - Empresa Júnior de Computação";
 const description =
@@ -68,6 +69,7 @@ function App(): React.JSX.Element {
       <Navbar />
       <HeroSection />
       <About />
+      <Parceiros />
       <Footer />
     </div>
   );
