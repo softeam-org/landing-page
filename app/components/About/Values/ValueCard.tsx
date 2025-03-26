@@ -11,7 +11,7 @@ interface ValueCardProps {
 function ValueCard({ valueName, valueIcon: Icon }: ValueCardProps): React.JSX.Element {
   return (
     <div
-      className="flex items-center justify-center rounded-md cursor-pointer h-52 px-10
+      className="flex items-center justify-center rounded-md h-52 px-10
         max-lg:px-8 shadow-[0_0_5px_1px_#114e7e] ease-out duration-200 hover:bg-color-2"
     >
       <div className="flex flex-col gap-4 max-md:gap-6 max-xs:gap-7">
