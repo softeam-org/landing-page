@@ -40,3 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 app/grid-auto.md
+app/components/Parceiros/image1.png
+app/components/Parceiros/image2.png
+app/components/Parceiros/image3.png
