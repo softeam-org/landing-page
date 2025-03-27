@@ -31,13 +31,13 @@ const socialNetworks = [
     icon: "/whatsapp.png",
     alt: "Logo do Whatsapp",
     link: "https://wa.me/+557981000041",
-    effectHover: "linkSN3"
+    effectHover: "linkSN3",
   },
 ];
 
 function Footer(): React.JSX.Element {
   return (
-    <div className="container">
+    <div id="contato" className="container">
       <div className="information">
         {information.map((info, index) => (
           <div className="info" key={index}>

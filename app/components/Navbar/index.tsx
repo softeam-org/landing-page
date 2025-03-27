@@ -3,9 +3,9 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import { FaArrowRightToBracket } from "react-icons/fa6";
-import { LuTextSearch } from "react-icons/lu";
-import { NavButtons, NavButtonsProps } from "./NavButtons";
+// import { FaArrowRightToBracket } from "react-icons/fa6";
+// import { LuTextSearch } from "react-icons/lu";
+// import { NavButtons, NavButtonsProps } from "./NavButtons";
 import { NavLinks, NavLinksProps } from "./NavLinks";
 
 import Link from "next/link";
@@ -13,28 +13,28 @@ import { FC } from "react";
 
 const Navbar: FC = () => {
   const links: NavLinksProps[] = [
+    { url: "#about", label: "Sobre nós" },
     { url: "#catalogo", label: "Catálogo" },
-    { url: "#servicos", label: "Serviços" },
-    { url: "#parceiros", label: "Parceiros" },
-    { url: "#contato", label: "Contato" },
+    { url: "#contato", label: "Parceiros" },
+    { url: "#contato", label: "Contatos" },
   ];
 
-  const buttons: NavButtonsProps[] = [
-    { url: "/transparencia", label: "Transparência", icon: <LuTextSearch /> },
-    { url: "/entrar", label: "Entrar", icon: <FaArrowRightToBracket /> },
-  ];
+  // const buttons: NavButtonsProps[] = [
+  //   { url: "/transparencia", label: "Transparência", icon: <LuTextSearch /> },
+  //   { url: "/entrar", label: "Entrar", icon: <FaArrowRightToBracket /> },
+  // ];
 
   return (
-    <Disclosure as="nav" className="bg-blue-1074BC">
+    <Disclosure as="nav" className="fixed top-0 left-0 w-full z-50 shadow-md bg-blue-1074BC md:bg-blue-1074BC/95">
       <div className="w-full  px-32 max-xl:px-16 max-lg:px-10 max-md:px-6">
-        <div className="relative flex h-16 items-center justify-between">
+        <div className="relative flex flex-wrap h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
             <DisclosureButton
-              className="group relative inline-flex
+              className="relative inline-flex
               items-center
               justify-center rounded-md p-2
               text-white hover:bg-blue-1C58A8 focus:ring-2
-              focus:ring-white focus:outline-hidden focus:ring-inset"
+              focus:ring-white focus:outline-none focus:ring-inset"
             >
               {({ open }) => (
                 <>
@@ -48,7 +48,7 @@ const Navbar: FC = () => {
           </div>
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
             <div className="flex shrink-0">
-              <Link href="/">
+              <Link href="#">
                 <Image
                   alt="Logo da Softeam com Nome"
                   src="logo-softeam-with-name.svg"
@@ -67,11 +67,11 @@ const Navbar: FC = () => {
               </div>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
+          {/* <div className="absolute inset-y-0 right-0 flex items-center md:static md:inset-auto md:ml-6 md:pr-0">
             {buttons.map((button, index) => (
               <NavButtons key={index} url={button.url} label={button.label} icon={button.icon} />
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
 
