@@ -7,5 +7,6 @@ html, body {
     padding: 0;
     overflow-x: hidden; /* Evita rolagem lateral indesejada */
     background-color:#072763;
+    scroll-behavior: smooth;
 }
 

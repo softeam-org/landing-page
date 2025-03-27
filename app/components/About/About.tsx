@@ -13,7 +13,8 @@ import ValueCard from "./Values/ValueCard";
 function About(): React.JSX.Element {
   return (
     <section
-      className={`w-full flex flex-col gap-16 px-44 max-xl:px-36 max-lg:px-16 max-md:px-10 max-xs:px-14
+      id="about"
+      className={`scroll-mt-16 w-full flex flex-col gap-16 px-44 max-xl:px-36 max-lg:px-16 max-md:px-10 max-xs:px-14
         py-12 ${poppins.className} text-white bg-color-1`}
     >
       {/* Quem Somos */}
