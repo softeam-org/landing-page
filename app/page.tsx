@@ -5,7 +5,7 @@ import About from "./components/About/About";
 import Footer from "./components/footer/footer";
 import HeroSection from "./components/HeroSection/HeroSection";
 import Navbar from "./components/Navbar/index";
-import Parceiros from "./components/Parceiros/Parceiros";
+import Partners from "./components/Parceiros/Parceiros";
 
 const title = "Softeam - Empresa Júnior de Computação";
 const description =
@@ -69,7 +69,7 @@ function App(): React.JSX.Element {
       <Navbar />
       <HeroSection />
       <About />
-      <Parceiros />
+      <Partners />
       <Footer />
     </div>
   );
