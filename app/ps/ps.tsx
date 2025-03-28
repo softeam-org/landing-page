@@ -7,6 +7,9 @@ import Timeline from "./timeline/timeline";
 const information =[
     { icon: "/check-mark.png", text: "Neste processo seletivo fknalgnfagbkajfbjkadgbkjafgbaljfsgbojwvfjsvb" },
     { icon: "/check-mark.png", text: "Neste processo seletivo fknalgnfagbkajfbjkadgbkjafgbaljfsgbojwvfjsvb" },
+    { icon: "/check-mark.png", text: "Neste processo seletivo fknalgnfagbkajfbjkadgbkjafgbaljfsgbojwvfjsvb" },
+    { icon: "/check-mark.png", text: "Neste processo seletivo fknalgnfagbkajfbjkadgbkjafgbaljfsgbojwvfjsvb" },
+    { icon: "/check-mark.png", text: "Neste processo seletivo fknalgnfagbkajfbjkadgbkjafgbaljfsgbojwvfjsvb" },
     { icon: "/check-mark.png", text: "Neste processo seletivo fknalgnfagbkajfbjkadgbkjafgbaljfsgbojwvfjsvb" }
     
 ]
@@ -20,6 +23,8 @@ const nucleos =[
 const cronograma = [
     { etapa: "Incricao", data: "01/01/2025-15/01/2025" },
     { etapa: "Desafio em Grupo", data: "01/01/2025-15/01/2025" },
+    { etapa: "Incricao", data: "01/01/2025-15/01/2025" },
+    { etapa: "Incricao", data: "01/01/2025-15/01/2025" },
     { etapa: "Incricao", data: "01/01/2025-15/01/2025" }
 ]
 
@@ -31,7 +36,9 @@ function PS(): ReactElement {
         <div className="ps_container">
             <div className="content">
                 <div className="text">
-                    <h1 className="text-6xl font-bold font-sans leading-tight">Faça parte da<br></br>maior empresa<br></br>Júnior de Sergipe</h1>
+                    <h1 className="titulo text-6xl font-bold font-sans leading-tight">
+                        Faça parte da<br/>maior empresa<br/>Júnior de Sergipe
+                    </h1>
                     <p className="font-bold font-sans leading-relaxed compact-text">
                         Fundada em 1997, a SofTeam é uma empresa sem fins lucrativos que entrega soluções digitais,
                         abrangendo diversas áreas da computação. Composta pelos cursos do Departamento de Computação

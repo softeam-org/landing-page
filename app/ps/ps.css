@@ -12,6 +12,7 @@
     margin: 100px 120px 0px;
 }
 
+
 .text{
     display: flex;
     gap: 30px;
@@ -19,15 +20,14 @@
     width: 50%;
     justify-content: start;
     align-items: start;
-    
 }
 
 .ps_div_img{
     display: flex;
     width: 50%;
-    align-items: center;
+    align-items: start;
     justify-content: center;
-    
+    margin-top: 20px;
     
 }
 
@@ -42,7 +42,7 @@
     display: flex;
     flex-direction: column;
     margin: 100px 120px 0px;
-    gap: 20px;
+    gap: 30px;
 }
 
 
@@ -58,7 +58,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40%;
+    width: 50%;
 }
 
 .info_edital{
@@ -129,24 +129,36 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: 60%;
     width: 100%;
-    gap: 50px;
-    position: relative; 
+    position: relative;
+    padding: 0 25px;
 }
 
-/* Linha entre as etapas */
 .timeline::before {
     content: '';
     position: absolute;
-    top: 45%;
-    left: 0;
-    width: 100%;
-    height: 8px; 
-    background-color: white; 
-    transform: translateY(-50%); 
-    z-index: 1; 
+    top: 50%;
+    left: 25px;
+    right: 25px;
+    height: 8px;
+    background-color: #e0e0e0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    width: var(--progress-width, 0);
+    height: 8px;
+    background-color:  rgb(48, 217, 48);
+    transform: translateY(-50%);
+    z-index: 2;
+    transition: width 0.5s ease;
 }
 
 .etapa {
@@ -156,22 +168,219 @@
     justify-content: center;
     height: 100%;
     gap: 10px;
-    position: relative; 
-    z-index: 2; 
+    position: relative;
+    z-index: 3;
+    flex: 1;
+    min-width: 0;
+    margin-top: 20px;
 }
 
+
 .img_check {
-    background-color: white;
-    border: black solid 5px;
+    background-color: #e0e0e0;
     border-radius: 30px;
     height: 50px;
     width: 50px;
 }
 
 .img_checkend {
-    background-color: rgb(247, 249, 247);
+    background-color: #e0e0e0;
     border: rgb(48, 217, 48) solid 5px;
     border-radius: 30px;
     height: 50px;
     width: 50px;
+}
+
+@media (max-width: 1024px) {
+    .content {
+        flex-direction: column;
+        height: auto;
+        margin: 80px 60px 0;
+        gap: 40px;
+    }
+
+    .content2{
+        margin: 80px 60px 200px;
+    }
+
+    .text, .ps_div_img {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ps_div_img {
+        margin-top: 0;
+    }
+
+
+    .text2 {
+        margin: 40px 60px 0;
+    }
+
+    .info_edital{
+        margin-bottom: 150px;
+    }
+
+    .edital{
+        margin-top: 150px;
+    }
+
+    .timeline_cont{
+        margin: 0px 60px 50px;
+    }
+
+    
+
+    
+}
+
+@media (max-width: 768px) {
+    .content, .content2, .text2,.timeline_cont {
+        margin: 70px 40px 0px;
+    }
+
+    .content{
+        flex-direction: column;
+    }
+
+
+    .content2{
+        flex-direction: column;
+        margin-bottom: 200px;
+    }
+
+    .content3{
+        flex-direction: row;
+        width: 100%;
+        gap: 50px;
+    }
+
+    .info_edital{
+        margin-bottom: 50px;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .edital{
+        margin-top: 100px;
+
+    }
+
+    .nucleos,.cronograma{
+        height: 100%;
+        width: 50%;
+    
+    }
+
+    .text{
+        width: 100%;
+        align-items: center;
+    }
+
+    .text2{
+        margin-top: 50px;
+    }
+
+
+    .timeline_cont{
+        margin-top: 250px;
+    }
+
+    .timeline {
+        gap: 20px;
+    }
+
+    .etapa{
+        margin-top: 43px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .content, .content2, .timeline_cont {
+        margin: 30px 20px 0px;
+    }
+
+    .content2{
+        margin-bottom: 500px;
+    }
+
+    .text2{
+        margin: 30px 20px 0px;
+    }
+
+    .text h1 {
+        font-size: 1.8rem;
+    }
+
+    .text p {
+        font-size: 0.9rem;
+    }
+
+    .ps_img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .edital{
+        margin-top: 150px;
+    }
+
+    
+
+    .timeline_cont {
+        height: auto;
+        padding: 30px 20px;
+        margin: 50px 20px 100px;
+    }
+
+    .timeline {
+        flex-direction: column;
+        height: auto;
+        gap: 40px;
+        padding: 30px 0;
+    }
+
+    .timeline::before {
+        /* Transforma a linha horizontal em vertical */
+        top: 0;
+        left: 50%;
+        width: 8px;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+
+    .timeline::after {
+        /* Ajusta a linha de progresso para vertical */
+        top: 0;
+        left: 50%;
+        width: 8px;
+        height: var(--progress-width, 0);
+        transform: translateX(-50%);
+    }
+
+    .etapa {
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        gap: 20px;
+        margin-top: 0;
+        margin-left: 15px;
+        align-items: center;
+    }
+
+    .img_check,
+    .img_checkend {
+        margin-right: 15px;
+    }
+
+    .date, .label {
+        text-align: left;
+        flex: 1;
+    }
+
 }
