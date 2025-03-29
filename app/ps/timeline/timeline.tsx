@@ -45,8 +45,8 @@ const etapas: Etapa[] = [
     icon: "/check-mark.png", 
     icon2: "/checkEnd.png", 
     label: "Inscricao", 
-    dateI: "15/04/2025", 
-    dateF: "30/05/2025", 
+    dateI: "01/03/2025", 
+    dateF: "30/04/2025", 
     class: "img_check", 
     class2: "img_checkend" 
   },
@@ -55,19 +55,12 @@ const etapas: Etapa[] = [
     icon2: "/checkEnd.png", 
     label: "Inscricao", 
     dateI: "01/03/2025", 
-    dateF: "30/03/2025", 
+    dateF: "30/04/2025", 
     class: "img_check", 
     class2: "img_checkend" 
-    },
-    { 
-        icon: "/check-mark.png", 
-        icon2: "/checkEnd.png", 
-        label: "Inscricao", 
-        dateI: "01/03/2025", 
-        dateF: "30/03/2025", 
-        class: "img_check", 
-        class2: "img_checkend" 
-    }
+  },
+  
+  
 ];
 
 const isDateBeforeToday = (dateString: string): boolean => {
@@ -81,33 +74,33 @@ function Timeline(): ReactElement {
   const [progressWidth, setProgressWidth] = useState<number>(0);
   
   useEffect(() => {
-    // Calcula quantas etapas estão completas
-    const completedCount = etapas.filter(etapa => isDateBeforeToday(etapa.dateF)).length;
-    
-    if (completedCount === 0) {
-      setProgressWidth(0);
-      return;
-    }
+    const calculateProgress = () => {
+      const completedStages = etapas.filter(etapa => isDateBeforeToday(etapa.dateF)).length;
+      
+      if (completedStages === 0) {
+        setProgressWidth(0);
+        return;
+      }
 
-    // Calcula a largura total disponível (100%)
-    const totalWidth = 100;
-    
-    // Calcula o tamanho de cada segmento entre etapas
-    const segmentWidth = totalWidth / (etapas.length - 1);
-    
-    // Calcula até onde a linha verde deve chegar
-    let width = 0;
-    
-    if (completedCount === etapas.length) {
-      // Todas etapas completas - preenche 100%
-      width = totalWidth;
-    } else {
-      // Preenche até a última etapa completa + metade do próximo segmento
-      width = (completedCount - 1) * segmentWidth + (segmentWidth / 2);
-    }
-    
-    setProgressWidth(width);
-  }, []);
+      // Calcula a largura baseada no número real de etapas
+      const totalStages = etapas.length;
+      const segmentWidth = 100 / (totalStages - 1);
+      
+      // Preenche até o centro do último estágio completo
+      let width = (completedStages - 1) * segmentWidth;
+      
+      // Se não for a última etapa, adiciona metade do segmento
+      if (completedStages < totalStages) {
+        width += segmentWidth / 2;
+      } else {
+        width = 100; // Completa se for a última etapa
+      }
+      
+      setProgressWidth(width);
+    };
+
+    calculateProgress();
+  }, [etapas]); // Adicionei etapas como dependência
 
   return (
     <div className="timeline_cont">

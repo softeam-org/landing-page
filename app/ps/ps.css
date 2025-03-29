@@ -129,9 +129,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Alterado para space-between */
     height: 60%;
-    width: 100%;
+    width: calc(100% - 50px); /* Ajuste para compensar o padding */
     position: relative;
     padding: 0 25px;
 }
@@ -141,7 +141,7 @@
     position: absolute;
     top: 50%;
     left: 25px;
-    right: 25px;
+    right: 25px; /* Ajuste para compensar o padding */
     height: 8px;
     background-color: #e0e0e0;
     transform: translateY(-50%);
@@ -155,24 +155,20 @@
     left: 25px;
     width: var(--progress-width, 0);
     height: 8px;
-    background-color:  rgb(48, 217, 48);
+    background-color: rgb(48, 217, 48);
     transform: translateY(-50%);
     z-index: 2;
     transition: width 0.5s ease;
 }
 
 .etapa {
+    position: relative;
+    z-index: 3;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100%;
-    gap: 10px;
-    position: relative;
-    z-index: 3;
     flex: 1;
-    min-width: 0;
-    margin-top: 20px;
+    margin-top: 19px;
 }
 
 
@@ -295,7 +291,7 @@
     }
 
     .etapa{
-        margin-top: 43px;
+        margin-top: 23px;
     }
 
 }
@@ -381,6 +377,126 @@
     .date, .label {
         text-align: left;
         flex: 1;
+    }
+
+
+    @media (max-width: 320px) {
+        .ps_container {
+          padding: 0 10px;
+        }
+      
+        .content, 
+        .content2,
+        .text2 {
+          margin: 30px 10px 0 !important;
+          height: auto !important;
+        }
+      
+        .text {
+          width: 100% !important;
+          gap: 15px !important;
+        }
+      
+        .ps_div_img {
+          width: 100% !important;
+          margin-top: 10px !important;
+        }
+      
+        .ps_img {
+          width: 280px !important;
+          height: 280px !important;
+        }
+      
+        .content2 {
+          flex-direction: column !important;
+          margin-bottom: 300px !important;
+        }
+      
+        .content3 {
+          width: 100% !important;
+          flex-direction: column !important;
+        }
+      
+        .nucleos, 
+        .cronograma {
+          width: 100% !important;
+          height: auto !important;
+          margin-bottom: 30px !important;
+        }
+      
+        .info {
+          flex-direction: column !important;
+          gap: 5px !important;
+        }
+      
+        .btn-edital {
+          padding: 8px 16px !important;
+          font-size: 14px !important;
+        }
+      
+        /* Ajustes específicos para a timeline */
+        .timeline_cont {
+          margin: 30px 10px 50px !important;
+          height: auto !important;
+          padding: 20px 10px !important;
+        }
+      
+        .timeline {
+          flex-direction: column !important;
+          height: auto !important;
+          gap: 30px !important;
+          padding: 20px 0 !important;
+        }
+      
+        .timeline::before {
+          top: 0 !important;
+          left: 50% !important;
+          width: 6px !important;
+          height: 100% !important;
+          transform: translateX(-50%) !important;
+        }
+      
+        .timeline::after {
+          top: 0 !important;
+          left: 50% !important;
+          width: 6px !important;
+          height: var(--progress-width, 0) !important;
+          transform: translateX(-50%) !important;
+        }
+      
+        .etapa {
+          flex-direction: row !important;
+          width: 100% !important;
+          height: auto !important;
+          gap: 15px !important;
+          margin-top: 0 !important;
+          align-items: center !important;
+          margin-left: 23px;
+        }
+      
+        .img_check,
+        .img_checkend {
+          width: 40px !important;
+          height: 40px !important;
+          margin-right: 10px !important;
+        }
+      
+        .label,
+        .date {
+          text-align: left !important;
+          flex: 1 !important;
+        }
+      
+        .label p,
+        .date p {
+          font-size: 14px !important;
+          line-height: 1.3 !important;
+        }
+      
+        .timeline_cont h2 {
+          font-size: 1.5rem !important;
+          margin-bottom: 20px !important;
+        }
     }
 
 }
