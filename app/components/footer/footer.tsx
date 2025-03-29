@@ -37,12 +37,12 @@ const socialNetworks = [
 
 function Footer(): React.JSX.Element {
   return (
-    <div id="contato" className="container">
+    <div id="contato" className="container_footer">
       <div className="information">
         {information.map((info, index) => (
           <div className="info" key={index}>
             <div className="iconInfo">
-              <Image src={info.icon} alt={info.text} width={25} height={25} loading="lazy"/>
+              <Image src={info.icon} alt={info.text} width={40} height={40} loading="lazy"/>
             </div>
             <p>{info.text}</p>
           </div>
