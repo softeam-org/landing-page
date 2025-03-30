@@ -1,18 +1,19 @@
-import React from "react";
+import React, { ReactElement } from "react";
+import Navbar from "../components/Navbar";
+import PS from "./ps";
+import SemPS from "./semPS";
+import Footer from "../components/footer/footer";
 import Head from "next/head";
-import About from "./components/About/About";
-import Footer from "./components/footer/footer";
-import HeroSection from "./components/HeroSection/HeroSection";
-import Navbar from "./components/Navbar/index";
-import { Metadata } from "next";
 
-const title = "Softeam - Empresa Júnior de Computação";
-const description =
-  "A SofTeam é a empresa júnior de computação da UFS, especializada no desenvolvimento de sites, sistemas e aplicativos. Oferecemos soluções tecnológicas inovadoras, acessíveis e personalizadas para impulsionar o crescimento do seu negócio. Solicite um orçamento agora!";
+import { Metadata } from "next";
+import data from "@/public/psel.json";
+
+const title = "Processo Seletivo Softeam";
+const description = "Venha fazer parte da Softeam, inscreva-se já em nosso processo seletivo!";
 const imgLogo = "/logo-softeam.png"; // Make sure this is a valid PNG/JPG image
-const URLSite = "https://softeam.com.br";
+const URLSite = "https://softeam.com.br/ps";
 const keywords =
-  "empresa júnior, desenvolvimento web, mobile, consultoria tecnológica, softeam, tecnologia, website, site, software, desenvolvimento, inovação, soluções, ideias, transformação, contato, sistema, sistemas";
+  "empresa júnior, desenvolvimento web, mobile, consultoria tecnológica, softeam, tecnologia, website, site, software, desenvolvimento, inovação, soluções, ideias, transformação, contato, sistema, sistemas,processo seletivo";
 
 export const metadata: Metadata = {
   title: title,
@@ -33,8 +34,12 @@ export const metadata: Metadata = {
   robots: "index, follow",
 };
 
+{
+  /*Variavel para saber se há processo seltivo*/
+}
+const processoSeletivoAberto = data.ativo;
 
-function App(): React.JSX.Element {
+function index(): ReactElement {
   return (
     <div className="w-full min-h-screen flex flex-col overflow-x-hidden">
       <Head>
@@ -65,13 +70,11 @@ function App(): React.JSX.Element {
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" href="/favicon.png" />
       </Head>
-
       <Navbar />
-      <HeroSection />
-      <About />
+      {/* Renderização condicional */}
+      {processoSeletivoAberto ? <PS /> : <SemPS />}
       <Footer />
     </div>
   );
 }
-
-export default App;
+export default index;
