@@ -6,6 +6,7 @@ import Footer from "../components/footer/footer";
 import Head from "next/head";
 
 import { Metadata } from "next";
+import data from "@/public/psel.json";
 
 const title = "Processo Seletivo Softeam";
 const description =
@@ -35,7 +36,7 @@ export const metadata: Metadata = {
 };
 
 {/*Variavel para saber se há processo seltivo*/}
-const processoSeletivoAberto = false;
+const processoSeletivoAberto = data.ativo;
 
 
 function index(): ReactElement {

@@ -1,6 +1,7 @@
 "use client";
 import React, { ReactElement, useEffect, useState } from "react";
 import Image from "next/image";
+import etapasData from "@/public/psel.json"; // Importação direta do JSON
 import "./timeline.css";
 
 interface Etapa {
@@ -13,94 +14,40 @@ interface Etapa {
   class2: string;
 }
 
-const etapas: Etapa[] = [
-  { 
-    icon: "/check-mark.png", 
-    icon2: "/checkEnd.png", 
-    label: "Inscricao", 
-    dateI: "01/01/2025", 
-    dateF: "01/02/2025", 
-    class: "img_check", 
-    class2: "img_checkend" 
-  },
-  { 
-    icon: "/check-mark.png", 
-    icon2: "/checkEnd.png", 
-    label: "Inscricao", 
-    dateI: "05/02/2025", 
-    dateF: "30/03/2025", 
-    class: "img_check", 
-    class2: "img_checkend" 
-  },
-  { 
-    icon: "/check-mark.png", 
-    icon2: "/checkEnd.png", 
-    label: "Inscricao", 
-    dateI: "01/03/2025", 
-    dateF: "30/04/2025", 
-    class: "img_check", 
-    class2: "img_checkend" 
-  },
-  { 
-    icon: "/check-mark.png", 
-    icon2: "/checkEnd.png", 
-    label: "Inscricao", 
-    dateI: "01/03/2025", 
-    dateF: "30/04/2025", 
-    class: "img_check", 
-    class2: "img_checkend" 
-  },
-  { 
-    icon: "/check-mark.png", 
-    icon2: "/checkEnd.png", 
-    label: "Inscricao", 
-    dateI: "01/03/2025", 
-    dateF: "30/04/2025", 
-    class: "img_check", 
-    class2: "img_checkend" 
-  },
-  
-  
-];
-
 const isDateBeforeToday = (dateString: string): boolean => {
   const today = new Date();
-  const [day, month, year] = dateString.split('/').map(Number);
+  const [day, month, year] = dateString.split("/").map(Number);
   const date = new Date(year, month - 1, day);
   return date < today;
 };
 
 function Timeline(): ReactElement {
   const [progressWidth, setProgressWidth] = useState<number>(0);
-  
+  const [etapas, setEtapas] = useState<Etapa[]>(etapasData.etapas || []); // Inicializa com os dados importados
+
   useEffect(() => {
+    if (etapas.length === 0) return;
+    
     const calculateProgress = () => {
       const completedStages = etapas.filter(etapa => isDateBeforeToday(etapa.dateF)).length;
-      
       if (completedStages === 0) {
         setProgressWidth(0);
         return;
       }
-
-      // Calcula a largura baseada no número real de etapas
+      
       const totalStages = etapas.length;
       const segmentWidth = 100 / (totalStages - 1);
-      
-      // Preenche até o centro do último estágio completo
       let width = (completedStages - 1) * segmentWidth;
-      
-      // Se não for a última etapa, adiciona metade do segmento
       if (completedStages < totalStages) {
         width += segmentWidth / 2;
       } else {
-        width = 100; // Completa se for a última etapa
+        width = 100;
       }
-      
       setProgressWidth(width);
     };
 
     calculateProgress();
-  }, [etapas]); // Adicionei etapas como dependência
+  }, [etapas]);
 
   return (
     <div className="timeline_cont">

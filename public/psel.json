@@ -1,0 +1,53 @@
+{
+    "ativo": false,
+    "titulo": "Cronograma PSS 2025",
+    "descricao": "Detalhes sobre o processo seletivo",
+    "etapas": [
+    { 
+      "icon": "/check-mark.png", 
+      "icon2": "/checkEnd.png", 
+      "label": "Inscricao", 
+      "dateI": "01/01/2025", 
+      "dateF": "01/02/2025", 
+      "class": "img_check", 
+      "class2": "img_checkend" 
+    },
+    { 
+      "icon": "/check-mark.png", 
+      "icon2": "/checkEnd.png", 
+      "label": "Fase 12", 
+      "dateI": "05/02/2025", 
+      "dateF": "30/03/2025", 
+      "class": "img_check", 
+      "class2": "img_checkend" 
+    },
+    { 
+      "icon": "/check-mark.png", 
+      "icon2": "/checkEnd.png", 
+      "label": "Fase 2", 
+      "dateI": "01/03/2025", 
+      "dateF": "30/04/2025", 
+      "class": "img_check", 
+      "class2": "img_checkend" 
+    },
+    { 
+      "icon": "/check-mark.png", 
+      "icon2": "/checkEnd.png", 
+      "label": "Fase 3", 
+      "dateI": "01/03/2025", 
+      "dateF": "30/04/2025", 
+      "class": "img_check", 
+      "class2": "img_checkend" 
+    },
+    { 
+      "icon": "/check-mark.png", 
+      "icon2": "/checkEnd.png", 
+      "label": "Fase 4", 
+      "dateI": "01/03/2025", 
+      "dateF": "30/04/2025", 
+      "class": "img_check", 
+      "class2": "img_checkend" 
+    }
+  ]
+  }
+  
