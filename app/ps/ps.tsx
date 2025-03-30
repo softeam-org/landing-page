@@ -4,32 +4,13 @@ import Image from "next/image";
 import "./ps.css";
 import Timeline from "./timeline/timeline";
 
-const information =[
-    { icon: "/check-mark.png", text: "Neste processo seletivo fknalgnfagbkajfbjkadgbkjafgbaljfsgbojwvfjsvb" },
-    { icon: "/check-mark.png", text: "Neste processo seletivo fknalgnfagbkajfbjkadgbkjafgbaljfsgbojwvfjsvb" },
-    { icon: "/check-mark.png", text: "Neste processo seletivo fknalgnfagbkajfbjkadgbkjafgbaljfsgbojwvfjsvb" },
-    { icon: "/check-mark.png", text: "Neste processo seletivo fknalgnfagbkajfbjkadgbkjafgbaljfsgbojwvfjsvb" },
-    { icon: "/check-mark.png", text: "Neste processo seletivo fknalgnfagbkajfbjkadgbkjafgbaljfsgbojwvfjsvb" },
-    { icon: "/check-mark.png", text: "Neste processo seletivo fknalgnfagbkajfbjkadgbkjafgbaljfsgbojwvfjsvb" }
-    
-]
+import data from "@/public/psel.json";
 
-const nucleos =[
-    { icon: "/check-mark.png", text: "Pojetos" },
-    { icon: "/check-mark.png", text: "Pojetos" },
-    {icon:"/check-mark.png", text:"Pojetos"}
-]
+const information = data.info;
 
-const cronograma = [
-    { etapa: "Incricao", data: "01/01/2025-15/01/2025" },
-    { etapa: "Desafio em Grupo", data: "01/01/2025-15/01/2025" },
-    { etapa: "Incricao", data: "01/01/2025-15/01/2025" },
-    { etapa: "Incricao", data: "01/01/2025-15/01/2025" },
-    { etapa: "Incricao", data: "01/01/2025-15/01/2025" }
-]
+const nucleos = data.nucleos;
 
-
-
+const cronograma = data.cronograma;
 
 function PS(): ReactElement {
     return (
