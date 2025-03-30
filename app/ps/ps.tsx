@@ -49,7 +49,9 @@ function PS(): ReactElement {
 
                 </div>
                 <div className="ps_div_img">
-                    <div className="ps_img"></div>
+                    <div className="ps_img">
+                        
+                    </div>
                 </div>
 
             </div>

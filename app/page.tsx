@@ -33,6 +33,7 @@ export const metadata: Metadata = {
   robots: "index, follow",
 };
 
+
 function App(): React.JSX.Element {
   return (
     <div className="w-full min-h-screen flex flex-col overflow-x-hidden">

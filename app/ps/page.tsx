@@ -1,6 +1,7 @@
 import React, { ReactElement } from "react";
 import Navbar from "../components/Navbar";
 import PS from "./ps";
+import SemPS from "./semPS";
 import Footer from "../components/footer/footer";
 import Head from "next/head";
 
@@ -32,6 +33,9 @@ export const metadata: Metadata = {
   },
   robots: "index, follow",
 };
+
+{/*Variavel para saber se há processo seltivo*/}
+const processoSeletivoAberto = false;
 
 
 function index(): ReactElement {
@@ -66,7 +70,8 @@ function index(): ReactElement {
                 <link rel="icon" type="image/png" href="/favicon.png" />
             </Head>
             <Navbar />
-            <PS/>
+            {/* Renderização condicional */}
+            {processoSeletivoAberto ? <PS /> : <SemPS />}
             <Footer/>
         </div>
     )
