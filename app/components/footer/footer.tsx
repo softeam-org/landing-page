@@ -31,7 +31,7 @@ const socialNetworks = [
     icon: "/whatsapp.png",
     alt: "Logo do Whatsapp",
     link: "https://wa.me/+557981000041",
-    effectHover: "linkSN3"
+    effectHover: "linkSN3",
   },
 ];
 
@@ -42,7 +42,7 @@ function Footer(): React.JSX.Element {
         {information.map((info, index) => (
           <div className="info" key={index}>
             <div className="iconInfo">
-              <Image src={info.icon} alt={info.text} width={25} height={25} loading="lazy"/>
+              <Image src={info.icon} alt={info.text} width={25} height={25} loading="lazy" />
             </div>
             <p>{info.text}</p>
           </div>
