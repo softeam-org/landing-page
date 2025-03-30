@@ -4,16 +4,6 @@ import Image from "next/image";
 import etapasData from "@/public/psel.json"; // Importação direta do JSON
 import "./timeline.css";
 
-interface Etapa {
-  icon: string;
-  icon2: string;
-  label: string;
-  dateI: string;
-  dateF: string;
-  class: string;
-  class2: string;
-}
-
 const isDateBeforeToday = (dateString: string): boolean => {
   const today = new Date();
   const [day, month, year] = dateString.split("/").map(Number);
@@ -23,18 +13,18 @@ const isDateBeforeToday = (dateString: string): boolean => {
 
 function Timeline(): ReactElement {
   const [progressWidth, setProgressWidth] = useState<number>(0);
-  const [etapas, setEtapas] = useState<Etapa[]>(etapasData.etapas || []); // Inicializa com os dados importados
+  const etapas = etapasData.etapas; // Inicializa com os dados importados
 
   useEffect(() => {
     if (etapas.length === 0) return;
-    
-    const calculateProgress = () => {
-      const completedStages = etapas.filter(etapa => isDateBeforeToday(etapa.dateF)).length;
+
+    const calculateProgress = (): number => {
+      const completedStages = etapas.filter((etapa) => isDateBeforeToday(etapa.dateF)).length;
       if (completedStages === 0) {
         setProgressWidth(0);
-        return;
+        return 0;
       }
-      
+
       const totalStages = etapas.length;
       const segmentWidth = 100 / (totalStages - 1);
       let width = (completedStages - 1) * segmentWidth;
@@ -44,6 +34,7 @@ function Timeline(): ReactElement {
         width = 100;
       }
       setProgressWidth(width);
+      return 0;
     };
 
     calculateProgress();
@@ -52,10 +43,7 @@ function Timeline(): ReactElement {
   return (
     <div className="timeline_cont">
       <h2 className="text-3xl font-bold font-sans mb-4">Cronograma PSS 2025</h2>
-      <div 
-        className="timeline"
-        style={{ '--progress-width': `${progressWidth}%` } as React.CSSProperties}
-      >
+      <div className="timeline" style={{ "--progress-width": `${progressWidth}%` } as React.CSSProperties}>
         {etapas.map((etapa, index) => {
           const isCompleted = isDateBeforeToday(etapa.dateF);
           return (
@@ -72,7 +60,8 @@ function Timeline(): ReactElement {
               />
               <div className="date">
                 <p className="font-bold font-sans">
-                  {etapa.dateI} a <br />{etapa.dateF}
+                  {etapa.dateI} a <br />
+                  {etapa.dateF}
                 </p>
               </div>
             </div>
