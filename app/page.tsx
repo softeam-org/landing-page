@@ -9,10 +9,12 @@ import Partners from "./components/Parceiros/Parceiros";
 
 const title = "Softeam - Empresa Júnior de Computação";
 const description =
+  // eslint-disable-next-line max-len
   "A SofTeam é a empresa júnior de computação da UFS, especializada no desenvolvimento de sites, sistemas e aplicativos. Oferecemos soluções tecnológicas inovadoras, acessíveis e personalizadas para impulsionar o crescimento do seu negócio. Solicite um orçamento agora!";
 const imgLogo = "/logo-softeam.png"; // Make sure this is a valid PNG/JPG image
 const URLSite = "https://softeam.com.br";
 const keywords =
+  // eslint-disable-next-line max-len
   "empresa júnior, desenvolvimento web, mobile, consultoria tecnológica, softeam, tecnologia, website, site, software, desenvolvimento, inovação, soluções, ideias, transformação, contato, sistema, sistemas";
 
 export const metadata: Metadata = {
