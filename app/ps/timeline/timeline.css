@@ -1,0 +1,221 @@
+.timeline_cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1074bc;
+    border-radius: 15px;
+    height: 300px;
+    margin: 50px 120px 100px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.timeline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; /* Alterado para space-between */
+    height: 60%;
+    width: calc(100% - 50px); /* Ajuste para compensar o padding */
+    position: relative;
+    padding: 0 25px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    right: 25px; /* Ajuste para compensar o padding */
+    height: 8px;
+    background-color: #e0e0e0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    width: var(--progress-width, 0);
+    height: 8px;
+    background-color: rgb(48, 217, 48);
+    transform: translateY(-50%);
+    z-index: 2;
+    transition: width 0.5s ease;
+}
+
+.etapa {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    margin-top: 19px;
+}
+
+
+.img_check {
+    background-color: #e0e0e0;
+    border-radius: 30px;
+    height: 50px;
+    width: 50px;
+}
+
+.img_checkend {
+    background-color: #e0e0e0;
+    border: rgb(48, 217, 48) solid 5px;
+    border-radius: 30px;
+    height: 50px;
+    width: 50px;
+}
+
+
+@media (max-width: 1024px) {
+
+    .timeline_cont{
+        margin: 0px 60px 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline_cont {
+        margin: 70px 40px 0px;
+    }
+
+    .timeline_cont{
+        margin-top: 250px;
+    }
+
+    .timeline {
+        gap: 20px;
+    }
+
+    .etapa{
+        margin-top: 23px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .timeline_cont {
+        margin: 30px 20px 0px;
+        height: auto;
+        padding: 30px 20px;
+        margin: 50px 20px 100px;
+    }
+
+    .timeline {
+        flex-direction: column;
+        height: auto;
+        gap: 40px;
+        padding: 30px 0;
+    }
+
+    .timeline::before {
+        /* Transforma a linha horizontal em vertical */
+        top: 0;
+        left: 50%;
+        width: 8px;
+        height: 100%;
+        transform: translateX(-50%);
+    }
+
+    .timeline::after {
+        /* Ajusta a linha de progresso para vertical */
+        top: 0;
+        left: 50%;
+        width: 8px;
+        height: var(--progress-width, 0);
+        transform: translateX(-50%);
+    }
+
+    .etapa {
+        flex-direction: row;
+        width: 100%;
+        height: auto;
+        gap: 20px;
+        margin-top: 0;
+        margin-left: 15px;
+        align-items: center;
+    }
+
+    .img_check,
+    .img_checkend {
+        margin-right: 15px;
+    }
+
+    .date, .label {
+        text-align: left;
+        flex: 1;
+    }
+
+
+    @media (max-width: 320px) {
+      
+        .timeline_cont {
+          margin: 30px 10px 50px !important;
+          height: auto !important;
+          padding: 20px 10px !important;
+        }
+      
+        .timeline {
+          flex-direction: column !important;
+          height: auto !important;
+          gap: 30px !important;
+          padding: 20px 0 !important;
+        }
+      
+        .timeline::before {
+          top: 0 !important;
+          left: 50% !important;
+          width: 6px !important;
+          height: 100% !important;
+          transform: translateX(-50%) !important;
+        }
+      
+        .timeline::after {
+          top: 0 !important;
+          left: 50% !important;
+          width: 6px !important;
+          height: var(--progress-width, 0) !important;
+          transform: translateX(-50%) !important;
+        }
+      
+        .etapa {
+          flex-direction: row !important;
+          width: 100% !important;
+          height: auto !important;
+          gap: 15px !important;
+          margin-top: 0 !important;
+          align-items: center !important;
+          margin-left: 23px;
+        }
+      
+        .img_check,
+        .img_checkend {
+          width: 40px !important;
+          height: 40px !important;
+          margin-right: 10px !important;
+        }
+      
+        .label,
+        .date {
+          text-align: left !important;
+          flex: 1 !important;
+        }
+      
+        .label p,
+        .date p {
+          font-size: 14px !important;
+          line-height: 1.3 !important;
+        }
+      
+        .timeline_cont h2 {
+          font-size: 1.5rem !important;
+          margin-bottom: 20px !important;
+        }
+    }
+
+}

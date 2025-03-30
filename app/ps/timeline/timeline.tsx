@@ -1,7 +1,7 @@
 "use client";
 import React, { ReactElement, useEffect, useState } from "react";
 import Image from "next/image";
-import "../ps.css";
+import "./timeline.css";
 
 interface Etapa {
   icon: string;
