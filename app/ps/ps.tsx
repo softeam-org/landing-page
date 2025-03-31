@@ -15,7 +15,7 @@ const cronograma = data.cronograma;
 function PS(): ReactElement {
   return (
     <div className="ps_container">
-      <div className="content">
+      <div className="pscontent">
         <div className="text">
           <h1 className="titulo text-6xl font-bold font-sans leading-tight">
             Faça parte da
@@ -55,7 +55,7 @@ function PS(): ReactElement {
             <h2 className="text-4xl font-bold font-sans mb-4">Processo Seletivo 2025.1</h2>
             {information.map((info, index) => (
               <div className="info mb-4" key={index}>
-                <div className="iconInfo">
+                <div className="psiconInfo">
                   <Image src={info.icon} alt={info.text} width={20} height={20} loading="lazy" />
                 </div>
                 <p>{info.text}</p>
@@ -78,7 +78,7 @@ function PS(): ReactElement {
                 <div className="border-t border-blue-500 my-2"></div>
 
                 <div className="info flex items-center gap-2">
-                  <div className="iconInfo">
+                  <div className="psiconInfo">
                     <Image src={nucleo.icon} alt={nucleo.text} width={20} height={20} loading="lazy" />
                   </div>
                   <p>{nucleo.text}</p>

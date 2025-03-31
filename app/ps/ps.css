@@ -1,11 +1,14 @@
 
 .ps_container{
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     color: white;
 }
 
 .content{
+    margin-top: 25px;
+
     display: flex;
     flex-direction: row;
     height: 500px;
@@ -27,7 +30,8 @@
     width: 50%;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     
 }
 
@@ -103,7 +107,12 @@
 .nucleos,.cronograma{
     height: 50%;
     width: 100%;
+}
 
+.psiconInfo {
+    background: #fff;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 
