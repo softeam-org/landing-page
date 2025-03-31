@@ -48,7 +48,7 @@ const Navbar: FC = () => {
           </div>
           <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
             <div className="flex shrink-0">
-              <Link href="#">
+              <Link href="/">
                 <Image
                   alt="Logo da Softeam com Nome"
                   src="logo-softeam-with-name.svg"

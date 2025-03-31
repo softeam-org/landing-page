@@ -1,4 +1,3 @@
-
 .ps_container{
     margin-top: 100px;
     display: flex;
@@ -8,7 +7,6 @@
 
 .content{
     margin-top: 25px;
-
     display: flex;
     flex-direction: row;
     height: 500px;
@@ -30,9 +28,8 @@
     width: 50%;
     align-items: center;
     justify-content: center;
-    margin-top: 25px;
     margin-bottom: 25px;
-    
+    flex-direction: column;
 }
 
 .ps_img{

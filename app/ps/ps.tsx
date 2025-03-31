@@ -15,7 +15,7 @@ const cronograma = data.cronograma;
 function PS(): ReactElement {
   return (
     <div className="ps_container">
-      <div className="pscontent">
+      <div className="content">
         <div className="text">
           <h1 className="titulo text-6xl font-bold font-sans leading-tight">
             Faça parte da
