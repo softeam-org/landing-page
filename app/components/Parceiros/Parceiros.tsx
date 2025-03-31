@@ -25,7 +25,7 @@ function Partners(): React.JSX.Element {
       className="relative w-full flex flex-col gap-16 px-44 max-xl:px-36 max-lg:px-16 max-md:px-10 max-xs:px-14
       py-12 bg-color-5"
     >
-      <h3 className={`text-2xl text-center font-semibold ${poppins.className}`}>NOSSOS PARCEIROS</h3>
+      <h2 className={`text-3xl text-center font-semibold ${poppins.className}`}>Nossos Parceiros</h2>
       <div className="relative">
         <div className="absolute z-30 flex justify-between h-64 w-full">
           <div className="h-full w-10 bg-gradient-to-r from-color-5 from-20% to-transparent"></div>
