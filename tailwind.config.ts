@@ -39,6 +39,9 @@ export default {
       width: {
         ["7/10"]: "70%",
       },
+      borderWidth: {
+        "3": "3px",
+      },
     },
   },
   plugins: [],
