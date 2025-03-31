@@ -1,5 +1,8 @@
+"use client";
+
 import { useAtom } from "jotai";
 import Image, { StaticImageData } from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { IoClose } from "react-icons/io5";
 import placeholderMockup from "../../../public/image2.png";
@@ -12,6 +15,12 @@ interface ServicePopupProps {
 
 function PopupServico({ popupName, popupMockup }: ServicePopupProps): React.JSX.Element {
   const [, setIsServicePopupOpen] = useAtom(isServicePopupOpenAtom);
+  const router = useRouter();
+
+  const handleContractCLick = (): void => {
+    setIsServicePopupOpen(false);
+    router.push("/#contato");
+  };
 
   return (
     <div
@@ -42,7 +51,7 @@ function PopupServico({ popupName, popupMockup }: ServicePopupProps): React.JSX.
             type="button"
             className="h-10 w-40 text-sm font-semibold absolute bottom-8 text-color-3 hover:bg-color-3 hover:text-white
             rounded-full border-color-3 border-3 ease-out duration-200"
-            onClick={() => alert(`Contratado o serviço ${4}.`)}
+            onClick={() => handleContractCLick()}
           >
             Contrate-nos
           </button>
