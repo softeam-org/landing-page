@@ -1,6 +1,7 @@
 "use client";
 
 import { poppins } from "@/app/ts/fonts";
+import { servicesList } from "@/app/ts/servicesList";
 import { atom, useAtom } from "jotai";
 import React, { useRef } from "react";
 import "swiper/css";
@@ -71,9 +72,9 @@ function Services(): React.JSX.Element {
         pagination={false}
         className="w-full"
       >
-        {services.map((service, index) => (
+        {servicesList.map((service, index) => (
           <SwiperSlide key={index}>
-            <Servico />
+            <Servico service={service} />
           </SwiperSlide>
         ))}
 

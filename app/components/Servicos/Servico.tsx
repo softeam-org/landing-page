@@ -1,9 +1,10 @@
 import { poppins } from "@/app/ts/fonts";
+import { Service } from "@/app/ts/servicesList";
 import { useAtom } from "jotai";
 import React from "react";
 import { isServicePopupOpenAtom } from "./Servicos";
 
-function Servico(): React.JSX.Element {
+function Servico({ service }: { service: Service }): React.JSX.Element {
   const [, setIsServicePopupOpen] = useAtom(isServicePopupOpenAtom);
 
   return (
@@ -17,9 +18,7 @@ function Servico(): React.JSX.Element {
           </div>
           <div className="font-semibold">
             <p className="font-semibold">O melhor custo benefício do mercado!</p>
-            <p className="font-semibold">
-              Aqui vai uma breve descrição deste projeto. Pode obter muitas coisas legais.
-            </p>
+            <p className="font-semibold">{service.serviceDescription}</p>
             <p className="font-semibold">Conheça mais agora.</p>
           </div>
           <button

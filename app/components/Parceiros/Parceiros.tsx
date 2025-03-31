@@ -6,13 +6,13 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import { images } from "../../ts/parternsPNGs";
+import { images } from "../../ts/partnersPNGs";
 
 function Partners(): React.JSX.Element {
   const settings = {
     infinite: true,
     speed: 3000,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
@@ -26,15 +26,21 @@ function Partners(): React.JSX.Element {
       py-12 bg-color-5"
     >
       <h2 className={`text-3xl text-center font-semibold ${poppins.className}`}>Nossos Parceiros</h2>
-      <div className="relative">
-        <div className="absolute z-30 flex justify-between h-64 w-full">
+      <div className="relative flex justify-center items-center">
+        <div className="absolute z-30 flex justify-between items-center h-64 w-full">
           <div className="h-full w-10 bg-gradient-to-r from-color-5 from-20% to-transparent"></div>
           <div className="h-full w-10 bg-gradient-to-l from-color-5 from-20% to-transparent"></div>
         </div>
         <Slider {...settings} className="z-20 flex w-full h-64">
           {images.map((src, index) => (
-            <div key={index} className="flex items-center justify-center">
-              <Image src={src} className="object-cover w-64 aspect-square" alt={`Parceiro ${index + 1}`} />
+            <div key={index} className="flex flex-col h-64 w-32 aspect-auto items-center justify-center">
+              <Image
+                src={src}
+                width={150} // Defina um tamanho fixo
+                height={150} // Altura fixa para manter alinhado
+                className="object-contain w-1/2 h-full"
+                alt={`Parceiro ${index + 1}`}
+              />
             </div>
           ))}
         </Slider>
