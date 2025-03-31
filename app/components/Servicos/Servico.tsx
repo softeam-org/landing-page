@@ -16,7 +16,7 @@ function Servico(): React.JSX.Element {
             <h3 className="font-bold text-xl tracking-wide">Voltado para solucionar problema</h3>
           </div>
           <div className="font-semibold">
-            <p className="font-semibold">O maior custo benefício do mercado!</p>
+            <p className="font-semibold">O melhor custo benefício do mercado!</p>
             <p className="font-semibold">
               Aqui vai uma breve descrição deste projeto. Pode obter muitas coisas legais.
             </p>
