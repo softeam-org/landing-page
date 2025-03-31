@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Head from "next/head";
 import React from "react";
+import BodyWrapper from "./BodyWrapper";
 import About from "./components/About/About";
 import Footer from "./components/footer/footer";
 import HeroSection from "./components/HeroSection/HeroSection";
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
 
 function App(): React.JSX.Element {
   return (
-    <div className="w-full min-h-screen flex flex-col overflow-x-hidden">
+    <BodyWrapper>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -75,7 +76,7 @@ function App(): React.JSX.Element {
       <Services />
       <Partners />
       <Footer />
-    </div>
+    </BodyWrapper>
   );
 }
 
