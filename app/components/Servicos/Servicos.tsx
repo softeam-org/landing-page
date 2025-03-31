@@ -8,15 +8,18 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
+import PopupServico from "./PopupServico";
 import Servico from "./Servico";
 import ServicosNav from "./ServicosNav";
 
 export const currentServiceAtom = atom<number>(0);
+export const isServicePopupOpenAtom = atom<boolean>(false);
 
 export const services: number[] = [0, 1, 2, 3, 4, 5];
 
 function Services(): React.JSX.Element {
   const swiperRef = useRef<SwiperClass | null>(null);
+  const [isServicePopupOpen] = useAtom(isServicePopupOpenAtom);
   const [, setCurrentService] = useAtom(currentServiceAtom);
 
   return (
@@ -34,7 +37,7 @@ function Services(): React.JSX.Element {
           prevEl: ".custom-prev",
         }}
         autoplay={{
-          delay: 5000,
+          delay: 7000,
           disableOnInteraction: false,
         }}
         loop={true}
@@ -64,6 +67,7 @@ function Services(): React.JSX.Element {
           {">"}
         </div>
       </Swiper>
+      {isServicePopupOpen && <PopupServico />}
     </section>
   );
 }
