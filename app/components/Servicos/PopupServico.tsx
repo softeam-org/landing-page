@@ -1,7 +1,9 @@
+import { useAtom } from "jotai";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { IoClose } from "react-icons/io5";
 import placeholderMockup from "../../../public/image2.png";
+import { isServicePopupOpenAtom } from "./Servicos";
 
 interface ServicePopupProps {
   popupName: string;
@@ -9,6 +11,8 @@ interface ServicePopupProps {
 }
 
 function PopupServico({ popupName, popupMockup }: ServicePopupProps): React.JSX.Element {
+  const [, setIsServicePopupOpen] = useAtom(isServicePopupOpenAtom);
+
   return (
     <div
       className="fixed top-0 left-0 flex justify-center items-center w-screen h-screen
@@ -16,7 +20,11 @@ function PopupServico({ popupName, popupMockup }: ServicePopupProps): React.JSX.
     >
       <div className="flex flex-col items-center w-1/3 aspect-square bg-white rounded-3xl">
         <div className="flex justify-end items-center w-full h-12 border-b-2 border-slate-200 rounded-t-3xl">
-          <button type="button" className="flex h-full aspect-square justify-center items-center rounded-tr-3xl">
+          <button
+            type="button"
+            className="flex h-full aspect-square justify-center items-center rounded-tr-3xl"
+            onClick={() => setIsServicePopupOpen(false)}
+          >
             <IoClose className="h-full w-2/3 aspect-square" color="#64748b" />
           </button>
         </div>
@@ -36,7 +44,7 @@ function PopupServico({ popupName, popupMockup }: ServicePopupProps): React.JSX.
             rounded-full border-color-3 border-3 ease-out duration-200"
             onClick={() => alert(`Contratado o serviço ${4}.`)}
           >
-            Comece agora
+            Contrate-nos
           </button>
         </div>
       </div>
