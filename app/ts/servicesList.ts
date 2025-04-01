@@ -40,4 +40,13 @@ export const servicesList: Service[] = [
     serviceCardImage: image3,
     servicePopupImage: image3,
   },
+  {
+    id: 3,
+    serviceTitle: "Sites",
+    serviceDescription:
+      // eslint-disable-next-line max-len
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur consequuntur saepe sequi, neque repellendusqui, vitae tempore molestias explicabo architecto, voluptate aut ut animi dicta quae est maxime libero porro?",
+    serviceCardImage: image3,
+    servicePopupImage: image3,
+  },
 ];
