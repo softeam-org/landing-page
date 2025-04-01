@@ -11,18 +11,22 @@ function ServicosNav({ swiperRef }: { swiperRef: React.RefObject<SwiperClass | n
     <nav>
       <ul
         className="flex w-full h-12 justify-between items-center
-          px-44 max-xl:px-36 max-lg:px-16 max-md:px-10 max-xs:px-14"
+          px-44 max-xl:px-36 max-lg:px-16 max-md:px-10 max-xs:px-7"
       >
         {servicesList.map((service, index) => {
           return (
             <li
               key={index}
-              className={`flex justify-center items-center rounded-full h-full w-28 text-sm font-semibold
-              text-white ${currentService === index ? "bg-color-3" : "hover:bg-color-3 opacity-70"}
-                ease-out duration-200 cursor-pointer`}
+              className={`flex justify-center items-center h-full max-xs:h-5/6
+              w-24 max-sm:w-auto rounded-3xl
+              ${servicesList.length > 3 ? "max-sm:aspect-square max-sm:rounded-full" : ""}
+              text-sm font-semibold text-white
+              ${currentService === index ? "bg-color-3" : "hover:bg-color-3 opacity-70"}
+              ease-out duration-200 cursor-pointer`}
               onClick={() => swiperRef.current?.slideToLoop(index)}
             >
-              {service.serviceTitle}
+              <span className="sm:hidden">{servicesList.length > 3 ? index + 1 : service.serviceTitle}</span>
+              <span className="hidden sm:block">{service.serviceTitle}</span>
             </li>
           );
         })}
