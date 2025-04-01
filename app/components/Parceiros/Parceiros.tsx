@@ -2,17 +2,38 @@
 
 import { poppins } from "@/app/ts/fonts";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import { images } from "../../ts/partnersPNGs";
 
 function Partners(): React.JSX.Element {
+  const [slidesToShow, setSlidesToShow] = useState(3);
+
+  useEffect(() => {
+    const updateSlidesToShow = (): void => {
+      if (window.innerWidth <= 540) {
+        setSlidesToShow(1);
+      } else if (window.innerWidth <= 1024) {
+        setSlidesToShow(2);
+      } else {
+        setSlidesToShow(3);
+      }
+    };
+
+    updateSlidesToShow();
+    window.addEventListener("resize", updateSlidesToShow);
+
+    return () => {
+      window.removeEventListener("resize", updateSlidesToShow);
+    };
+  }, []);
+
   const settings = {
     infinite: true,
     speed: 3000,
-    slidesToShow: 3,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,
@@ -22,7 +43,7 @@ function Partners(): React.JSX.Element {
 
   return (
     <section
-      className="relative w-full flex flex-col gap-16 px-44 max-xl:px-36 max-lg:px-16 max-md:px-10 max-xs:px-14
+      className="relative w-full flex flex-col gap-16 px-44 max-xl:px-36 max-lg:px-16 max-md:px-8 max-xs:px-0
       py-12 bg-color-4"
     >
       <h2 className={`text-3xl text-center font-semibold text-white ${poppins.className}`}>Nossos Parceiros</h2>
