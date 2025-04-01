@@ -1,20 +1,18 @@
 "use client";
 
+import { servicesList } from "@/app/ts/servicesList";
 import { useAtom } from "jotai";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { IoClose } from "react-icons/io5";
 import placeholderMockup from "../../../public/image2.png";
-import { isServicePopupOpenAtom } from "./Servicos";
+import { currentOpenServicePopupOpenAtom, isServicePopupOpenAtom } from "./Servicos";
 
-interface ServicePopupProps {
-  popupName: string;
-  popupMockup: StaticImageData;
-}
-
-function PopupServico({ popupName, popupMockup }: ServicePopupProps): React.JSX.Element {
+function PopupServico(): React.JSX.Element {
   const [, setIsServicePopupOpen] = useAtom(isServicePopupOpenAtom);
+  const [currentOpenServicePopupOpen] = useAtom(currentOpenServicePopupOpenAtom);
+
   const router = useRouter();
 
   const handleContractCLick = (): void => {
@@ -27,7 +25,10 @@ function PopupServico({ popupName, popupMockup }: ServicePopupProps): React.JSX.
       className="fixed top-0 left-0 flex justify-center items-center w-screen h-screen
         bg-black bg-opacity-80 z-50"
     >
-      <div className="flex flex-col items-center w-1/3 aspect-square bg-white rounded-3xl">
+      <div
+        className="flex flex-col items-center w-2/5 max-xl:w-1/2 max-lg:w-7/12
+        max-md:h-2/3 max-sm:w-2/3 max-xs:w-5/6 aspect-square bg-white rounded-3xl"
+      >
         <div className="flex justify-end items-center w-full h-12 border-b-2 border-slate-200 rounded-t-3xl">
           <button
             type="button"
@@ -37,16 +38,17 @@ function PopupServico({ popupName, popupMockup }: ServicePopupProps): React.JSX.
             <IoClose className="h-full w-2/3 aspect-square" color="#64748b" />
           </button>
         </div>
-        <div className="relative flex-1 flex flex-col w-full  px-10 gap-4 justify-center items-center rounded-b-3xl">
+        <div className="relative flex-1 flex flex-col w-full px-10 gap-4 justify-center items-center rounded-b-3xl">
           {/* Mockup do Serviço */}
-          <Image src={popupMockup || placeholderMockup} alt="mockup" />
+          <Image src={servicesList[currentOpenServicePopupOpen].servicePopupImage || placeholderMockup} alt="mockup" />
           {/* Título do Serviço */}
-          <h1 className="font-semibold text-xl">{popupName || "Lorem Ipsum"}</h1>
+          <h1 className="font-semibold text-xl">
+            {servicesList[currentOpenServicePopupOpen].serviceTitle || "Lorem Ipsum"}
+          </h1>
           {/* Descrição do Serviço */}
-          <h3 className="text-xs text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum numquam ipsum quas nostrum dolor, delectus,
-            neque laudantium quibusdam vitae officia veniam architecto, voluptate dolore autem possimus a quod!
-          </h3>
+          <p className="text-sm max-xs:text-xs text-center text-black">
+            {servicesList[currentOpenServicePopupOpen].serviceDescription}
+          </p>
           <button
             type="button"
             className="h-10 w-40 text-sm font-semibold absolute bottom-8 text-color-3 hover:bg-color-3 hover:text-white
