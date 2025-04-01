@@ -18,7 +18,7 @@ function ServicosNav({ swiperRef }: { swiperRef: React.RefObject<SwiperClass | n
             <li
               key={index}
               className={`flex justify-center items-center rounded-full h-full w-28 text-sm font-semibold
-                ${currentService === index ? "bg-color-3 text-white" : "hover:bg-color-3 opacity-70"}
+              text-white ${currentService === index ? "bg-color-3" : "hover:bg-color-3 opacity-70"}
                 ease-out duration-200 cursor-pointer`}
               onClick={() => swiperRef.current?.slideToLoop(index)}
             >

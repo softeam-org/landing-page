@@ -1,6 +1,5 @@
 "use client";
 
-import { Service } from "@/app/ts/servicesList";
 import { useAtom } from "jotai";
 import Image, { StaticImageData } from "next/image";
 import { useRouter } from "next/navigation";
@@ -12,7 +11,6 @@ import { isServicePopupOpenAtom } from "./Servicos";
 interface ServicePopupProps {
   popupName: string;
   popupMockup: StaticImageData;
-  openService: Service;
 }
 
 function PopupServico({ popupName, popupMockup }: ServicePopupProps): React.JSX.Element {
