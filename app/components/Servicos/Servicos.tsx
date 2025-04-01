@@ -15,6 +15,7 @@ import Servico from "./Servico";
 import ServicosNav from "./ServicosNav";
 
 export const currentServiceAtom = atom<number>(0);
+export const currentOpenServicePopupOpenAtom = atom<number>(0);
 export const isServicePopupOpenAtom = atom<boolean>(false);
 
 export const services: number[] = [0, 1, 2, 3, 4, 5];
@@ -22,7 +23,7 @@ export const services: number[] = [0, 1, 2, 3, 4, 5];
 function Services(): React.JSX.Element {
   const swiperRef = useRef<SwiperClass | null>(null);
   const [isServicePopupOpen] = useAtom(isServicePopupOpenAtom);
-  const [currentService, setCurrentService] = useAtom(currentServiceAtom);
+  const [, setCurrentService] = useAtom(currentServiceAtom);
 
   return (
     <section className={`w-full flex flex-col gap-16 text-white ${poppins.className} bg-color-4`}>
@@ -58,16 +59,16 @@ function Services(): React.JSX.Element {
         }}
         loop={true}
         pagination={false}
-        className="w-full"
+        className="w-full h-full"
       >
         {servicesList.map((service, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className="h-full">
             <Servico service={service} />
           </SwiperSlide>
         ))}
 
         <div
-          className="custom-prev absolute top-1/2 left-8 transform
+          className="custom-prev absolute top-1/2 left-8 max-lg:left-4 transform max-md:hidden
           -translate-y-1/2 bg-color-3 text-white w-8 h-8 flex items-center
           justify-center rounded-full cursor-pointer z-10 text-lg"
           onClick={() => swiperRef.current?.slidePrev()}
@@ -75,20 +76,15 @@ function Services(): React.JSX.Element {
           {"<"}
         </div>
         <div
-          className="custom-next absolute top-1/2 right-8 transform
-          -translate-y-1/2 bg-color-3 text-white w-8 h-8 flex items-center
+          className="custom-next absolute top-1/2 right-8 max-lg:right-4 transform
+          max-md:hidden -translate-y-1/2 bg-color-3 text-white w-8 h-8 flex items-center
           justify-center rounded-full cursor-pointer z-10 text-xl"
           onClick={() => swiperRef.current?.slideNext()}
         >
           {">"}
         </div>
       </Swiper>
-      {isServicePopupOpen && (
-        <PopupServico
-          popupName={servicesList[currentService].serviceTitle}
-          popupMockup={servicesList[currentService].servicePopupImage}
-        />
-      )}
+      {isServicePopupOpen && <PopupServico />}
     </section>
   );
 }
