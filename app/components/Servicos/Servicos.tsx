@@ -26,7 +26,7 @@ function Services(): React.JSX.Element {
   const [, setCurrentService] = useAtom(currentServiceAtom);
 
   return (
-    <section className={`w-full flex flex-col gap-16 text-white ${poppins.className} bg-color-4`}>
+    <section id="catalogo" className={`w-full flex flex-col gap-16 text-white ${poppins.className} bg-color-4`}>
       <div>
         <Waves
           fill="#114e7e"

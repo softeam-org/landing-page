@@ -13,6 +13,7 @@ const description = "Venha fazer parte da Softeam, inscreva-se já em nosso proc
 const imgLogo = "/logo-softeam.png"; // Make sure this is a valid PNG/JPG image
 const URLSite = "https://softeam.com.br/ps";
 const keywords =
+  // eslint-disable-next-line max-len
   "empresa júnior, desenvolvimento web, mobile, consultoria tecnológica, softeam, tecnologia, website, site, software, desenvolvimento, inovação, soluções, ideias, transformação, contato, sistema, sistemas,processo seletivo";
 
 export const metadata: Metadata = {
