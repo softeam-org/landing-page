@@ -1,12 +1,12 @@
 "use client";
 
 import { servicesList } from "@/app/ts/servicesList";
+import placeholderMockup from "@/public/logo-softeam.svg";
 import { useAtom } from "jotai";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { IoClose } from "react-icons/io5";
-import placeholderMockup from "@/public/logo-softeam.svg";
 import { currentOpenServicePopupOpenAtom, isServicePopupOpenAtom } from "./Servicos";
 
 function PopupServico(): React.JSX.Element {
@@ -38,7 +38,7 @@ function PopupServico(): React.JSX.Element {
             <IoClose className="h-full w-2/3 aspect-square" color="#64748b" />
           </button>
         </div>
-        <div className="relative flex-1 flex flex-col w-full px-10 gap-4 justify-center items-center rounded-b-3xl">
+        <div className="relative flex-1 flex flex-col w-full p-10 gap-4 justify-between items-center rounded-b-3xl">
           {/* Mockup do Serviço */}
           <Image src={servicesList[currentOpenServicePopupOpen].servicePopupImage || placeholderMockup} alt="mockup" />
           {/* Título do Serviço */}
@@ -51,7 +51,7 @@ function PopupServico(): React.JSX.Element {
           </p>
           <button
             type="button"
-            className="h-10 w-40 text-sm font-semibold absolute bottom-8 text-color-3 hover:bg-color-3 hover:text-white
+            className="h-10 w-40 text-sm font-semibold bottom-8 text-color-3 hover:bg-color-3 hover:text-white
             rounded-full border-color-3 border-3 ease-out duration-200"
             onClick={() => handleContractCLick()}
           >
