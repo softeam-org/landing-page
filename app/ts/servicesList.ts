@@ -1,8 +1,10 @@
 import { StaticImageData } from "next/image";
 
-import image1 from "@/public/ps.jpeg";
-import image2 from "@/public/ps.jpeg";
-import image3 from "@/public/ps.jpeg";
+import landingpage1 from "@/public/landingpage1.avif";
+import icose from "@/public/icose.png";
+import sistemas from "@/public/sistemas.jpg";
+import consultoria from "@/public/consultoria.jpg";
+import cursos from "@/public/cursos.jpeg";
 
 export interface Service {
   id: number;
@@ -21,8 +23,8 @@ export const servicesList: Service[] = [
     serviceDescription:
       // eslint-disable-next-line max-len
       "Transforme cliques em clientes com uma landing page profissional! Uma página focada, estratégica e feita sob medida para converter visitantes em resultados reais — seja captando leads, vendendo produtos ou promovendo serviços. Mais que um cartão de visitas online, é sua vitrine no mundo digital.",
-    serviceCardImage: image1,
-    servicePopupImage: image1,
+    serviceCardImage: landingpage1,
+    servicePopupImage: landingpage1,
   },
   {
     id: 1,
@@ -31,8 +33,8 @@ export const servicesList: Service[] = [
     serviceDescription:
       // eslint-disable-next-line max-len
       "Tem uma ideia de site? A gente transforma em realidade! Você traz a visão, nós cuidamos do design, desenvolvimento e funcionalidade para entregar uma solução completa, sob medida e pronta para impressionar. Do esboço à entrega, seu projeto nas mãos certas.",
-    serviceCardImage: image2,
-    servicePopupImage: image2,
+    serviceCardImage: icose,
+    servicePopupImage: icose,
   },
   {
     id: 2,
@@ -41,8 +43,8 @@ export const servicesList: Service[] = [
     serviceDescription:
       // eslint-disable-next-line max-len
       "Automatize tarefas, reduza custos e ganhe eficiência com um sistema feito sob medida para o seu negócio. Desenvolvemos soluções completas para diferentes áreas, como sistemas de gerenciamento de estoque, caixas para estabelecimentos comerciais, plataformas de atendimento, ERPs personalizados, sistemas de controle financeiro e muito mais. Tenha um software que realmente atende às suas necessidades e impulsiona sua produtividade.",
-    serviceCardImage: image3,
-    servicePopupImage: image3,
+    serviceCardImage: sistemas,
+    servicePopupImage: sistemas,
   },
   {
     id: 3,
@@ -51,8 +53,8 @@ export const servicesList: Service[] = [
     serviceDescription:
       // eslint-disable-next-line max-len
       "Está com um desafio no seu negócio? A gente resolve. Você traz a situação, nós analisamos o cenário, identificamos os pontos críticos e desenvolvemos a solução ideal para sua necessidade. Com nossa consultoria em computação, cada obstáculo vira uma oportunidade de crescer com estratégia e tecnologia.",
-    serviceCardImage: image3,
-    servicePopupImage: image3,
+    serviceCardImage: consultoria,
+    servicePopupImage: consultoria,
   },
   {
     id: 4,
@@ -61,7 +63,7 @@ export const servicesList: Service[] = [
     serviceDescription:
       // eslint-disable-next-line max-len
       "Levamos o conhecimento até você! Com nossos cursos de computação, ensinamos de forma acessível, prática e personalizada. A gente vai até sua escola, instituição ou grupo e leva tecnologia, aprendizado e novas possibilidades direto pra sua realidade.",
-    serviceCardImage: image3,
-    servicePopupImage: image3,
+    serviceCardImage: cursos,
+    servicePopupImage: cursos,
   },
 ];

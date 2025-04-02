@@ -6,13 +6,10 @@ function SemPS(): ReactElement {
     <div className="ps_container mb-50px">
       <div className="content flex flex-col">
         <div className="">
-          <h1 className="text-6xl font-bold font-sans leading-tight">
-            Não há Processo Seletivo
-            <br /> no Momento
-          </h1>
+          <h1 className="text-6xl font-bold font-sans leading-tight">Não há processo seletivo aberto no momento.</h1>
           <p className="font-bold text-3xl font-sans leading-relaxed compact-text">
-            Mas Fique atento em nossas redes sociais,que assim que o processo seletivo estiver aberto estaremos
-            comunicando. Além disso, você pode apreciar nossas postagens,pois tem muito conteudo bom lá!
+            Fique atento às nossas redes sociais! Assim que houver uma nova oportunidade, avisaremos por lá. Enquanto
+            isso, aproveite nosso conteúdo — temos muitas postagens interessantes para você.
           </p>
         </div>
         <div className="ps_div_img">
