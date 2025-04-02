@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { IoClose } from "react-icons/io5";
-import placeholderMockup from "../../../public/image2.png";
+import placeholderMockup from "@/public/logo-softeam.svg";
 import { currentOpenServicePopupOpenAtom, isServicePopupOpenAtom } from "./Servicos";
 
 function PopupServico(): React.JSX.Element {

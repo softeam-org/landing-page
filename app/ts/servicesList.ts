@@ -1,8 +1,8 @@
 import { StaticImageData } from "next/image";
 
-import image1 from "../../public/image1.png";
-import image2 from "../../public/image2.png";
-import image3 from "../../public/image3.png";
+import image1 from "@/public/ps.jpeg";
+import image2 from "@/public/ps.jpeg";
+import image3 from "@/public/ps.jpeg";
 
 export interface Service {
   id: number;
