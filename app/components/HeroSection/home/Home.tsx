@@ -5,6 +5,7 @@ import React from "react";
 function Home(): React.JSX.Element {
   return (
     <section
+      id="home"
       className="w-full h-fit px-32 max-xl:px-16 max-lg:px-10 max-md:px-6 flex flex-col max-xl:mb-12 max-lg:my-10
         max-md:mt-16 max-md:mb-6 max-sm:my-16 max-xs:mt-20"
     >
@@ -25,6 +26,7 @@ function Home(): React.JSX.Element {
               className="max-lg:h-14 max-lg:w-auto"
               width={40}
               height={40}
+              loading="lazy"
             />
             <p className="font-bold">ideias</p>
             <p>em</p>
@@ -34,7 +36,7 @@ function Home(): React.JSX.Element {
             className={`${openSans.className} w-2/3 max-md:w-5/6 text-2xl max-xl:text-xl max-md:text-lg max-sm:text-base
             font-medium tracking-wider max-md:text-center`}
           >
-            Desenvolvemos soluções de qualidade com o maior custo benefício do mercado para fazer seu projeto decolar!
+            Desenvolvemos soluções de qualidade com o melhor custo benefício do mercado para fazer seu projeto decolar!
           </p>
         </article>
         <Image
@@ -43,6 +45,7 @@ function Home(): React.JSX.Element {
           className="w-2/5 md:w-1/3 h-auto max-md:hidden"
           width={100}
           height={100}
+          loading="lazy"
         />
       </div>
     </section>

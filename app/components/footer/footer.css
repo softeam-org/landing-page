@@ -4,7 +4,7 @@ html, body {
     width: 100%;
 }
 
-.container {
+.container_footer {
     display: flex;
     flex-direction: row;
     background-color: #072763;
@@ -16,32 +16,18 @@ html, body {
 }
 
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column-reverse;
-        align-items: center;
-        text-align: center;
-    }
-}
-
 
 .socialNetworks {
     display: flex;
     flex-direction: row;
     gap: 20px;
-    justify-content: center;
+    justify-content: end;
     width: 50%;
+    height: auto;
     margin-top: 20px;
+    margin-right: 150px;
 }
 
-
-@media (max-width: 768px) {
-    .socialNetworks {
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 20px;
-    }
-}
 
 .information {
     display: flex;
@@ -51,17 +37,10 @@ html, body {
     justify-content: center;
     width: 50%;
     padding: 20px;
-    margin-left: 20px;
+    margin-left: 125px;
 }
 
 
-@media (max-width: 768px) {
-    .information {
-        width: 100%;
-        align-items: start;
-        text-align: center;
-    }
-}
 
 .info{
     display: flex;
@@ -76,7 +55,9 @@ html, body {
 .iconInfo {
     background-color: white;
     border-radius: 20px;
-    padding: 5px;
+    padding: 8px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,16 +78,55 @@ html, body {
 
 .linkSN1:hover .iconSN:hover {
     background: linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4);
-    box-shadow: 2px 2px 2px white;
-    
+    box-shadow: 2px 1px 2px white;
 }
 
 .linkSN2:hover .iconSN:hover {
     background-color: #0e76a8;
-    box-shadow: 2px 2px 2px white;
+    box-shadow: 2px 1px 2px white;
 }
 
 .linkSN3:hover .iconSN:hover {
     background-color: #25D366;
-    box-shadow: 2px 2px 2px white;
+    box-shadow: 2px 1px 2px white;
 }
+
+.linkSN1:active .linkSN2:active .linkSN3:active .iconSN:active {
+    box-shadow: none;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1024px) {
+    .socialNetworks {
+        margin-right: 120px;
+    }
+    
+    .information {
+        margin-left: 90px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container_footer {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+    }
+
+    .socialNetworks {
+        width: 100%;
+        justify-content: center;
+        margin: 20px 0px 0px;
+    }
+
+    .information {
+        width: 100%;
+        margin: 20px 0px 0px;
+        margin-left: 20px;
+        align-items: start;
+        text-align: center;
+    }
+}
+
+
