@@ -1,20 +1,21 @@
-.ps_container{
+.ps_container {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
     color: white;
 }
 
-.content{
+.content {
     margin-top: 25px;
     display: flex;
     flex-direction: row;
-    height: 500px;
+    align-items: stretch; /* Ensure both elements stretch to the same height */
+    gap: 50px; /* Adds spacing between text and image */
+    height: auto; /* Adjust based on content */
     margin: 100px 120px 0px;
 }
 
-
-.text{
+.text {
     display: flex;
     gap: 30px;
     flex-direction: column;
@@ -23,17 +24,27 @@
     align-items: start;
 }
 
-.ps_div_img{
+.ps_div_img {
     display: flex;
     width: 50%;
     align-items: center;
     justify-content: center;
-    margin-bottom: 25px;
     flex-direction: column;
 }
 
-.ps_img{
+.ps_img {
+    width: 100%;
+    height: 100%;
+    display: flex;
 }
+
+.ps_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the div while maintaining aspect ratio */
+    border-radius: 12px;
+}
+
 
 .text2{
     display: flex;

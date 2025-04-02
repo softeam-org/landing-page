@@ -20,7 +20,11 @@ function Servico({ service }: { service: Service }): React.JSX.Element {
       max-sm:gap-0 max-sm:gap-x-4 ma px-44 max-xl:px-36 max-lg:px-16 max-md:px-10 max-xs:px-7
     text-white max-sm:text-center"
     >
-      <Image src={service.serviceCardImage} alt="mockup" className="h-full w-full object-cover bg-black rounded-3xl max-sm:hidden" />
+      <Image
+        src={service.serviceCardImage}
+        alt="mockup"
+        className="h-full w-full object-cover bg-black rounded-3xl max-sm:hidden"
+      />
       <article className="flex h-full max-sm:h-1/2 flex-col gap-10 max-sm:items-center">
         <div className={`${poppins.className}`}>
           <h3 className="font-bold text-xl tracking-wide">Projeto de Software</h3>

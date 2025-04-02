@@ -20,7 +20,7 @@ function PS(): ReactElement {
           <h1 className="titulo text-6xl font-bold font-sans leading-tight">
             Faça parte da
             <br />
-            maior empresa
+            maior Empresa
             <br />
             Júnior de Sergipe
           </h1>

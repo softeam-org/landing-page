@@ -38,7 +38,6 @@ export const metadata: Metadata = {
   robots: "index, follow",
 };
 
-
 function App(): React.JSX.Element {
   return (
     <BodyWrapper>
