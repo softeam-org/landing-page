@@ -1,0 +1,304 @@
+.ps_container{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.content{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    margin: 100px 120px 0px;
+}
+
+
+.text{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    width: 50%;
+    justify-content: start;
+    align-items: start;
+}
+
+.ps_div_img{
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    flex-direction: column;
+}
+
+.ps_img{
+}
+
+.text2{
+    display: flex;
+    flex-direction: column;
+    margin: 100px 120px 0px;
+    gap: 30px;
+}
+
+
+.content2{
+    display: flex;
+    flex-direction: row;
+    height: 700px;
+    margin: 100px 120px 200px 120px;
+    
+}
+
+.content3{
+    display: flex;
+    flex-direction: column;
+}
+
+.info_edital{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    width:100%;
+}
+
+.info_ps{
+    height: 50%;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.edital{
+    height: 50%;
+}
+
+.btn-edital{        
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background-color: #1074bc; /* Azul */
+    border: none;
+    border-radius: 5px; /* Bordas levemente arredondadas */
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-edital:hover{
+    background-color: #1c58ab;
+    color: aliceblue;
+}
+
+.btn-edital:active{
+    box-shadow: none;
+}
+
+.nucleos,.cronograma{
+    height: 50%;
+    width: 100%;
+}
+
+.psiconInfo {
+    background: #fff;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+
+@media (max-width: 1024px) {
+    .content {
+        flex-direction: column;
+        height: auto;
+        margin: 80px 60px 0;
+        gap: 40px;
+    }
+
+    .content2 {
+        margin: 80px 60px 400px;
+        font-size: 0.9rem;
+    }
+
+    .content3 {
+        flex-direction: column;  /* Ensure the content stacks vertically */
+        height: auto;
+    }
+    .text, .ps_div_img {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ps_div_img {
+        margin-top: 0;
+        width: 100%;
+    }
+
+
+    .text2 {
+        margin: 40px 60px 0;
+    }
+
+    .info_edital{
+        margin-bottom: 150px;
+    }
+
+    .edital{
+        margin-top: 150px;
+    }
+    
+
+    
+}
+
+@media (max-width: 768px) {
+    .content, .content2, .text2{
+        margin: 70px 40px 0px;
+    }
+
+    .content{
+        flex-direction: column;
+    }
+
+
+    .content2{
+        flex-direction: column;
+        margin-bottom: 400px;
+    }
+
+    .content3{
+        flex-direction: column;
+        width: 100%;
+        gap: 50px;
+    }
+
+    .info_edital{
+        margin-bottom: 50px;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .edital{
+        margin-top: 100px;
+
+    }
+
+    .nucleos,.cronograma{
+        height: 100%;
+        width: 50%;
+    
+    }
+
+    .text{
+        width: 100%;
+        align-items: center;
+    }
+
+    .text2{
+        margin-top: 50px;
+    }
+    .ps_div_img {
+        margin-top: 0;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .content, .content2{
+        margin: 30px 20px 0px;
+    }
+
+    .content2{
+        margin-bottom: 700px;
+    }
+
+    .text2{
+        margin: 30px 20px 0px;
+    }
+
+    .text h1 {
+        font-size: 1.8rem;
+    }
+
+    .text p {
+        font-size: 0.9rem;
+    }
+
+    .edital{
+        margin-top: 150px;
+    }
+    .ps_div_img {
+        margin-top: 0;
+        width: 100%;
+    }
+
+
+}
+
+    @media (max-width: 320px) {
+        .ps_container {
+          padding: 0 10px;
+        }
+      
+        .content, 
+        .content2,
+        .text2 {
+          margin: 30px 10px 0 !important;
+          height: auto !important;
+        }
+      
+        .text {
+          width: 100% !important;
+          gap: 15px !important;
+        }
+      
+        .ps_div_img {
+          width: 100% !important;
+          margin-top: 10px !important;
+        }
+      
+      
+        .content2 {
+          flex-direction: column !important;
+          margin-bottom: 300px !important;
+        }
+      
+        .content3 {
+          width: 100% !important;
+          flex-direction: column !important;
+        }
+      
+        .nucleos, 
+        .cronograma {
+          width: 100% !important;
+          height: auto !important;
+          margin-bottom: 30px !important;
+        }
+      
+        .info {
+          flex-direction: column !important;
+          gap: 5px !important;
+        }
+      
+        .btn-edital {
+          padding: 8px 16px !important;
+          font-size: 14px !important;
+        }
+      
+       
+        
+}
+
+

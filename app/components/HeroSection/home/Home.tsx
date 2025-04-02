@@ -5,6 +5,7 @@ import React from "react";
 function Home(): React.JSX.Element {
   return (
     <section
+      id="home"
       className="w-full h-fit px-32 max-xl:px-16 max-lg:px-10 max-md:px-6 flex flex-col max-xl:mb-12 max-lg:my-10
         max-md:mt-16 max-md:mb-6 max-sm:my-16 max-xs:mt-20"
     >

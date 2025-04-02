@@ -51,14 +51,12 @@ function Footer(): React.JSX.Element {
           320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,
           320,69,320,34,320L0,320Z"
       />
-      <div className="container">
-        <div className="information">
-          {information.map((info, index) => (
-            <div className="info" key={index}>
-              <div className="iconInfo">
-                <Image src={info.icon} alt={info.text} width={25} height={25} loading="lazy" />
-              </div>
-              <p>{info.text}</p>
+    <div id="contato" className="container_footer">
+      <div className="information">
+        {information.map((info, index) => (
+          <div className="info" key={index}>
+            <div className="iconInfo">
+              <Image src={info.icon} alt={info.text} width={40} height={40} loading="lazy"/>
             </div>
           ))}
           <p className="textBotton">{textBotton}</p>
