@@ -5,7 +5,7 @@ import React from "react";
 import { AiOutlineAlert } from "react-icons/ai";
 import { FaHandHoldingHeart, FaRegCalendarCheck } from "react-icons/fa";
 import { HiUserGroup } from "react-icons/hi2";
-import { PiCastleTurret, PiHandFist, PiSunHorizonDuotone, PiTarget, PiPersonArmsSpread } from "react-icons/pi";
+import { PiCastleTurret, PiHandFist, PiPersonArmsSpread, PiSunHorizonDuotone, PiTarget } from "react-icons/pi";
 
 import MissionVisionCard from "./MissionVision/MissionVisionCard";
 import ValueCard from "./Values/ValueCard";
@@ -60,7 +60,8 @@ function About(): React.JSX.Element {
       <article className="w-full flex flex-col gap-10">
         <h3 className="text-2xl text-center font-semibold">VALORES</h3>
         <div
-          className="grid grid-cols-3 max-md:grid-cols-2 max-xs:grid-cols-1 w-full items-stretch gap-10
+          className="grid grid-cols-3 max-sm:grid-cols-2 max-sm:grid-rows-4
+          max-xs:grid-cols-1 w-full items-stretch gap-10
             max-xl:gap-9 max-lg:gap-7"
         >
           <ValueCard valueIcon={FaHandHoldingHeart} valueName="Paixão e Energia" />
@@ -69,7 +70,7 @@ function About(): React.JSX.Element {
           <ValueCard valueIcon={HiUserGroup} valueName="União entre a equipe" />
           <ValueCard valueIcon={PiHandFist} valueName="Garra para encarar desafios" />
           <ValueCard valueIcon={PiCastleTurret} valueName="Se divertir para criar" />
-          <div className="col-span-3 text-center">
+          <div className="col-span-3 max-sm:col-span-2 max-xs:col-span-1 text-center">
             <ValueCard valueIcon={PiPersonArmsSpread} valueName="Protagonistas do presente" />
           </div>
         </div>
