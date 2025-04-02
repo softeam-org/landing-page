@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import Waves from "../HeroSection/waves/Waves";
 import "./footer.css";
 
 const textBotton = "Software Team 2025 \u00A9 :: Feito com Café e Paçoca";

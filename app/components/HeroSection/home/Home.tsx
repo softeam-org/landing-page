@@ -36,7 +36,7 @@ function Home(): React.JSX.Element {
             className={`${openSans.className} w-2/3 max-md:w-5/6 text-2xl max-xl:text-xl max-md:text-lg max-sm:text-base
             font-medium tracking-wider max-md:text-center`}
           >
-            Desenvolvemos soluções de qualidade com o maior custo benefício do mercado para fazer seu projeto decolar!
+            Desenvolvemos soluções de qualidade com o melhor custo benefício do mercado para fazer seu projeto decolar!
           </p>
         </article>
         <Image

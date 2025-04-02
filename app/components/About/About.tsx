@@ -5,7 +5,7 @@ import React from "react";
 import { AiOutlineAlert } from "react-icons/ai";
 import { FaHandHoldingHeart, FaRegCalendarCheck } from "react-icons/fa";
 import { HiUserGroup } from "react-icons/hi2";
-import { PiCastleTurret, PiHandFist, PiSunHorizonDuotone, PiTarget } from "react-icons/pi";
+import { PiCastleTurret, PiHandFist, PiSunHorizonDuotone, PiTarget, PiPersonArmsSpread } from "react-icons/pi";
 
 import MissionVisionCard from "./MissionVision/MissionVisionCard";
 import ValueCard from "./Values/ValueCard";
@@ -63,12 +63,15 @@ function About(): React.JSX.Element {
           className="grid grid-cols-3 max-md:grid-cols-2 max-xs:grid-cols-1 w-full items-stretch gap-10
             max-xl:gap-9 max-lg:gap-7"
         >
-          <ValueCard valueIcon={FaHandHoldingHeart} valueName="Paixão pelo que fazemos" />
+          <ValueCard valueIcon={FaHandHoldingHeart} valueName="Paixão e Energia" />
           <ValueCard valueIcon={FaRegCalendarCheck} valueName="Compromisso com resultados" />
           <ValueCard valueIcon={AiOutlineAlert} valueName="Autocrítica com nossas soluções" />
           <ValueCard valueIcon={HiUserGroup} valueName="União entre a equipe" />
           <ValueCard valueIcon={PiHandFist} valueName="Garra para encarar desafios" />
           <ValueCard valueIcon={PiCastleTurret} valueName="Se divertir para criar" />
+          <div className="col-span-3 text-center">
+            <ValueCard valueIcon={PiPersonArmsSpread} valueName="Protagonistas do presente" />
+          </div>
         </div>
       </article>
     </section>
