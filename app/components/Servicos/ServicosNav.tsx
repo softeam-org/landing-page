@@ -18,7 +18,7 @@ function ServicosNav({ swiperRef }: { swiperRef: React.RefObject<SwiperClass | n
             <li
               key={index}
               className={`flex justify-center items-center h-full max-xs:h-5/6
-              w-24 max-sm:w-auto rounded-3xl
+              w-32 max-sm:w-auto rounded-3xl
               ${servicesList.length > 3 ? "max-sm:aspect-square max-sm:rounded-full" : ""}
               text-sm font-semibold text-white
               ${currentService === index ? "bg-color-3" : "hover:bg-color-3 opacity-70"}

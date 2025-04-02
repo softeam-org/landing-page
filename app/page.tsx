@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar/index";
 import Partners from "./components/Parceiros/Parceiros";
 import Services from "./components/Servicos/Servicos";
 import Waves from "./components/HeroSection/waves/Waves";
+import Testimonials from "./components/Testimonials/testimonials";
 
 const title = "Softeam - Empresa Júnior de Computação";
 const description =
@@ -76,6 +77,7 @@ function App(): React.JSX.Element {
       <About />
       <Services />
       <Partners />
+      <Testimonials />
 
       <Waves
         fill="#072763"

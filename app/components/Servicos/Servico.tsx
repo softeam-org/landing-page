@@ -27,13 +27,11 @@ function Servico({ service }: { service: Service }): React.JSX.Element {
       />
       <article className="flex h-full max-sm:h-1/2 flex-col gap-10 max-sm:items-center">
         <div className={`${poppins.className}`}>
-          <h3 className="font-bold text-xl tracking-wide">Projeto de Software</h3>
-          <h3 className="font-bold text-xl tracking-wide">Voltado para solucionar problema</h3>
+          <h3 className="font-bold text-xl tracking-wide">{service.serviceTitle}</h3>
+          <h3 className="text-l tracking-wide italic">{service.serviceSubtitle}</h3>
         </div>
         <div className="font-semibold">
-          <p className="font-semibold">O melhor custo benefício do mercado!</p>
           <p className="font-semibold">{service.serviceDescription}</p>
-          <p className="font-semibold">Conheça mais agora.</p>
         </div>
         <button
           type="button"
