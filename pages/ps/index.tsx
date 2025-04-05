@@ -1,8 +1,8 @@
 import React, { ReactElement } from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "@/app/components/Navbar";
 import PS from "./ps";
 import SemPS from "./semPS";
-import Footer from "../components/footer/footer";
+import Footer from "@/app/components/footer/footer";
 import Head from "next/head";
 
 import { Metadata } from "next";

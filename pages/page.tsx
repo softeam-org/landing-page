@@ -1,15 +1,14 @@
-import { Metadata } from "next";
 import Head from "next/head";
 import React from "react";
 import BodyWrapper from "./BodyWrapper";
-import About from "./components/About/About";
-import Footer from "./components/footer/footer";
-import HeroSection from "./components/HeroSection/HeroSection";
-import Navbar from "./components/Navbar/index";
-import Partners from "./components/Parceiros/Parceiros";
-import Services from "./components/Servicos/Servicos";
-import Waves from "./components/HeroSection/waves/Waves";
-import Testimonials from "./components/Testimonials/testimonials";
+import About from "@/app/components/About/About"; // Adjusted path to match the correct file structure
+import Footer from "@/app/components/footer/footer";
+import HeroSection from "@/app/components/HeroSection/HeroSection";
+import Navbar from "@/app/components/Navbar/index";
+import Partners from "@/app/components/Parceiros/Parceiros";
+import Services from "@/app/components/Servicos/Servicos";
+import Waves from "@/app/components/HeroSection/waves/Waves";
+import Testimonials from "@/app/components/Testimonials/testimonials";
 
 const title = "Softeam - Empresa Júnior de Computação";
 const description =
@@ -20,25 +19,6 @@ const URLSite = "https://softeam.com.br";
 const keywords =
   // eslint-disable-next-line max-len
   "empresa júnior, desenvolvimento web, mobile, consultoria tecnológica, softeam, tecnologia, website, site, software, desenvolvimento, inovação, soluções, ideias, transformação, contato, sistema, sistemas";
-
-export const metadata: Metadata = {
-  title: title,
-  description: description,
-  keywords: keywords,
-  openGraph: {
-    title: title,
-    description: description,
-    type: "website",
-    siteName: "Softeam",
-    url: URLSite,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: title,
-    description: description,
-  },
-  robots: "index, follow",
-};
 
 function App(): React.JSX.Element {
   return (
