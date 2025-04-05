@@ -39,7 +39,7 @@ function Services(): React.JSX.Element {
           prevEl: ".custom-prev",
         }}
         autoplay={{
-          delay: 7000,
+          delay: 15000,
           disableOnInteraction: false,
         }}
         loop={true}
