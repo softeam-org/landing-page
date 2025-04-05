@@ -4,7 +4,6 @@ import { servicesList } from "@/app/ts/servicesList";
 import placeholderMockup from "@/public/logo-softeam.svg";
 import { useAtom } from "jotai";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import React from "react";
 import { IoClose } from "react-icons/io5";
 import { currentOpenServicePopupOpenAtom, isServicePopupOpenAtom } from "./Servicos";
@@ -13,11 +12,9 @@ function PopupServico(): React.JSX.Element {
   const [, setIsServicePopupOpen] = useAtom(isServicePopupOpenAtom);
   const [currentOpenServicePopupOpen] = useAtom(currentOpenServicePopupOpenAtom);
 
-  const router = useRouter();
-
   const handleContractCLick = (): void => {
     setIsServicePopupOpen(false);
-    router.push("/#contato");
+    window.open("https://wa.me/557981000041", "_blank");
   };
 
   return (

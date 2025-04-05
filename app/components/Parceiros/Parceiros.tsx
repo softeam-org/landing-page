@@ -43,6 +43,7 @@ function Partners(): React.JSX.Element {
 
   return (
     <section
+      id="parceiros"
       className="relative w-full flex flex-col gap-16 px-44 max-xl:px-36 max-lg:px-16 max-md:px-8 max-xs:px-0
       py-12 bg-color-1"
     >

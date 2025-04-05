@@ -9,7 +9,6 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
-import Waves from "../HeroSection/waves/Waves";
 import PopupServico from "./PopupServico";
 import Servico from "./Servico";
 import ServicosNav from "./ServicosNav";
