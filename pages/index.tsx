@@ -10,6 +10,8 @@ import Services from "@/app/components/Servicos/Servicos";
 import Waves from "@/app/components/HeroSection/waves/Waves";
 import Testimonials from "@/app/components/Testimonials/testimonials";
 
+import "@/styles/globals.css";
+
 const title = "Softeam - Empresa Júnior de Computação";
 const description =
   // eslint-disable-next-line max-len

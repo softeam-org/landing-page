@@ -8,6 +8,9 @@ import Head from "next/head";
 import { Metadata } from "next";
 import data from "@/public/psel.json";
 
+import "@/styles/ps.css";
+import "@/styles/globals.css";
+
 const title = "Processo Seletivo Softeam";
 const description = "Venha fazer parte da Softeam, inscreva-se já em nosso processo seletivo!";
 const imgLogo = "/logo-softeam.png"; // Make sure this is a valid PNG/JPG image

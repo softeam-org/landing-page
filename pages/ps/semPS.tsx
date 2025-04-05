@@ -1,5 +1,7 @@
 import React, { ReactElement } from "react";
-import "./ps.css";
+
+import "@/styles/ps.css";
+import "@/styles/globals.css";
 
 function SemPS(): ReactElement {
   return (

@@ -1,7 +1,9 @@
 import React, { ReactElement } from "react";
 import Image from "next/image";
 
-import "./ps.css";
+import "@/styles/ps.css";
+import "@/styles/globals.css";
+
 import Timeline from "./timeline/timeline";
 
 import data from "@/public/psel.json";
