@@ -4,7 +4,6 @@ import { servicesList } from "@/app/ts/servicesList";
 import placeholderMockup from "@/public/logo-softeam.svg";
 import { useAtom } from "jotai";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import React from "react";
 import { IoClose } from "react-icons/io5";
 import { currentOpenServicePopupOpenAtom, isServicePopupOpenAtom } from "./Servicos";
@@ -13,11 +12,9 @@ function PopupServico(): React.JSX.Element {
   const [, setIsServicePopupOpen] = useAtom(isServicePopupOpenAtom);
   const [currentOpenServicePopupOpen] = useAtom(currentOpenServicePopupOpenAtom);
 
-  const router = useRouter();
-
   const handleContractCLick = (): void => {
     setIsServicePopupOpen(false);
-    router.push("/#contato");
+    window.open("https://wa.me/557981000041", "_blank");
   };
 
   return (
@@ -27,15 +24,15 @@ function PopupServico(): React.JSX.Element {
     >
       <div
         className="flex flex-col items-center w-2/5 max-xl:w-1/2 max-lg:w-7/12
-        max-md:h-2/3 max-sm:w-2/3 max-xs:w-5/6 aspect-square bg-white rounded-3xl"
+  max-md:h-2/3 max-sm:w-2/3 max-xs:w-5/6 max-h-[90vh] overflow-y-auto bg-white rounded-3xl"
       >
         <div className="flex justify-end items-center w-full h-12 border-b-2 border-slate-200 rounded-t-3xl">
           <button
             type="button"
-            className="flex h-full aspect-square justify-center items-center rounded-tr-3xl"
+            className="flex w-12 h-12 justify-center items-center rounded-tr-3xl"
             onClick={() => setIsServicePopupOpen(false)}
           >
-            <IoClose className="h-full w-2/3 aspect-square" color="#64748b" />
+            <IoClose className="w-6 h-6" color="#64748b" />
           </button>
         </div>
         <div className="relative flex-1 flex flex-col w-full p-10 gap-4 justify-between items-center rounded-b-3xl">

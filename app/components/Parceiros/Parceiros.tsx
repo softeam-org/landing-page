@@ -43,14 +43,15 @@ function Partners(): React.JSX.Element {
 
   return (
     <section
+      id="parceiros"
       className="relative w-full flex flex-col gap-16 px-44 max-xl:px-36 max-lg:px-16 max-md:px-8 max-xs:px-0
-      py-12 bg-color-4"
+      py-12 bg-color-1"
     >
       <h2 className={`text-3xl text-center font-semibold text-white ${poppins.className}`}>Nossos Parceiros</h2>
       <div className="relative flex justify-center items-center">
         <div className="absolute z-30 flex justify-between items-center h-64 w-full">
-          <div className="h-full w-10 bg-gradient-to-r from-color-4 from-50% to-transparent"></div>
-          <div className="h-full w-10 bg-gradient-to-l from-color-4 from-50% to-transparent"></div>
+          <div className="h-full w-10 bg-gradient-to-r from-color-1 from-50% to-transparent"></div>
+          <div className="h-full w-10 bg-gradient-to-l from-color-1 from-50% to-transparent"></div>
         </div>
         <Slider {...settings} className="z-20 flex w-full h-64">
           {images.map((src, index) => (

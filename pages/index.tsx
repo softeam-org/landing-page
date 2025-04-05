@@ -1,15 +1,16 @@
-import { Metadata } from "next";
 import Head from "next/head";
 import React from "react";
 import BodyWrapper from "./BodyWrapper";
-import About from "./components/About/About";
-import Footer from "./components/footer/footer";
-import HeroSection from "./components/HeroSection/HeroSection";
-import Navbar from "./components/Navbar/index";
-import Partners from "./components/Parceiros/Parceiros";
-import Services from "./components/Servicos/Servicos";
-import Waves from "./components/HeroSection/waves/Waves";
-import Testimonials from "./components/Testimonials/testimonials";
+import About from "@/app/components/About/About"; // Adjusted path to match the correct file structure
+import Footer from "@/app/components/footer/footer";
+import HeroSection from "@/app/components/HeroSection/HeroSection";
+import Navbar from "@/app/components/Navbar/index";
+import Partners from "@/app/components/Parceiros/Parceiros";
+import Services from "@/app/components/Servicos/Servicos";
+import Waves from "@/app/components/HeroSection/waves/Waves";
+import Testimonials from "@/app/components/Testimonials/testimonials";
+
+import "@/styles/globals.css";
 
 const title = "Softeam - Empresa Júnior de Computação";
 const description =
@@ -20,25 +21,6 @@ const URLSite = "https://softeam.com.br";
 const keywords =
   // eslint-disable-next-line max-len
   "empresa júnior, desenvolvimento web, mobile, consultoria tecnológica, softeam, tecnologia, website, site, software, desenvolvimento, inovação, soluções, ideias, transformação, contato, sistema, sistemas";
-
-export const metadata: Metadata = {
-  title: title,
-  description: description,
-  keywords: keywords,
-  openGraph: {
-    title: title,
-    description: description,
-    type: "website",
-    siteName: "Softeam",
-    url: URLSite,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: title,
-    description: description,
-  },
-  robots: "index, follow",
-};
 
 function App(): React.JSX.Element {
   return (
@@ -74,10 +56,23 @@ function App(): React.JSX.Element {
 
       <Navbar />
       <HeroSection />
-      <About />
       <Services />
       <Partners />
       <Testimonials />
+
+      <Waves
+        fill="#114e7e"
+        bg="bg-color-1"
+        hClass="h-36 max-md:h-32"
+        d="M0,96L34.3,96C68.6,96,137,96,206,112C274.3,128,343,160,411,
+          186.7C480,213,549,235,617,229.3C685.7,224,754,192,823,170.7C891.4,
+          149,960,139,1029,138.7C1097.1,139,1166,149,1234,138.7C1302.9,128,
+          1371,96,1406,80L1440,64L1440,320L1405.7,320C1371.4,320,1303,320,1234,
+          320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,
+          320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,
+          320,69,320,34,320L0,320Z"
+      />
+      <About />
 
       <Waves
         fill="#072763"

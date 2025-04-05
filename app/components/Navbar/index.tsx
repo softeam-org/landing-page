@@ -15,7 +15,7 @@ const Navbar: FC = () => {
   const links: NavLinksProps[] = [
     { url: "#about", label: "Sobre nós" },
     { url: "#catalogo", label: "Catálogo" },
-    { url: "#contato", label: "Parceiros" },
+    { url: "#parceiros", label: "Parceiros" },
     { url: "#contato", label: "Contatos" },
   ];
 

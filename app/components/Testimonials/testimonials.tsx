@@ -16,7 +16,7 @@ function Testimonials(): React.JSX.Element {
   const swiperRef = useRef<SwiperClass | null>(null);
 
   return (
-    <section className={`w-full flex flex-col gap-16 text-white ${poppins.className} bg-color-4 py-12`}>
+    <section className={`w-full flex flex-col gap-16 text-white ${poppins.className} bg-color-1 py-12`}>
       <h2 className="text-3xl text-center font-semibold">O que nossos clientes dizem</h2>
 
       <Swiper

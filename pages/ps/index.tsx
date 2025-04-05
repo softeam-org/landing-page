@@ -1,12 +1,15 @@
 import React, { ReactElement } from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "@/app/components/Navbar";
 import PS from "./ps";
 import SemPS from "./semPS";
-import Footer from "../components/footer/footer";
+import Footer from "@/app/components/footer/footer";
 import Head from "next/head";
 
 import { Metadata } from "next";
 import data from "@/public/psel.json";
+
+import "@/styles/ps.css";
+import "@/styles/globals.css";
 
 const title = "Processo Seletivo Softeam";
 const description = "Venha fazer parte da Softeam, inscreva-se já em nosso processo seletivo!";
