@@ -45,7 +45,7 @@ function Partners(): React.JSX.Element {
     <section
       id="parceiros"
       className="relative w-full flex flex-col gap-16 px-44 max-xl:px-36 max-lg:px-16 max-md:px-8 max-xs:px-0
-      py-12 bg-color-1"
+      py-12 bg-color-1 pt-32"
     >
       <h2 className={`text-3xl text-center font-semibold text-white ${poppins.className}`}>Nossos Parceiros</h2>
       <div className="relative flex justify-center items-center">
