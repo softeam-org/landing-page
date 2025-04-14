@@ -25,7 +25,7 @@ function Services(): React.JSX.Element {
   const [, setCurrentService] = useAtom(currentServiceAtom);
 
   return (
-    <section id="catalogo" className={`w-full flex flex-col gap-16 text-white ${poppins.className} bg-color-1`}>
+    <section id="catalogo" className={`w-full pt-32 flex flex-col gap-16 text-white ${poppins.className} bg-color-1`}>
       <h2 className="text-3xl text-center font-semibold">Nossos Serviços</h2>
       <ServicosNav swiperRef={swiperRef} />
       <Swiper
