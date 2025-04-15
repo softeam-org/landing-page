@@ -4,7 +4,7 @@ import Image from "next/image";
 import "@/styles/ps.css";
 import "@/styles/globals.css";
 
-import Timeline from "./timeline/timeline";
+import Timeline from "../timeline/timeline";
 
 import data from "@/public/psel.json";
 

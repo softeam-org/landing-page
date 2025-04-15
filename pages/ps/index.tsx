@@ -1,11 +1,10 @@
 import React, { ReactElement } from "react";
 import Navbar from "@/app/components/Navbar";
-import PS from "./ps";
-import SemPS from "./semPS";
+import PS from "@/app/components/ps/ps";
+import SemPS from "@/app/components/semPS/semPS";
 import Footer from "@/app/components/footer/footer";
 import Head from "next/head";
 
-import { Metadata } from "next";
 import data from "@/public/psel.json";
 
 import "@/styles/ps.css";
@@ -19,28 +18,6 @@ const keywords =
   // eslint-disable-next-line max-len
   "empresa júnior, desenvolvimento web, mobile, consultoria tecnológica, softeam, tecnologia, website, site, software, desenvolvimento, inovação, soluções, ideias, transformação, contato, sistema, sistemas,processo seletivo";
 
-export const metadata: Metadata = {
-  title: title,
-  description: description,
-  keywords: keywords,
-  openGraph: {
-    title: title,
-    description: description,
-    type: "website",
-    siteName: "Softeam",
-    url: URLSite,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: title,
-    description: description,
-  },
-  robots: "index, follow",
-};
-
-{
-  /*Variavel para saber se há processo seltivo*/
-}
 const processoSeletivoAberto = data.ativo;
 
 function index(): ReactElement {

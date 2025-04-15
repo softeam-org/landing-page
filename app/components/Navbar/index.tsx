@@ -51,7 +51,7 @@ const Navbar: FC = () => {
               <Link href="/">
                 <Image
                   alt="Logo da Softeam com Nome"
-                  src="logo-softeam-with-name.svg"
+                  src="/logo-softeam-with-name.svg"
                   className="h-12 w-auto"
                   width={258}
                   height={66}
