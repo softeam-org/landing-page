@@ -7,8 +7,8 @@ import Head from "next/head";
 
 import data from "@/public/psel.json";
 
-import "@/styles/ps.css";
-import "@/styles/globals.css";
+import "./ps.css";
+import "./globals.css";
 
 const title = "Processo Seletivo Softeam";
 const description = "Venha fazer parte da Softeam, inscreva-se já em nosso processo seletivo!";
