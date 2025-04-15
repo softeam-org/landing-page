@@ -4,11 +4,9 @@ import Image from "next/image";
 import "@/styles/ps.css";
 import "@/styles/globals.css";
 
-import Timeline from "./timeline/timeline";
+import Timeline from "../timeline/timeline";
 
 import data from "@/public/psel.json";
-
-const information = data.info;
 
 const nucleos = data.nucleos;
 
@@ -19,19 +17,8 @@ function PS(): ReactElement {
     <div className="ps_container">
       <div className="content">
         <div className="text">
-          <h1 className="titulo text-6xl font-bold font-sans leading-tight">
-            Faça parte da
-            <br />
-            maior Empresa
-            <br />
-            Júnior de Sergipe
-          </h1>
-          <p className="font-bold font-sans leading-relaxed compact-text">
-            Fundada em 1997, a SofTeam é uma empresa sem fins lucrativos que entrega soluções digitais, abrangendo
-            diversas áreas da computação. Composta pelos cursos do Departamento de Computação da Universidade Federal de
-            Sergipe, tem como um de seus objetivos capacitar e aperfeiçoar o desenvolvimento dos alunos do DCOMP,
-            proporcionando vivência empresarial e a prática com o que há de atual no mercado.
-          </p>
+          <h1 className="titulo text-6xl font-bold font-sans leading-tight">{data.titulo}</h1>
+          <p className="font-bold font-sans leading-relaxed compact-text">{data.bodytitulo}</p>
         </div>
         <div className="ps_div_img">
           <div className="ps_img">
@@ -43,29 +30,42 @@ function PS(): ReactElement {
       <div className="text2">
         <h2 className="text-4xl font-bold font-sans">Por que entrar na SofTeam?</h2>
         <p>
-          Seja entrando em contato e negociando com clientes reais, pondo em prática o que estudou em sala de aula para
-          resolver problemas reais ou aprendendo, na prática, habilidades de gestão, a SofTeam proporciona à estudantes
-          dos cursos do DCOMP a oportunidade de se desenvolver profissionalmente e ir além da grade curricular. Muito
-          mais que isso, a SofTeam oferece proximidade com o mercado e interação com empresas e empresários júniores de
-          diversas áreas e estados.
+          {data.descricao.split("\n").map((line, idx) => (
+            <React.Fragment key={idx}>
+              {line}
+              <br />
+              <br />
+            </React.Fragment>
+          ))}
         </p>
       </div>
 
       <div className="content2">
         <div className="info_edital">
           <div className="info_ps">
-            <h2 className="text-4xl font-bold font-sans mb-4">Processo Seletivo 2025.1</h2>
-            {information.map((info, index) => (
-              <div className="info mb-4" key={index}>
-                <div className="psiconInfo">
-                  <Image src={info.icon} alt={info.text} width={20} height={20} loading="lazy" />
+            <h2 className="text-4xl font-bold font-sans mb-4">{data.faqtitle}</h2>
+            {data.faq.map((question, index) => (
+              <div className="info mb-6" key={index}>
+                <div className="psiconInfo mb-2">
+                  <Image src={question.icon} alt={question.title} width={20} height={20} loading="lazy" />
                 </div>
-                <p>{info.text}</p>
+                <div>
+                  <h3 className="text-lg font-semibold mb-1">{question.title}</h3>
+                  <p>{question.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="info_ps">
+            <h2 className="text-4xl font-bold font-sans mb-4">{data.oportunidadestitle}</h2>
+            {data.oportunidades.map((opportunity, index) => (
+              <div className="info mb-4" key={index}>
+                <p>{opportunity.text}</p>
               </div>
             ))}
           </div>
           <div className="edital">
-            <h2 className="text-4xl font-bold font-sans mb-4">Edital</h2>
+            <h2 className="text-4xl font-bold font-sans mb-4 pt-20">Edital</h2>
             <a className="btn-edital" target="_blank">
               Acessar Edital
             </a>

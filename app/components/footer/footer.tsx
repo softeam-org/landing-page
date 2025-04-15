@@ -43,7 +43,7 @@ function Footer(): React.JSX.Element {
           {information.map((info, index) => (
             <div className="info" key={index}>
               <div className="iconInfo">
-                <Image src={info.icon} alt={info.text} width={40} height={40} loading="lazy" />
+                <Image src={info.icon} alt={info.text} width={128} height={128} loading="lazy" />
               </div>
               <p>{info.text}</p>
             </div>
