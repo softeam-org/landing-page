@@ -1,12 +1,23 @@
 {
-    "ativo": false,
-    "titulo": "",
-    "descricao": "Detalhes sobre o processo seletivo",
-    "info": [
-        { "icon": "/check-mark.png", "text": "Detalhe 1" },
-        { "icon": "/check-mark.png", "text": "Detalhe 2" },
-        { "icon": "/check-mark.png", "text": "Detalhe 3" },
-        { "icon": "/check-mark.png", "text": "Detalhe 4" }
+    "ativo": true,
+    "titulo": "Faça parte da maior Empresa Júnior de Sergipe",
+    "bodytitulo": "Fundada em 1997, a SofTeam é uma empresa sem fins lucrativos que entrega soluções digitais, abrangendo diversas áreas da computação. Composta pelos cursos do Departamento de Computação da Universidade Federal de Sergipe, tem como um de seus objetivos capacitar e aperfeiçoar o desenvolvimento dos alunos do DCOMP, proporcionando vivência empresarial e a prática com o que há de atual no mercado.",
+    "descricao": "Somos a Empresa Júnior de Computação da UFS, formada por estudantes que acreditam no poder do protagonismo, do aprendizado constante e da tecnologia como ferramenta de transformação. Na Softeam, você vai muito além da teoria: aqui, você trabalha em projetos reais, desenvolve habilidades técnicas e de gestão, se conecta com o mercado e vive uma experiência universitária completamente diferente do comum.\nNosso processo seletivo é cuidadosamente pensado para identificar pessoas com vontade de aprender, crescer em equipe e construir soluções de impacto. Não exigimos experiência prévia ou conhecimento avançado — só queremos ver a sua disposição em se desenvolver junto com a gente.\nA Softeam é feita por estudantes, para estudantes. Isso significa que entendemos seus desafios, valorizamos seu tempo e criamos um ambiente seguro e acolhedor para você crescer, errar, acertar e aprender muito no caminho. Aqui, você vai aplicar os conhecimentos da graduação na prática, aprender tecnologias novas, evoluir como pessoa e profissional, conhecer gente incrível e fazer parte de uma rede que impulsiona o futuro da computação.",
+    "faqtitle": "O que você precisa saber",
+    "faq": [
+      { "icon": "/check-mark.png", "title": "Quem pode participar?", "text": "Estudantes da UFS dos cursos de Ciência da Computação, Engenharia da Computação e Sistemas de Informação." },
+      { "icon": "/check-mark.png", "title": "Quando acontece?", "text": "Nossas seleções ocorrem geralmente no final de cada período impar. Fique de olho nas redes da Softeam para não perder nenhuma oportunidade!" },
+      { "icon": "/check-mark.png", "title": "Preciso ter experiência?", "text": "Nada disso! A gente te ensina tudo que for preciso. O mais importante é a sua vontade de aprender e crescer." }
+    ],
+    "oportunidadestitle": "Quais oportunidades você pode ter",
+    "oportunidades": [
+        { "icon": "/check-mark.png", "text": "Projetos reais com clientes de verdade" },
+        { "icon": "/check-mark.png", "text": "Desenvolvimento técnico em web, mobile, infraestrutura e mais" },
+        { "icon": "/check-mark.png", "text": "Evolução em soft skills como liderança, comunicação e trabalho em equipe" },
+        { "icon": "/check-mark.png", "text": "Capacitações, mentorias e networking com o mercado" },
+        { "icon": "/check-mark.png", "text": "Contato direto com o ecossistema de inovação e empreendedorismo" },
+        { "icon": "/check-mark.png", "text": "Vivência empresarial dentro da universidade" },
+        { "icon": "/check-mark.png", "text": "Cultura colaborativa, ambiente acolhedor e pessoas apaixonadas por tecnologia" }
       ],
     "nucleos": [
         { "icon": "/check-mark.png", "text": "Projetos" },

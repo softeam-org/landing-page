@@ -127,8 +127,7 @@
 
 @media (max-width: 1024px) {
     .content {
-        flex-direction: column;
-        height: auto;
+        height: 100%;
         margin: 80px 60px 0;
         gap: 40px;
     }
@@ -139,8 +138,8 @@
     }
 
     .content3 {
+        height: 100%;
         flex-direction: column;  /* Ensure the content stacks vertically */
-        height: auto;
     }
     .text, .ps_div_img {
         width: 100%;
@@ -181,8 +180,8 @@
 
 
     .content2{
+        height: 100%;
         flex-direction: column;
-        margin-bottom: 400px;
     }
 
     .content3{
@@ -198,11 +197,6 @@
     .info {
         flex-direction: column;
         align-items: center;
-    }
-
-    .edital{
-        margin-top: 100px;
-
     }
 
     .nucleos,.cronograma{
@@ -232,7 +226,7 @@
     }
 
     .content2{
-        margin-bottom: 700px;
+        flex-direction: column;  /* Ensure the content stacks vertically */
     }
 
     .text2{
@@ -246,15 +240,10 @@
     .text p {
         font-size: 0.9rem;
     }
-
-    .edital{
-        margin-top: 150px;
-    }
     .ps_div_img {
         margin-top: 0;
         width: 100%;
     }
-
 
 }
 
@@ -283,7 +272,6 @@
       
         .content2 {
           flex-direction: column !important;
-          margin-bottom: 300px !important;
         }
       
         .content3 {
@@ -307,7 +295,6 @@
           padding: 8px 16px !important;
           font-size: 14px !important;
         }
-      
        
         
 }
