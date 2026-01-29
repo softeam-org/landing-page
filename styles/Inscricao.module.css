@@ -1,0 +1,439 @@
+/* @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap'); Remove import external */
+
+.container {
+    width: 100%;
+    overflow-x: hidden;
+    background-color: #072763;
+}
+
+.bgHeader {
+    background-color: #072763;
+}
+
+.bgVagas {
+    background-color: #002E85;
+}
+
+.bgForm {
+    background-color: #003DB0;
+}
+
+.cabecalho {
+    background: #072763;
+    padding: 2rem 5%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 5%;
+    z-index: 100;
+}
+
+.logo {
+    width: 350px;
+    /* SVG oficial geralmente precisa de um ajuste diferente de PNG */
+    height: auto;
+    object-fit: contain;
+}
+
+.menu {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.menu li {
+    cursor: pointer;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.menu li a:hover {
+    color: #FECA03;
+}
+
+.conteudo-cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.texto-cabecalho {
+    flex: 1;
+    max-width: 600px;
+    z-index: 10;
+}
+
+.texto-cabecalho h1 {
+    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.texto-cabecalho span {
+    color: #FECA03;
+}
+
+.vagaColaborador {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.vC {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 0.7rem 1.5rem;
+    border-radius: 999px;
+    font-size: 1.2rem;
+    backdrop-filter: blur(5px);
+}
+
+.botao-inscrever {
+    background: #FECA03;
+    color: #072763;
+    padding: 1.2rem 4rem;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.4rem;
+    transition: transform 0.2s ease, box-shadow 0.2s;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.botao-inscrever:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(254, 202, 3, 0.4);
+}
+
+.sobre {
+    padding: 3rem 5%;
+    text-align: center;
+    background: #002E85;
+    color: white;
+}
+
+.sobre h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.sobre p {
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.etapas {
+    padding: 3rem 5%;
+    background: #002E85;
+    /* Keep consistent background or slight variation */
+    color: white;
+}
+
+.etapas h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.lista-etapas {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.etapa {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.numero-etapa {
+    width: 100px;
+    height: 100px;
+    background: #FECA03;
+    color: #072763;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.conteudo-etapa {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.conteudo-etapa h3 {
+    margin-bottom: 0.5rem;
+    color: #FECA03;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.conteudo-etapa p {
+    line-height: 1.5;
+}
+
+.edital-etapa {
+    display: inline-block;
+    text-align: center;
+    margin: 3rem auto 0;
+    font-size: 1.2rem;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    transition: background 0.2s;
+    width: fit-content;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}
+
+.edital-etapa:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.vagas {
+    padding: 3rem 5%;
+    background: #002E85;
+    text-align: center;
+    color: white;
+}
+
+.vagas h2 {
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.grid-vagas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.conteudo-vagas {
+    background: white;
+    color: #072763;
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    width: 280px;
+    /* Ajustado para permitir 3 por linha em desktops */
+}
+
+.conteudo-vagas:hover {
+    transform: translateY(-5px);
+}
+
+.conteudo-vagas h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.conteudo-vagas strong {
+    font-size: 3rem;
+    display: block;
+    line-height: 1;
+    margin-bottom: 0.2rem;
+    color: #004AD5;
+}
+
+.conteudo-vagas span {
+    font-weight: 500;
+    color: #666;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+.mascote {
+    /* Fix positioning */
+    max-width: 650px;
+    width: 50%;
+    height: auto;
+}
+
+.secao-fomulario {
+    background: #003DB0;
+    padding: 3rem 5%;
+    color: white;
+}
+
+.secao-fomulario h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.secao-fomulario p {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    opacity: 0.9;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.formulario {
+    max-width: 700px;
+    margin: 0 auto;
+    background: #072763;
+    padding: 3rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.formulario h2 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.formulario label {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    gap: 0.5rem;
+}
+
+.formulario input[type="text"],
+.formulario input[type="file"],
+.formulario input[type="email"],
+.formulario input[type="tel"] {
+    padding: 1rem;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+
+.formulario input:focus {
+    outline: 3px solid #FECA03;
+    background: white;
+}
+
+.opcao-curso {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.opcao-curso:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.opcao-curso input {
+    accent-color: #FECA03;
+    width: 1.2rem;
+    height: 1.2rem;
+}
+
+.rodape {
+    padding: 2rem;
+    background: #004AD5;
+    text-align: center;
+    font-size: 1rem;
+    opacity: 0.8;
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .conteudo-cabecalho {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .texto-cabecalho {
+        max-width: 100%;
+    }
+
+    .texto-cabecalho h1 {
+        font-size: 3rem;
+    }
+
+    .vagaColaborador {
+        justify-content: center;
+    }
+
+    .mascote {
+        width: 80%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .sobre,
+    .etapas,
+    .vagas,
+    .secao-fomulario {
+        padding: 2rem 5%;
+    }
+
+    .cabecalho {
+        padding: 6rem 5% 2rem;
+    }
+}
