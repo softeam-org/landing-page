@@ -7,9 +7,10 @@ interface WavesProps {
   fill: string;
   bg?: string;
   hClass: string;
+  count?: number;
 }
 
-function Waves({ d, fill, bg, hClass }: WavesProps): React.JSX.Element {
+function Waves({ d, fill, bg, hClass, count = 4 }: WavesProps): React.JSX.Element {
   // JavaScript object to style the waves:
   const waveStyle: React.CSSProperties = {
     top: "0",
@@ -28,12 +29,12 @@ function Waves({ d, fill, bg, hClass }: WavesProps): React.JSX.Element {
     return opacity;
   };
 
-  const arr = new Array(4).fill(0);
+  const arr = new Array(count).fill(0);
 
   return (
     <div className={`relative flex items-start ${hClass}  overflow-hidden ${bg ? bg : ""}`} style={{ width: "150vw" }}>
       {arr.map((value, index: number) => {
-        const opcty = calculateWaveOpacity(index, 4);
+        const opcty = calculateWaveOpacity(index, count);
         return <Wave key={index} opcty={opcty} waveStyle={waveStyle} d={d} />;
       })}
     </div>
