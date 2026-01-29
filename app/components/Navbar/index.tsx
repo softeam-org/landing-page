@@ -5,7 +5,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 // import { FaArrowRightToBracket } from "react-icons/fa6";
 // import { LuTextSearch } from "react-icons/lu";
-// import { NavButtons, NavButtonsProps } from "./NavButtons";
+import { NavButtons, NavButtonsProps } from "./NavButtons";
 import { NavLinks, NavLinksProps } from "./NavLinks";
 
 import Link from "next/link";
@@ -19,10 +19,10 @@ const Navbar: FC = () => {
     { url: "#contato", label: "Contatos" },
   ];
 
-  // const buttons: NavButtonsProps[] = [
-  //   { url: "/transparencia", label: "Transparência", icon: <LuTextSearch /> },
-  //   { url: "/entrar", label: "Entrar", icon: <FaArrowRightToBracket /> },
-  // ];
+  const buttons: NavButtonsProps[] = [
+    // { url: "/transparencia", label: "Transparência", icon: <LuTextSearch /> },
+    { url: "/inscricao", label: "PSEL" }, // Adicionado PSEL
+  ];
 
   return (
     <Disclosure as="nav" className="fixed top-0 left-0 w-full z-50 shadow-md bg-blue-1074BC md:bg-blue-1074BC/95">
@@ -67,11 +67,11 @@ const Navbar: FC = () => {
               </div>
             </div>
           </div>
-          {/* <div className="absolute inset-y-0 right-0 flex items-center md:static md:inset-auto md:ml-6 md:pr-0">
+          <div className="absolute inset-y-0 right-0 flex items-center md:static md:inset-auto md:ml-6 md:pr-0">
             {buttons.map((button, index) => (
               <NavButtons key={index} url={button.url} label={button.label} icon={button.icon} />
             ))}
-          </div> */}
+          </div>
         </div>
       </div>
 
