@@ -5,27 +5,36 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 // import { FaArrowRightToBracket } from "react-icons/fa6";
 // import { LuTextSearch } from "react-icons/lu";
-// import { NavButtons, NavButtonsProps } from "./NavButtons";
+import { NavButtons, NavButtonsProps } from "./NavButtons";
 import { NavLinks, NavLinksProps } from "./NavLinks";
 
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { FC } from "react";
 
-const Navbar: FC = () => {
+interface NavbarProps {
+  bgColor?: string;
+}
+
+const Navbar: FC<NavbarProps> = ({ bgColor = "bg-blue-1074BC" }) => {
+  const router = useRouter();
+  const normalizePath = (path: string) => path.replace(/\/$/, "") || "/";
+  const currentPath = normalizePath(router.asPath.split("?")[0].split("#")[0]);
+
   const links: NavLinksProps[] = [
-    { url: "#about", label: "Sobre nós" },
-    { url: "#catalogo", label: "Catálogo" },
-    { url: "#parceiros", label: "Parceiros" },
-    { url: "#contato", label: "Contatos" },
+    { url: "/#about", label: "Sobre nós" },
+    { url: "/#catalogo", label: "Catálogo" },
+    { url: "/#parceiros", label: "Parceiros" },
+    { url: "/#contato", label: "Contatos" },
   ];
 
-  // const buttons: NavButtonsProps[] = [
-  //   { url: "/transparencia", label: "Transparência", icon: <LuTextSearch /> },
-  //   { url: "/entrar", label: "Entrar", icon: <FaArrowRightToBracket /> },
-  // ];
+  const buttons: NavButtonsProps[] = [
+    // { url: "/transparencia", label: "Transparência", icon: <LuTextSearch /> },
+    { url: "/processo-seletivo", label: "PSEL" }, // Adicionado PSEL
+  ].filter(button => normalizePath(button.url) !== currentPath);
 
   return (
-    <Disclosure as="nav" className="fixed top-0 left-0 w-full z-50 shadow-md bg-blue-1074BC md:bg-blue-1074BC/95">
+    <Disclosure as="nav" className={`fixed top-0 left-0 w-full z-50 shadow-md ${bgColor} md:${bgColor}/95`}>
       <div className="w-full  px-32 max-xl:px-16 max-lg:px-10 max-md:px-6">
         <div className="relative flex flex-wrap h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
@@ -67,11 +76,11 @@ const Navbar: FC = () => {
               </div>
             </div>
           </div>
-          {/* <div className="absolute inset-y-0 right-0 flex items-center md:static md:inset-auto md:ml-6 md:pr-0">
+          <div className="absolute inset-y-0 right-0 flex items-center md:static md:inset-auto md:ml-6 md:pr-0">
             {buttons.map((button, index) => (
               <NavButtons key={index} url={button.url} label={button.label} icon={button.icon} />
             ))}
-          </div> */}
+          </div>
         </div>
       </div>
 
