@@ -11,9 +11,9 @@ export interface NavButtonsProps {
 export function NavButtons(props: NavButtonsProps): JSX.Element {
   return (
     <Link href={props.url}>
-      <div className="flex flex-col items-center justify-center px-2 py-1 sm:px-4 sm:py-2 text-white">
-        {props.icon && React.cloneElement(props.icon, { className: "w-6 h-6 md:w-5 md:h-5" })}
-        <span className={`${leagueSpartan.className} hidden md:flex md:flex-col text-lg`}>{props.label}</span>
+      <div className="flex flex-col items-center justify-center px-1 py-1 sm:px-4 sm:py-2 text-white">
+        {props.icon && React.cloneElement(props.icon, { className: "w-5 h-5" })}
+        <span className={`${leagueSpartan.className} flex flex-col text-sm md:text-lg`}>{props.label}</span>
       </div>
     </Link>
   );

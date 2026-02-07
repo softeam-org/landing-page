@@ -262,7 +262,6 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     width: 280px;
-    /* Ajustado para permitir 3 por linha em desktops */
 }
 
 .conteudo-vagas:hover {
@@ -284,7 +283,7 @@
 
 .conteudo-vagas span {
     font-weight: 500;
-    color: #666;
+    color: #072763;
 }
 
 .logo {
@@ -351,20 +350,18 @@
 
 .formulario input[type="text"],
 .formulario input[type="file"],
-.formulario input[type="email"],
-.formulario input[type="tel"] {
+.formulario input[type="email"] {
     padding: 1rem;
     border-radius: 8px;
     border: none;
     outline: none;
     font-size: 1rem;
+    color: #072763;
     background: rgba(255, 255, 255, 0.95);
 }
 
-
-.formulario input:focus {
-    outline: 3px solid #FECA03;
-    background: white;
+.label-curso {
+    cursor: pointer;
 }
 
 .opcao-curso {
@@ -380,10 +377,13 @@
 
 .opcao-curso:hover {
     background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
 }
 
 .opcao-curso input {
     accent-color: #FECA03;
+    border: none;
+    cursor: pointer;
     width: 1.2rem;
     height: 1.2rem;
 }
@@ -420,10 +420,6 @@
         width: 80%;
         max-width: 400px;
         margin: 0 auto;
-    }
-
-    .menu {
-        display: none;
     }
 
     .sobre,
