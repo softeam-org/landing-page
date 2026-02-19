@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, ChangeEvent, FormEvent}from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '@/styles/Inscricao.module.css';
@@ -6,8 +6,56 @@ import { leagueSpartan } from "@/app/ts/fonts";
 import Waves from "@/app/components/HeroSection/waves/Waves";
 import "@/styles/globals.css";
 import Navbar from '@/app/components/Navbar/index';
+import { InscricaoPsel } from "@/types/InscricaoPsel"; 
+import { InscricaoPselService } from "@/services/inscricaoPselService";
+
+
+
 
 export default function Inscricao() {
+    const[formData, setFormData] = useState<InscricaoPsel>({
+        nome: "", 
+        email: "",
+        telefone: "",
+        curso: "",
+        motivacao:""
+    });
+
+    const handleChange = (
+        e: ChangeEvent<HTMLInputElement>
+    ) => {
+        const { name, value } = e.target;
+
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e: FormEvent) => {
+        e.preventDefault();
+      
+        try {
+          await InscricaoPselService(formData);
+      
+          alert("Inscrição enviada com sucesso!");
+      
+          setFormData({
+            nome: "",
+            email: "",
+            telefone: "",
+            curso: "",
+            motivacao: "",
+          });
+      
+        } catch (error) {
+          console.error(error);
+          alert("Erro ao enviar inscrição");
+        }
+      };
+
+
+
     const wavePath = "M0,96L34.3,96C68.6,96,137,96,206,112C274.3,128,343,160,411,186.7C480,213,549,235,617,229.3C685.7,224,754,192,823,170.7C891.4,149,960,139,1029,138.7C1097.1,139,1166,149,1234,138.7C1302.9,128,1371,96,1406,80L1440,64L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z";
 
     return (
@@ -151,37 +199,54 @@ export default function Inscricao() {
                         Este formulário é a primeira etapa oficial do processo seletivo. Por isso, preencha com atenção e sinceridade. As informaçẽs coletadas serão usadas para conhecermos melhor o seu perfil, suas motivações e como você pode contribuir com a Softeam
                     </p>
 
-                    <form className={styles.formulario}>
+                    <form className={styles.formulario} onSubmit={handleSubmit}>
                         <label>
                             Nome completo*:
-                            <input type="text" />
+                            <input type="text"  name="nome" 
+                            value={formData.nome} onChange={handleChange}/>
                         </label>
 
                         <label>
                             E-mail*:
-                            <input type="email" />
+                            <input type="email"  name="email"
+                            value={formData.email} onChange={handleChange}/>
                         </label>
 
                         <label>
                             Telefone:
-                            <input type="text" />
+                            <input type="text"  name="telefone"
+                            value={formData.telefone} onChange={handleChange}/>
                         </label>
 
                         <h2>Curso:</h2>
 
-                        {['Ciência da Computação', 'Engenharia da Computação', 'Sistemas de Informação'].map((c) => (
-                            <div className={styles['opcao-curso']} key={c}>
-                                <input type="radio" name="curso" id={c} />
-                                <label className={styles['label-curso']} htmlFor={c}>{c}</label>
-                            </div>
+                        {[
+                        'Ciência da Computação', 'Engenharia da Computação', 'Sistemas de Informação'].map((c) => (
+                        <div className={styles['opcao-curso']} key={c}>
+                            <input
+                                type="radio"
+                                name="curso"
+                                id={c}
+                                value={c}
+                                checked={formData.curso === c}
+                                onChange={handleChange}
+                            />
+                            <label
+                                className={styles['label-curso']}
+                                htmlFor={c}>
+                                {c}
+                            </label>
+                        </div>
                         ))}
+
 
                         <label>
                             Por que você quer fazer parte da softeam?
-                            <input type="text" />
+                            <input type="text"  name="motivacao"
+                            value={formData.motivacao} onChange={handleChange}/>
                         </label>
 
-                        <button className={styles['botao-inscrever']}>Enviar</button>
+                        <button type='submit' className={styles['botao-inscrever']}>Enviar</button>
                     </form>
                 </section>
 
