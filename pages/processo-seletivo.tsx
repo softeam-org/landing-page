@@ -10,8 +10,6 @@ import { InscricaoPsel } from "@/types/InscricaoPsel";
 import { InscricaoPselService } from "@/services/inscricaoPselService";
 
 
-
-
 export default function Inscricao() {
     const[formData, setFormData] = useState<InscricaoPsel>({
         nome: "", 

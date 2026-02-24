@@ -10,7 +10,8 @@ import { NavLinks, NavLinksProps } from "./NavLinks";
 
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FC } from "react";
+import { FC, useEffect } from "react";
+import { FeatureFlagsService } from "@/services/featureFlagsService";
 
 interface NavbarProps {
   bgColor?: string;
@@ -32,6 +33,10 @@ const Navbar: FC<NavbarProps> = ({ bgColor = "bg-blue-1074BC" }) => {
     // { url: "/transparencia", label: "Transparência", icon: <LuTextSearch /> },
     { url: "/processo-seletivo", label: "PSEL" }, // Adicionado PSEL
   ].filter(button => normalizePath(button.url) !== currentPath);
+
+  useEffect(() => {
+    FeatureFlagsService()
+  }, [])
 
   return (
     <Disclosure as="nav" className={`fixed top-0 left-0 w-full z-50 shadow-md ${bgColor} md:${bgColor}/95`}>

@@ -1,8 +1,10 @@
 import { openSans, poppins } from "@/app/ts/fonts";
+import { FeatureFlagsService } from "@/services/featureFlagsService";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 
 function Home(): React.JSX.Element {
+  
   return (
     <section
       id="home"
