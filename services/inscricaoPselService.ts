@@ -1,19 +1,23 @@
-import { InscricaoPsel } from "@/types/InscricaoPsel";
+import { InscricaoPsel, SubmissionPayload } from "@/types/InscricaoPsel";
 
-const API_URL = "URL_DA_API";
+export async function InscricaoPselService(payload: SubmissionPayload) {
+  const url = "http://localhost:5235/forms/a012ee38-29cf-4cf6-9193-3284aa44bec4/submissions";
 
-export async function InscricaoPselService(
-  data: InscricaoPsel
-): Promise<void> {
-  const response = await fetch(API_URL, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
+  const response = await fetch(url, {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
   });
 
+  const data = await response.json();
+
   if (!response.ok) {
-    throw new Error("Erro ao enviar inscrição");
+      // Isso vai imprimir no seu console os erros que o backend devolveu
+      console.error("Erro do servidor:", data);
+      throw new Error(data.errors?.join(", ") || "Erro ao enviar");
   }
+
+  return data;
 }

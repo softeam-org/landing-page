@@ -5,3 +5,12 @@ export interface InscricaoPsel{
     curso: string;
     motivacao:string;
 }
+
+export interface Answer {
+    QuestionId: string;
+    Value: string;
+  }
+  
+  export interface SubmissionPayload {
+    Answers: Answer[];
+  }

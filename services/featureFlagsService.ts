@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
+/*const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export async function FeatureFlagsService(
 
@@ -10,4 +10,4 @@ export async function FeatureFlagsService(
   if (!response.ok) {
     throw new Error("Erro ao enviar inscrição");
   }
-}
+}*/
