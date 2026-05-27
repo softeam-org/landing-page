@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import BodyWrapper from "./BodyWrapper";
-import About from "@/app/components/About/About"; // Adjusted path to match the correct file structure
+import About from "@/app/components/About/About";
 import Footer from "@/app/components/footer/footer";
 import HeroSection from "@/app/components/HeroSection/HeroSection";
 import Navbar from "@/app/components/Navbar/index";
@@ -9,6 +9,10 @@ import Partners from "@/app/components/Parceiros/Parceiros";
 import Services from "@/app/components/Servicos/Servicos";
 import Waves from "@/app/components/HeroSection/waves/Waves";
 import Testimonials from "@/app/components/Testimonials/testimonials";
+import Cases from "@/app/components/Cases/Cases";
+import { GetStaticProps } from "next";
+import fs from "fs";
+import path from "path";
 
 import "@/styles/globals.css";
 
@@ -16,13 +20,16 @@ const title = "Softeam - Empresa Júnior de Computação";
 const description =
   // eslint-disable-next-line max-len
   "A SofTeam é a empresa júnior de computação da UFS, especializada no desenvolvimento de sites, sistemas e aplicativos. Oferecemos soluções tecnológicas inovadoras, acessíveis e personalizadas para impulsionar o crescimento do seu negócio. Solicite um orçamento agora!";
-const imgLogo = "/logo-softeam.png"; 
+const imgLogo = "/logo-softeam.png";
 const URLSite = "https://softeam.com.br";
 const keywords =
-
   "empresa júnior, desenvolvimento web, mobile, consultoria tecnológica, softeam, tecnologia, website, site, software, desenvolvimento, inovação, soluções, ideias, transformação, contato, sistema, sistemas";
 
-function App(): React.JSX.Element {
+interface AppProps {
+  caseImages: string[];
+}
+
+function App({ caseImages }: AppProps): React.JSX.Element {
   return (
     <BodyWrapper>
       <Head>
@@ -58,6 +65,7 @@ function App(): React.JSX.Element {
       <HeroSection />
       <Services />
       <Partners />
+      <Cases caseImages={caseImages} />
       <Testimonials />
 
       <Waves
@@ -90,5 +98,20 @@ function App(): React.JSX.Element {
     </BodyWrapper>
   );
 }
+
+export const getStaticProps: GetStaticProps<AppProps> = async () => {
+  const casesDir = path.join(process.cwd(), "public", "cases");
+  const allowed = new Set([".png", ".jpg", ".jpeg", ".svg", ".webp", ".avif"]);
+
+  let caseImages: string[] = [];
+  if (fs.existsSync(casesDir)) {
+    caseImages = fs
+      .readdirSync(casesDir)
+      .filter((file) => allowed.has(path.extname(file).toLowerCase()))
+      .map((file) => `/cases/${file}`);
+  }
+
+  return { props: { caseImages } };
+};
 
 export default App;
