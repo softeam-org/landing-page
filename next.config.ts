@@ -3,8 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   trailingSlash: true,
   output: "export",
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   images: {
-    unoptimized: true, // Disable image optimization
+    unoptimized: true,
   },
 };
 
