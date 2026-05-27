@@ -4,7 +4,6 @@ import Image from "next/image";
 import React, { useEffect } from "react";
 
 function Home(): React.JSX.Element {
-  
   return (
     <section
       id="home"

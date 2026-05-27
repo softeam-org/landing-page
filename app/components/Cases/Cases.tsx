@@ -17,17 +17,13 @@ function Cases({ caseImages = [] }: CasesProps): React.JSX.Element {
       py-16 bg-color-1 ${poppins.className}`}
     >
       <div className="flex flex-col items-center gap-4 text-center">
-        <p className="text-color-5 text-lg font-medium uppercase tracking-widest">
-          Cases de Sucesso
-        </p>
+        <p className="text-color-5 text-lg font-medium uppercase tracking-widest">Cases de Sucesso</p>
         <h2 className="text-5xl max-md:text-4xl font-bold text-white">
-          Mais de{" "}
-          <span className="text-color-5">{PROJECTS_COUNT} projetos</span>{" "}
-          realizados
+          Mais de <span className="text-color-5">{PROJECTS_COUNT} projetos</span> realizados
         </h2>
         <p className="text-white/70 text-lg max-w-xl">
-          Ao longo de {YEARS_OF_EXPERIENCE} anos transformando ideias em
-          soluções tecnológicas para empresas e instituições de todo o Brasil.
+          Ao longo de {YEARS_OF_EXPERIENCE} anos transformando ideias em soluções tecnológicas para empresas e
+          instituições de todo o Brasil.
         </p>
       </div>
 

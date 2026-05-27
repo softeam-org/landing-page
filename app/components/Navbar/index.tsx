@@ -32,7 +32,7 @@ const Navbar: FC<NavbarProps> = ({ bgColor = "bg-blue-1074BC" }) => {
   const buttons: NavButtonsProps[] = [
     // { url: "/transparencia", label: "Transparência", icon: <LuTextSearch /> },
     { url: "/processo-seletivo", label: "PSEL" }, // Adicionado PSEL
-  ].filter(button => normalizePath(button.url) !== currentPath);
+  ].filter((button) => normalizePath(button.url) !== currentPath);
 
   /*useEffect(() => {
     FeatureFlagsService()
