@@ -1,5 +1,4 @@
 import { openSans, poppins } from "@/app/ts/fonts";
-import { FeatureFlagsService } from "@/services/featureFlagsService";
 import Image from "next/image";
 import React, { useEffect } from "react";
 
