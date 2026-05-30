@@ -2,7 +2,7 @@ import Image from "next/image";
 import React from "react";
 import "./footer.css";
 
-const textBotton = "Software Team 2025 \u00A9 :: Feito com Café e Paçoca";
+const textBotton = `Software Team ${new Date().getFullYear()} \u00A9 :: Feito com Café e Paçoca`;
 
 const information = [
   { icon: "/email.png", alt: "Icone representando um email", text: "contato@softeam.com.br" },
