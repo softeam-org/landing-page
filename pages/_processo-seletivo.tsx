@@ -87,8 +87,8 @@ export default function Inscricao() {
   return (
     <>
       <Head>
-        <title>Processo Seletivo 2026 - Softeam</title>
-        <meta name="description" content="Inscreva-se no Processo Seletivo da Softeam" />
+        <title>Processo Seletivo 2026 - SofTeam</title>
+        <meta name="description" content="Inscreva-se no Processo Seletivo da SofTeam" />
       </Head>
 
       <Navbar bgColor="bg-blue-072763" />
@@ -241,7 +241,7 @@ export default function Inscricao() {
         <Waves d={wavePath} fill="#004AD5" bg={styles.bgForm} hClass="h-24 md:h-36" count={1} />
 
         <footer className={styles.rodape}>
-          <p>2026 Softeam — Processo Seletivo</p>
+          <p>2026 SofTeam — Processo Seletivo</p>
         </footer>
       </div>
     </>

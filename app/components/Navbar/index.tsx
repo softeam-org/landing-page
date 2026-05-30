@@ -82,16 +82,16 @@ const Navbar: FC<NavbarProps> = ({ bgColor = "bg-blue-1074BC" }) => {
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center md:static md:inset-auto md:ml-6 md:pr-0">
-            {buttons.map((button, index) => (
+            {/* {links.map((button, index) => (
               <NavButtons key={index} url={button.url} label={button.label} icon={button.icon} />
-            ))}
+            ))} */}
           </div>
         </div>
       </div>
 
       <DisclosurePanel className="md:hidden">
         <div className="space-y-1 px-2 pt-2 pb-3">
-          {links.map((link, index) => (
+          {/*{buttons.map((link, index) => (
             <DisclosureButton
               key={index}
               as="a"
@@ -100,7 +100,7 @@ const Navbar: FC<NavbarProps> = ({ bgColor = "bg-blue-1074BC" }) => {
             >
               {link.label}
             </DisclosureButton>
-          ))}
+          ))}*/}
         </div>
       </DisclosurePanel>
     </Disclosure>
