@@ -28,13 +28,13 @@ const Navbar: FC<NavbarProps> = ({ bgColor = "bg-blue-1074BC" }) => {
     { url: "/#parceiros", label: "Parceiros" },
     { url: "/#contato", label: "Contatos" },
   ];
-
+  /*
   const buttons: NavButtonsProps[] = [
     // { url: "/transparencia", label: "Transparência", icon: <LuTextSearch /> },
     { url: "/processo-seletivo", label: "PSEL" }, // Adicionado PSEL
   ].filter((button) => normalizePath(button.url) !== currentPath);
 
-  /*useEffect(() => {
+  useEffect(() => {
     FeatureFlagsService()
   }, [])*/
 
