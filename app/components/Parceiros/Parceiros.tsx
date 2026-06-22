@@ -2,31 +2,33 @@
 
 import { poppins } from "@/app/ts/fonts";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import { images } from "../../ts/partnersPNGs";
 
 function Partners(): React.JSX.Element {
-  const [slidesToShow, setSlidesToShow] = useState(3);
+  const sliderContainerRef = useRef<HTMLDivElement>(null);
+  const [slidesToShow, setSlidesToShow] = useState(1);
 
   useEffect(() => {
-    const updateSlidesToShow = (): void => {
-      if (window.innerWidth <= 540) {
-        setSlidesToShow(1);
-      } else if (window.innerWidth <= 1024) {
-        setSlidesToShow(2);
-      } else {
-        setSlidesToShow(3);
-      }
-    };
+    const sliderContainer = sliderContainerRef.current;
 
-    updateSlidesToShow();
-    window.addEventListener("resize", updateSlidesToShow);
+    if (!sliderContainer) return;
+
+    const minimumSlideWidth = 280;
+    const resizeObserver = new ResizeObserver(([entry]) => {
+      const availableSlides = Math.floor(entry.contentRect.width / minimumSlideWidth);
+      const nextSlidesToShow = Math.max(1, Math.min(images.length, availableSlides));
+
+      setSlidesToShow(nextSlidesToShow);
+    });
+
+    resizeObserver.observe(sliderContainer);
 
     return () => {
-      window.removeEventListener("resize", updateSlidesToShow);
+      resizeObserver.disconnect();
     };
   }, []);
 
@@ -48,7 +50,7 @@ function Partners(): React.JSX.Element {
       py-12 bg-color-1 pt-32"
     >
       <h2 className={`text-3xl text-center font-semibold text-white ${poppins.className}`}>Nossos Parceiros</h2>
-      <div className="relative flex justify-center items-center">
+      <div ref={sliderContainerRef} className="relative flex justify-center items-center">
         <div className="absolute z-30 flex justify-between items-center h-64 w-full">
           <div className="h-full w-10 bg-gradient-to-r from-color-1 from-50% to-transparent"></div>
           <div className="h-full w-10 bg-gradient-to-l from-color-1 from-50% to-transparent"></div>
