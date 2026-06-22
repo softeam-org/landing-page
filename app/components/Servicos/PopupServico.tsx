@@ -52,7 +52,7 @@ function PopupServico(): React.JSX.Element {
             rounded-full border-color-3 border-3 ease-out duration-200"
             onClick={() => handleContractCLick()}
           >
-            Contrate-nos
+            Contate-nos
           </button>
         </div>
       </div>
